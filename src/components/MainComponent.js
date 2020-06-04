@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './MenuComponent';
 import DishDetail from './DishdetailComponent';
 import { DISHES } from '../shared/dishes';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
+import Blog from './BlogComponent';
+import Subscribe from './SubscribeComponent'
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 class Main extends Component {
@@ -33,6 +34,8 @@ class Main extends Component {
               <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
               <Redirect to="/home" />
           </Switch>
+        <Blog/>
+        <Subscribe/>
         <Footer />
       </div>
     );

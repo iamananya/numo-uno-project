@@ -12,7 +12,7 @@
 }
 
 .footer{
-    background-color: #D1C4E9;
+    background-color: white;
     margin:0px auto;
     padding: 20px 0px 20px 0px;
 }
@@ -28,7 +28,77 @@ address{
     margin:0px;
     color:#0f0f0f;
 }
-
-.navbar-dark {
-    background-color: #512DA8;
+nav{
+    position: fixed;
+    top: 0px;
 }
+
+.nav-link{
+    color: #333;
+}
+.nav-link :hover{
+    color: black;
+}
+#row1{
+    margin-top: 100px;
+}
+#row-col-1{
+    padding-left: 30px;
+}
+#row2{
+    margin-top: 100px;
+}
+#center-text{
+    margin: auto;
+}
+#card-even{
+    margin-top: 50px;
+    background-color: #fff0a1;
+    box-shadow: -1px 3px 20px #ccc;
+}
+#card-odd{
+    margin-bottom: 50px;
+    background-color: #f5f5f5;
+    box-shadow: -1px 3px 20px #ccc;
+}
+#card-img{
+    width: 60px;
+    height:  60px;
+    float: right;
+}
+
+.main-text{
+    font-size: 5rem;
+}
+ .custom-button {
+    color: #ffd700;
+    background-color: black;
+    border-radius: 40px;
+    padding: 10px 40px;
+  
+}
+.keep-fixed{
+    position: sticky;
+    z-index: 1;
+    top: 0px;
+    
+}
+.center-heading{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0px 3px 8px #a5a5a5;
+}
+.side-heading{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0px 3px 8px #a5a5a5;
+}
+.social-button{
+    color: grey;
+
+}
+
+
+
