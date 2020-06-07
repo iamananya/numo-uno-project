@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,
     Button, Modal, ModalHeader, ModalBody,
     Form, FormGroup, Input, Label } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
@@ -42,7 +42,7 @@ class Header extends Component {
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/home'> Home</NavLink>
+                                <NavLink className="nav-link"  to='/home' > Home</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to='/aboutus'> Blog</NavLink>
@@ -51,17 +51,18 @@ class Header extends Component {
                                 <NavLink className="nav-link"  to='/menu'> About us</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to='/contactus'> Our Team</NavLink>
+                                <NavLink className="nav-link" to='/contactus'> Pod Casts</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to='/contactus'> Contact Us</NavLink>
                             </NavItem>
+                            
                             <NavItem className="ml-5 ">
-                                <NavLink className="nav-link" to='/contactus'> Login</NavLink>
+                                <NavLink className="nav-link" to='/contactus' id="login"> Login</NavLink>
                             </NavItem>
                             <NavItem className="ml-2 ">
                                 <button className="custom-button" onClick={this.toggleModal}>
-                                    <span className="fa fa-sign-in fa-lg"></span> Join
+                                     Join
                                 </button>
                             </NavItem>
                             </Nav>

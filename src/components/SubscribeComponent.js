@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Breadcrumb, BreadcrumbItem,
-    Button, Form, FormGroup, Label, Input, Row , FormFeedback} from 'reactstrap';
-import { Link } from 'react-router-dom';
+import {  Form, FormGroup,  Input,  FormFeedback} from 'reactstrap';
 
 class Contact extends Component {
 
@@ -75,22 +73,22 @@ class Contact extends Component {
         event.preventDefault();
     }
      render(){
-         const errors=this. validate(this.state.firstname,this.state.lastname,this.state.telnum,this.state.email);
+         const errors=this.validate(this.state.firstname,this.state.lastname,this.state.telnum,this.state.email);
         return(
             <div className="container">
                 
                 <div className="row row-content">
                    <div className="col-12">
-                        <div className="center-heading">
+                        <div className="center-heading" >
                             <h3>Subscribe to keep Updated</h3>
                         </div>
                    </div>
-                    <div className="col-12">
+                    <div className="col-12" id="subscribe">
                         <Form onSubmit={this.handleSubmit}>
                             <div className="row">
                                 <div className="col-12 col-md-5 ">
-                                    <FormGroup row>                                   
-                                        <Input type="text" id="firstname" name="firstname"
+                                    <FormGroup row >                                   
+                                        <Input type="text" id="firstname" name="firstname" id="grey-border"
                                             placeholder="First Name"
                                             value={this.state.firstname}
                                             valid={errors.firstname===''}
@@ -104,7 +102,7 @@ class Contact extends Component {
                                 </div>
                                 <div className="col-12 col-md-5 ml-auto">
                                     <FormGroup row>
-                                        <Input type="tel" id="telnum" name="telnum"
+                                        <Input type="tel" id="telnum" name="telnum" id="grey-border"
                                             placeholder="Tel. number"
                                             value={this.state.telnum}
                                             valid={errors.telnum===''}
@@ -117,7 +115,7 @@ class Contact extends Component {
 
                                 <div className="col-12">
                                     <FormGroup row>
-                                        <Input type="email" id="email" name="email"
+                                        <Input type="email" id="email" name="email" id="grey-border"
                                         placeholder="Email"
                                         value={this.state.email}
                                         valid={errors.email===''}
@@ -129,7 +127,7 @@ class Contact extends Component {
                                 </div>
                                 
                                     <div className="mx-auto">
-                                        <button className="custom-button" type="submit">
+                                        <button className="custom-button2" type="submit">
                                         Continue
                                         </button>
                                     </div>

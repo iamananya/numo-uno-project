@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, CardImg,  CardText, CardBody,
-  CardTitle } from 'reactstrap';
+
 
 function Blog(props) {
     return(
@@ -29,7 +28,18 @@ function Blog(props) {
             <div className="col-12 col-md-4 ">
                 <img width="100%" src="/assets/images/group_393.png" alt="image not found"></img>
             </div>
+            <div className="mx-auto">
+            <button className="custom-button2" type="submit">
+            Blog
+            </button>
+            <button className="custom-button2" type="submit">
+            Pod Casts
+            </button>
+
         </div>
+        </div>
+        
+
 
       </div>
     );
