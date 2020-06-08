@@ -13,13 +13,13 @@ function Skill(props) {
         </div>
                                                   {/* This is the first row */}
         <div  className="row m-auto">              
-            <div className="col-12 col-md-5">
+            <div className="col-12 col-md-6">
                 <img width="100%" src="/assets/images/group_tl.png" alt="image not found"></img>
                 <img width="100%" src="/assets/images/group_ml.png" alt="image not found"></img>
                 <img width="100%" src="/assets/images/group_bl.png" alt="image not found"></img>
                 
             </div>
-            <div className="col-12 col-md-5 ">
+            <div className="col-12 col-md-6 ">
                 <img width="100%" src="/assets/images/group_tr.png" alt="image not found"></img>
                 <img width="100%" src="/assets/images/group_mr.png" alt="image not found"></img>
                 <img width="100%" src="/assets/images/group_br.png" alt="image not found"></img>
