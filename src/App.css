@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+input{
+    margin: 40px 0px 20px 0px;
+}
 .row-header{
     margin:0px auto;
     padding:0px auto;
 }
-
+#pad{
+    padding-right: 100px;
+    padding-left: 100px;
+}
 .row-content {
     margin:0px auto;
     padding: 50px 0px 50px 0px;
@@ -28,6 +37,14 @@ address{
     margin:0px;
     color:#0f0f0f;
 }
+#card-heading{
+    font-size: 18px;
+    color: #455A64;
+}
+#card-text{
+    font-size: 16px;
+    color: #455A64;
+}
 nav{
     position: fixed;
     top: 0px;
@@ -35,49 +52,78 @@ nav{
 #nav-font{
     font-size: 20px;
 }
+#modal{
+    width: 628px;
+    height: 766px;
+    text-shadow: 0px 2px 2px rgba(0,0,30,.16);;
+}
 #login{
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 22px;
     font-weight: 300;
+    margin-right: 20px;
     color: black;
+    text-shadow:0px 2px 2px rgba(0,0,0,.16);
 }
 .nav-link{
+    font-family: 'Montserrat', sans-serif;
     color: #333;
     font-size: 20px;
+    margin-left: 25px;
+    text-shadow: 0px 3px 8px rgba(0,0,0,.16);
 }
 .nav-link :hover{
     color: black;
     font-size: 20px;
 }
+#bottom-text{
+    position: absolute;
+    bottom: 40px;
+    text-align: left;
+}
 #row1{
     margin-top: 100px;
-}
-#row-col-1{
-    padding-left: 30px;
+    
 }
 #row2{
-    margin-top: 100px;
+    margin-top: 200px;
 }
+
+
 #subscribe{
-    margin-top: 50px;
+    padding: 50px 100px 0px 100px;
+    background-image: url(/assets/images/map.png);
 }
 #center-text{
     margin: auto;
 }
+#yellow-heading{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    color: #FFD700;
+    text-shadow: 0px 3px 2px #FFD700;
+    margin-top: 100px;
+}
 #card-even{
-    margin-top: 50px;
-    height:200px;
-    width: 200px;
+    margin: 135px auto 0px auto;
+    height:270px;
+    width: 270px;
     overflow: hidden;
+    border:0px;
+    border-radius: 10px;
     background-color: #fff0a1;
-    box-shadow: -1px 3px 20px #ccc;
+    box-shadow: -1px 3px 20px rgba(0,0,0,.16);
+    text-align: end;
 }
 #card-odd{
-    margin-bottom: 50px;
-    height:200px;
-    width: 200px;
+    margin: 0px auto 135px auto;
+    height:270px;
+    width: 270px;
+    border:0px;
+    border-radius: 10px;
     overflow: hidden;
     background-color: #f5f5f5;
-    box-shadow: -1px 3px 20px #ccc;
+    box-shadow: -1px 3px 20px rgba(0,0,0,.16);
 }
 #card-img{
     width: 60px;
@@ -88,6 +134,9 @@ nav{
     border-color: rgb(53, 53, 53);
     height: 64px;
 }
+#form-padding{
+    margin: 30px 0px 20px 0px;
+}
 .sub-text{
     font-family:Josefin Sans;
     font-size: 35px;
@@ -95,28 +144,37 @@ nav{
     margin-bottom: 50px;
 }
 .main-text{
-    font-family: Montserrat;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 80px;
-    font-style: normal;
+    font-weight: 200;
     margin-bottom: 50px;
+    line-height: 30px;
+}
+.main-text2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+    font-weight:normal;
+    margin-bottom: 50px;
+    line-height: 30px;
 }
  .custom-button {
     color: #ffd700;
     background-color: black;
+    border: 0px;
     border-radius: 40px;
     width: 180px;
     font-size: 21px;
     height: 45px;
-  
 }
 .custom-button2{
     color: #ffd700;
     background-color: black;
+    border: 0px;
     width: 250px;
     height: 60px;
     font-size: 28px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px 20px 20px 0px;
     
 }
 .keep-fixed{
@@ -125,23 +183,42 @@ nav{
     top: 0px;
     
 }
-.center-heading{
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    text-shadow: 0px 3px 8px #a5a5a5;
+#content{
+    margin-top: auto;
+    margin-bottom: auto;
 }
-.side-heading{
+.center-heading{
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    color: #151D41;
     font-size: 50px;
     font-weight: bold;
-    text-shadow: 0px 3px 8px #a5a5a5;
+    text-shadow: 0px 3px 3px #0000002d;
+}
+#side-heading{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #151D41;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0px 3px 3px #0000002d;
+    
 }
 .social-button{
-    color: grey;
+    color: #455A64;
+    margin: 50px 30px 30px 0px;
+    font-size: 35px;
 
 }
-
-
+#side-heading-child{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+}
+#copyright{
+    text-align: center;
+    font-size: 18px;
+    color: #151D41;
+}
 .btn {
     width: 65%;
     padding: 12px ;
@@ -178,3 +255,54 @@ nav{
     background-color: white;
     color: black;
   }
+  
+  .container2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0,0,0,.25);
+    width: auto;
+  }
+#footer-heading{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #445a64;
+    line-height: 0px;
+    padding: 35px 0px 0px 0px;
+}
+#footer-sub{
+    font-size: 20px;
+    font-weight: normal;
+    color: #151D41;
+}
+@media (max-width: 768px){
+    #pad{
+        padding-right: 20px;
+        
+        margin-left: 20px;
+    }
+    .main-text{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 50px;
+        font-weight: 200;
+        margin-bottom: 50px;
+        line-height: 50px;
+    }
+    .main-text2{
+        font-size: 50px;
+        margin-bottom: 50px;
+        line-height: 0px;
+    }
+    #card-odd{
+        margin: 0px;
+    }
+    #card-even{
+        margin: 0px;
+    }
+    #numounomobile{
+        height: 400px;
+    }
+}

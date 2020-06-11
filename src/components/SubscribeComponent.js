@@ -77,17 +77,17 @@ class Contact extends Component {
         return(
             <div className="container">
                 
-                <div className="row row-content">
+                <div className="row row-content" >
                    <div className="col-12">
-                        <div className="center-heading" >
-                            <h3>Subscribe to keep Updated</h3>
+                        <div  >
+                            <h3 className="center-heading">Subscribe to keep Updated</h3>
                         </div>
                    </div>
                     <div className="col-12" id="subscribe">
                         <Form onSubmit={this.handleSubmit}>
                             <div className="row">
                                 <div className="col-12 col-md-5 ">
-                                    <FormGroup row >                                   
+                                    <FormGroup row id="form-padding" >                                   
                                         <Input type="text" id="firstname" name="firstname" id="grey-border"
                                             placeholder="First Name"
                                             value={this.state.firstname}
@@ -101,7 +101,7 @@ class Contact extends Component {
                                     </FormGroup>
                                 </div>
                                 <div className="col-12 col-md-5 ml-auto">
-                                    <FormGroup row>
+                                    <FormGroup row id="form-padding">
                                         <Input type="tel" id="telnum" name="telnum" id="grey-border"
                                             placeholder="Tel. number"
                                             value={this.state.telnum}
@@ -114,7 +114,7 @@ class Contact extends Component {
                                 </div>
 
                                 <div className="col-12">
-                                    <FormGroup row>
+                                    <FormGroup row id="form-padding">
                                         <Input type="email" id="email" name="email" id="grey-border"
                                         placeholder="Email"
                                         value={this.state.email}

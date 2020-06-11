@@ -73,19 +73,19 @@ class Header extends Component {
                     </div>
                 </Navbar>
                 
-                <Modal isOpen={this.state.isMdodalOpen} toggle={this.toggleModal}>
-           <ModalHeader>Login</ModalHeader>
+                <Modal id="modal" isOpen={this.state.isMdodalOpen} toggle={this.toggleModal}>
+           
            <center>
                     <div className="container">			
                     <form className="cd-signin-modal__form">
-	                <p > Welcome Back</p><br/>
-                    <p>Signin to access personalized articles, podcasts, career enhancement services along with interest based professional communication groups.</p><br/>
+	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}> Welcome Back</p><br/>
+                    <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px"}}>Signin to access personalized articles, podcasts, career enhancement services along with interest based professional communication groups.</p><br/>
 
  	<center><a  src="./img/cd-logo.svg" className="fb btn">
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-		<img src="un.png" /></div>
+		<img src="un.png" style={{width: "10%"}} /></div>
 		<div className="e">
 		Signin with Linkedin</div>
         	</a></center>
@@ -93,7 +93,7 @@ class Header extends Component {
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-          	<img src="abc.svg"/></div>
+          	<img src="abc.svg"  style={{width: "10%"}}/></div>
 		<div className="e">
  		Signin with Google</div>
         	</a></center>
@@ -102,21 +102,21 @@ class Header extends Component {
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-           	<img src="apple.webp"/></div>
+           	<img src="apple.webp" style={{width: "10%"}}/></div>
 		<div className="e">
 		Signin with Apple</div>
         	</a></center>
-		<p>
+		<p  style={{margin:"1em 0"}}>
             <center>
 		or</center></p> 
  
-					<p>
+					<p style={{margin:"1em 0"}}>
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail"/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 
-					<p>
+					<p style={{margin:"1em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password"/>
 						
@@ -125,20 +125,21 @@ class Header extends Component {
 					<div className="row">
 						<div className="b"><p>.</p></div>
 						<div className="c">
-						<p>
+						<p  style={{margin:"1em 0"}}>
 							<input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
 							<label for="remember-me">Remember me</label>
 					</p></div></div>
 
-					<p>
-						<center><a href="#" className="twitter btn">
+					<p style={{margin:"1em 0"}}>
+						<center><a href="#" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
+                         padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans"}}>
           								 Continue
        							 </a></center>
 					</p>
 
-					<center><a href="#">Forgot Password?</a></center><br/><br/>
+					<center><a href="#" style={{fontSize: "14px", fontFamily: "Montserrat;"}}>Forgot Password?</a></center><br/><br/>
 					
-					<p><center>No Account?<a href="#0" data-signin="signup" >Create One</a></center></p>
+					<center><p style={{fontSize:"14px" , fontFamily:"Montserrat"}}>No Account?<a href="#0" data-signin="signup" >Create One</a></p></center>
 
 				</form>
 				
