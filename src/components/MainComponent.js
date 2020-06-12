@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import Menu from './MenuComponent';
 import { DISHES } from '../shared/dishes';
-import Header from './HeaderComponent';
-import Footer from './FooterComponent';
+
 import Home from './HomeComponent';
-import Blog from './BlogComponent';
-import Subscribe from './SubscribeComponent';
-import Skill from './SkillComponent';
+
+import BlogFinal from './SirfBlog';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 class Main extends Component {
@@ -28,16 +26,14 @@ class Main extends Component {
     }
     return (
       <div>
-        <Header />
+        
         <Switch>
-              <Route path='/home' component={HomePage} />
+              <Route path='/home'component={Home} />
               <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
+              <Route path='/blog' component={BlogFinal} />
               <Redirect to="/home" />
           </Switch>
-        <Skill/>
-        <Blog/>
-        <Subscribe/>
-        <Footer />
+        
       </div>
     );
   }

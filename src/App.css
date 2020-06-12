@@ -2,6 +2,9 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+#numounomobile{
+    height: 800px;
+}
 input{
     margin: 40px 0px 20px 0px;
 }
@@ -142,20 +145,18 @@ nav{
     font-size: 35px;
     color:#455a64;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 .main-text{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 80px;
     font-weight: 200;
-    margin-bottom: 50px;
-    line-height: 30px;
 }
 .main-text2{
     font-family: 'Montserrat', sans-serif;
     font-size: 80px;
     font-weight:normal;
-    margin-bottom: 50px;
-    line-height: 30px;
+    line-height: 0.9;
 }
  .custom-button {
     color: #ffd700;
@@ -278,6 +279,90 @@ nav{
     font-weight: normal;
     color: #151D41;
 }
+#tl{
+    margin-right: 60px;
+    left: 0px;
+    top: 0px;
+}
+#tr{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+#ml{
+    margin-right: 60px;
+    position: absolute;
+    bottom:450px;
+    left: 0px;
+}
+#mr{
+    position: absolute;
+    bottom:300px;
+    right: 0px;
+}
+#bl{
+    margin-right: 60px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+#br{
+    position: absolute;
+    bottom:0px;
+    right: 0px;
+}
+#skill-box{
+    position: relative;
+    height: 1250px;
+}
+@media (max-width: 1200px){
+    .main-text{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 65px;
+        font-weight: 200;
+        
+    }
+    .main-text2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 65px;
+        font-weight:normal;
+    }
+    #numounomobile{
+        height: 600px;
+    }
+    #skill-box{
+        position: relative;
+        height: 2500px;
+    }
+    #tl{
+        margin-right: 60px;
+        left: 0px;
+        top: 0px;
+    }
+    #tr{
+        position: absolute;
+        
+        top: 600px;
+    }
+    #ml{
+        margin-right: 60px;
+        position: absolute;
+        top: 900px;
+    }
+    #mr{
+        position: absolute;
+        top: 1100px;
+    }
+    #bl{
+        margin-right: 60px;
+        position: absolute;
+        top: 1750px;
+    }
+    #br{
+        position: absolute;
+        bottom:0px;
+    }
+}
 @media (max-width: 768px){
     #pad{
         padding-right: 20px;
@@ -288,21 +373,20 @@ nav{
         font-family: 'Josefin Sans', sans-serif;
         font-size: 50px;
         font-weight: 200;
-        margin-bottom: 50px;
-        line-height: 50px;
+        
     }
     .main-text2{
         font-size: 50px;
-        margin-bottom: 50px;
-        line-height: 0px;
+        
     }
     #card-odd{
-        margin: 0px;
+        margin:50px 0px 0px 0px;
     }
     #card-even{
-        margin: 0px;
+        margin:50px 0px 0px 0px;
     }
     #numounomobile{
         height: 400px;
     }
+
 }

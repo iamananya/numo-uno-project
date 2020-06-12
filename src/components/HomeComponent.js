@@ -2,21 +2,28 @@ import React from 'react';
 import { Card,  CardText, CardBody,
   CardTitle } from 'reactstrap';
 import ReactPlayer from 'react-player'
-
+import  Header from './HeaderComponent'
+import Blog from './BlogComponent';
+import Subscribe from './SubscribeComponent';
+import Skill from './SkillComponent';
+import Footer from './FooterComponent';
 function Home(props) {
     return(
+      <div>
+        <Header/>
       <div className="container-fluid" id="pad">
                                                   {/* This is the first row */}
           <div id="row1" className="row">              
             <div id="row-col-1"className="col-12 col-md-8" style={{margin: "auto"}}>
-              <h1 className="main-text">Shaping Careers </h1><h1 className="main-text2"> Through </h1><h1 className="main-text">Artificial Intelligence</h1>
+              <h1 className="main-text">Shaping Careers </h1><h1 className="main-text2"> Through </h1>
+              <h1 className="main-text" style={{lineHeight: "1.5"}}>Artificial Intelligence</h1>
               <h2 className="sub-text">Efficient A.I. based hiring solutions </h2>
               <button className="custom-button2" >
                    Get Started
               </button>
             </div>
             <div className="col-12 col-md-4 ">
-              <img height="800px" id="numounomobile"src="/assets/images/mobile.png" alt="not found"/>
+              <img  id="numounomobile"src="/assets/images/mobile.png" alt="not found"/>
             </div>
           </div>
 
@@ -59,7 +66,7 @@ Our job is to build your website so that it is functional and user-friendly but 
               
                                                  {/* This is the Card row */}
         <div id="row1" className="row justify-content-center">                                         
-          <div  className="col-12 col-md-3 ">
+          <div  className="col-12 col-md-6 col-lg-3 ">
             <Card id="card-odd" width="100%">
               <CardBody>
                 <img id ="card-img" top src="/assets/images/grey_rectangle.png" alt="Grey rectangle not found"/>
@@ -70,7 +77,7 @@ Our job is to build your website so that it is functional and user-friendly but 
               </CardBody>
             </Card>
           </div>
-          <div  className="col-12 col-md-3">
+          <div  className="col-12 col-md-6 col-lg-3">
             <Card id="card-even" width="100%">
               <CardBody>
                 <img id ="card-img" top src="/assets/images/grey_rectangle.png" alt="Grey rectangle not found"/>
@@ -81,7 +88,7 @@ Our job is to build your website so that it is functional and user-friendly but 
               </CardBody>
             </Card>
           </div>
-          <div  className="col-12 col-md-3">
+          <div  className="col-12 col-md-6 col-lg-3">
             <Card id="card-odd" width="100%">
               
               <CardBody>
@@ -93,7 +100,7 @@ Our job is to build your website so that it is functional and user-friendly but 
               </CardBody>
             </Card>
           </div>
-          <div  className="col-12 col-md-3">
+          <div  className="col-12 col-md-6 col-lg-3">
             <Card id="card-even" width="100%">
               <CardBody>
                 <img id ="card-img" top src="/assets/images/grey_rectangle.png" alt="Grey rectangle not found"/>
@@ -105,6 +112,11 @@ Our job is to build your website so that it is functional and user-friendly but 
             </Card>
           </div>
         </div>
+      </div>
+      <Skill/>
+        <Blog/>
+        <Subscribe/>
+        <Footer />
       </div>
     );
 }
