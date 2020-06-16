@@ -231,10 +231,23 @@ class Header extends Component {
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
+					<p style={{margin:"1em 0"}}>
+						<center>
+                        <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="Institute E-mail" 
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
+						<span className="cd-signin-modal__error">Error message here!</span></center>
+					</p>
 
 					<p style={{margin:"1em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password"
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
+						
+						<span className="cd-signin-modal__error">Error message here!</span></center>
+					</p>
+					<p style={{margin:"1em 0"}}>  
+						<center>
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Confirm Password"
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
