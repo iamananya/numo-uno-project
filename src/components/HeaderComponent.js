@@ -173,7 +173,7 @@ class Header extends Component {
                     <form className="cd-signin-modal__form">
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}>
                     Join Numo Uno</p>
-                    <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px"}}>
+                    <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",letterSpacing:"1px"}}>
                     Create an account to access personalized articles, podcasts,
                      career enhancement services along with interest based professional communication groups.</p><br/>
 
