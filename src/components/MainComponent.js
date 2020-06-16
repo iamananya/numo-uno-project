@@ -25,7 +25,7 @@ class Main extends Component {
             path="/menu"
             component={() => <Menu dishes={this.state.dishes} />}
           />
-          <Route path="/blog" component={BlogFinal} />
+          <Route exact path="/blog" component={BlogFinal} />
           <Route path="/blog/:id" component={ArticleFinal} />
           <Redirect to="/home" />
         </Switch>
