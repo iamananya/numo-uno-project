@@ -1,22 +1,22 @@
-import React,{Component} from 'react';
+import React, { Component } from "react";
 
-import './components/css/demo.css';
-import './components/css/reset.css';
-import './components/css/style.css';
-import './App.css';
-import './components/css/blog.css'
-import { BrowserRouter } from 'react-router-dom';
-import Main from './components/MainComponent';
+import "./components/css/demo.css";
+import "./components/css/reset.css";
+import "./components/css/style.css";
+import "./App.css";
+import "./components/css/blog.css";
+import "./components/css/article.css";
+import { BrowserRouter } from "react-router-dom";
+import Main from "./components/MainComponent";
 
 class App extends Component {
-
   render() {
     return (
       <BrowserRouter>
-      <div className="App">
-        <Main />
-      </div>
-    </BrowserRouter>
+        <div className="App">
+          <Main />
+        </div>
+      </BrowserRouter>
     );
   }
 }
