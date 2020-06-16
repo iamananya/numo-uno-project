@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@400;700&display=swap");
+#brand_art {
+  margin-left: 4%;
+  text-align: left;
+}
+#content_art {
+  margin: 0 auto;
+}
+#content_art h1 {
+  text-align: center;
+  font-family: Josefin Sans;
+  font-size: 40px;
+}
+.container-img_art {
+  text-align: center;
+}
+.bigImg_art {
+  max-width: 100%;
+  height: auto;
+}
+.social_art {
+  letter-spacing: 20px;
+  text-align: right;
+  margin-right: 15%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.text_art {
+  padding: 20px;
+}
+.text_art p {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  font-size: 16px;
+}
+.bigImg1_art {
+  max-width: 56%;
+  height: auto;
+  width: inherit;
+}
+.podcast_art {
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#container-card_art {
+  border: 0px solid white;
+  align-items: center;
+}
+#container-card_art p {
+  font-size: 15px;
+}
+.img-card_art {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.055);
+}
+.popText_art {
+  float: left;
+  width: 30%;
+  text-align: left;
+  padding: 10px 10px;
+  font-family: Montserrat;
+  font-size: 12px;
+}
+.popText_art h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.card_art {
+  border: 0px solid white;
+}
+.popRow_art {
+  display: flex;
+  margin: 2% 10%;
+}
+.popRow_art:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.popImg_art {
+  max-width: 100%;
+  width: 100%;
+  padding: 10px;
+  float: left;
+}
+
+@media screen and (max-width: 500px) {
+  .popRow_art {
+    display: block;
+  }
+  .popText_art {
+    width: 100%;
+  }
+  .popImg_art {
+    width: 60%;
+  }
+}

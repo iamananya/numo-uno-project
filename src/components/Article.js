@@ -1,81 +1,60 @@
 import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
+import axios from "axios"
+import { BLOG_URL, BLOG_KEY } from "../constants/constants"
+import renderHTML from "react-render-html";
+
+import "../components/css/article.css"
 
 class Article extends Component {
+  state = {
+    title: '',
+    content: ``,
+    feature_image: ''
+  }
+
+  componentDidMount() {
+    const postId = window.location.pathname.split('/')[2];
+    const URL = BLOG_URL + `/posts/${postId}/?key=${BLOG_KEY}`
+    axios
+      .get(URL)
+      .then(res => {
+        console.log("res.data ", res.data)
+        this.setState({
+          title: res.data.posts[0].title,
+          content: res.data.posts[0].html,
+          feature_image: res.data.posts[0].feature_image
+        })
+      })
+      .catch(err => {
+        console.log("err is ",err)
+      })
+  }
+  
   render() {
     return (
       <div>
-        <div className="brand">
-          <img src="../images/logo_black_croped2_bu.png"></img>
+        <div id="brand_art">
+          <img style ={{ width: '400px', height: '400px'}}src={this.state.feature_image}></img>
         </div>
-        <div className="content">
+        <div id="content_art">
           <h1>
-            Topic 1 category 1 Outdoor Experience <br /> of a Trek
-          </h1>
-          <div className="social">
-            <i className="fab fa-facebook"></i>
+         Title:  {this.state.title}
+           </h1>
+           <div className="social_art">
+            <i className="fab fa-facebook fa-3x"></i>
+            <i class="fab fa-linkedin fa-3x"></i>
+            <i class="fab fa-instagram fa-3x"></i>
           </div>
-          <div className="container-img">
-            <img className="bigImg" src="../images/Rectangle_52.png"></img>
+          <div className="container-img_art">
+            <img className="bigImg_art" src="../images/Rectangle_502.png"></img>
           </div>
-          <div className="text">
-            <p>
-              It’s windy. The cool breeze of the ocean. It gives, a sense of
-              beauty, in motion. All is flowing, rushing and tide-And
-              <br />I sit in wonder, dreaming beside. beauty, in motion. All is
-              flowing, rushing and tide-And I sit in wonder, dreaming beside
-            </p>
-            <p>
-              It’s windy. The cool breeze of the ocean. It gives, a sense of
-              beauty, in motion. All is flowing, rushing and tide-And
-              <br />I sit in wonder, dreaming beside. beauty, in motion. All is
-              flowing, rushing and tide-And I sit in wonder, dreaming beside
-            </p>
-            <p>
-              It’s windy. The cool breeze of the ocean. It gives, a sense of
-              beauty, in motion. All is flowing, rushing and tide-And <br />I
-              sit in wonder, dreaming beside. beauty, in motion. All is flowing,
-              rushing and tide-And I sit in wonder, dreaming beside
-            </p>
-            <p>
-              It’s windy. The cool breeze of the ocean. It gives, a sense of
-              beauty, in motion. All is flowing, rushing and tide-And
-              <br /> I sit in wonder, dreaming beside. beauty, in motion. All is
-              flowing, rushing and tide-And I sit in wonder, dreaming beside
-            </p>
-          </div>
-          <div className="container-img">
-            <img className="bigImg1" src="../images/Rectangle_16@2x.png"></img>
-          </div>
-          <div className="text">
-            <p>
-              It’s windy. The cool breeze of the ocean. It gives, a sense of
-              beauty, in motion. All is flowing, rushing and tide-And
-              <br />I sit in wonder, dreaming beside. beauty, in motion. All is
-              flowing, rushing and tide-And I sit in wonder, dreaming beside
-            </p>
-            <p>
-              It’s windy. The cool breeze of the ocean. It gives, a sense of
-              beauty, in motion. All is flowing, rushing and tide-And
-              <br />I sit in wonder, dreaming beside. beauty, in motion. All is
-              flowing, rushing and tide-And I sit in wonder, dreaming beside
-            </p>
-            <p>
-              It’s windy. The cool breeze of the ocean. It gives, a sense of
-              beauty, in motion. All is flowing, rushing and tide-And <br />I
-              sit in wonder, dreaming beside. beauty, in motion. All is flowing,
-              rushing and tide-And I sit in wonder, dreaming beside
-            </p>
-            <p>
-              It’s windy. The cool breeze of the ocean. It gives, a sense of
-              beauty, in motion. All is flowing, rushing and tide-And
-              <br /> I sit in wonder, dreaming beside. beauty, in motion. All is
-              flowing, rushing and tide-And I sit in wonder, dreaming beside
-            </p>
-          </div>
+          <div className="text_art">
+            {renderHTML(this.state.content)}
+            </div>
         </div>
-        <div className="podcast">
+        {/* <div className="podcast">
           <CardDeck>
             <Card className="container-card">
               <Card.Img
@@ -120,12 +99,12 @@ class Article extends Component {
               </Card.Body>
             </Card>
           </CardDeck>
-        </div>
-        <div className="Poppost">
+        </div> */}
+        {/* <div className="Poppost">
           <div className="card">
             <div className="popRow">
               <div>
-                <img className="popImg" src="../images/Rectangle_30.png"></img>
+                <img className="popImg" src={this.state.feature_image}></img>
               </div>
               <div className="popText">
                 <p>
@@ -153,7 +132,7 @@ class Article extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
