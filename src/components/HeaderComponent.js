@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,
    Modal } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
+import { BACKEND_URL } from '../constants/constants'
+import axios from 'axios'
 
 class Header extends Component {
 
@@ -10,7 +12,14 @@ class Header extends Component {
         this.state={
             isNavOpen: false,
             isMdodalOpen: false,
-            isMdodalOpenj:false
+            isMdodalOpenj:false,
+            
+            firstName: '',
+            lastName: '',
+            email: '',
+            password: '',
+            confirmPassword: '',
+            instiEmail: ''
         };
         this.toggleNav=this.toggleNav.bind(this);
         this.toggleModal=this.toggleModal.bind(this);
@@ -45,6 +54,44 @@ class Header extends Component {
             + " Remember: " + this.remember.checked);
         event.preventDefault();
     }
+
+    handleSubmit = (e) => {
+      e.preventDefault()
+      
+      // check if password and confirm password match, raise error accordingly
+      if(this.state.password !== this.state.confirmPassword) {
+        console.log("FRONTEND TEAM, please show the error");
+        return
+      }
+
+      const data = {
+        name: this.state.firstName + ' ' + this.state.lastName,
+        email: this.state.email,
+        password_hash: this.state.password,
+        insti_email: this.state.instiEmail
+      }
+
+      const URL = BACKEND_URL + '/user/signup/'
+      console.log("sending this ", data)
+      axios
+        .post(URL,data)
+        .then(res => {
+          console.log("res is ", res.data);
+          if (res.message === "success") {
+            console.log("FRONTEND TEAM TELL THEM TO SEE THEIR MAIL I")
+          }
+        })
+        .catch(err => {
+          if (err.response.status === 400) 
+          console.log("FRONTEND TEAM - SHOW WRONG EMAIL ADDRESS GIVEN BOLKE")
+          else if (err.response.status === 500) 
+          console.log("FRONTEND TEAM - SHOW unable to conect to server GIVEN BOLKE")
+          else if (err.response.status === 409)
+          console.log("FRONTEND TEAM SHOW USER ALREADY REG")
+        })
+
+    }
+
     render() {
         
         return(
@@ -136,7 +183,7 @@ class Header extends Component {
 
 					<p style={{margin:"1em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password"
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password"   placeholder="Password"
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
@@ -215,39 +262,43 @@ class Header extends Component {
 					<p class="cd-signin-modal__fieldset">
 						
                         <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userfname" type="text"
-                         placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px"}}/>
+                         placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
 						
 					</p></div>
 					<div class="d"><p>.</p></div>
 					<div class="a">
 						<p class="cd-signin-modal__fieldset">
                         <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userlname" type="text"
-                         placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px"}}/>
+                         placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
 						
 					</p></div></div>
 					<p style={{margin:"1em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
+                        onChange={(e) => this.setState({email: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 					<p style={{margin:"1em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="Institute E-mail" 
+                        onChange={(e) => this.setState({instiEmail: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 
 					<p style={{margin:"1em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password"
+            <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Password"
+            onChange={(e) => this.setState({password: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 					<p style={{margin:"1em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Confirm Password"
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Confirm Password"
+                        onChange={(e) => this.setState({confirmPassword: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
@@ -262,8 +313,10 @@ class Header extends Component {
 					</p></div></div>
 
 					<p style={{margin:"1em 0"}}>
-						<center><a href="twitter.com" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
-                         padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}>
+						<center><a  className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
+                         padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}
+                         onClick={(e) => this.handleSubmit(e)}
+                         >
           								 Continue
        							 </a></center>
 					</p>
