@@ -72,10 +72,11 @@ class Header extends Component {
                             </NavItem>
                             
                             <NavItem className="ml-5 ">
-                                <NavLink className="nav-link" to='/contactus' id="login" onClick={this.toggleModalj}> Login</NavLink>
+                                <div onClick={this.toggleModal} id="login"> Login </div>
+                                
                             </NavItem>
                             <NavItem className="ml-2 ">
-                                <button className="custom-button" onClick={this.toggleModal}>
+                                <button className="custom-button" onClick={this.toggleModalj}>
                                      Join
                                 </button>
                             </NavItem>
@@ -96,7 +97,7 @@ class Header extends Component {
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}> Welcome Back</p>
                     <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",letterSpacing:"1px"}}>Signin to access personalized articles, podcasts, career enhancement services along with interest based professional communication groups.</p><br/>
 
- 	<center><a  src="./img/cd-logo.svg" className="fb btn" alt="logo missing">
+ 	<center><a  href="./img/cd-logo.svg" className="fb btn" alt="logo missing">
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
@@ -150,15 +151,15 @@ class Header extends Component {
 					</p></div></div>
 
 					<p style={{margin:"1em 0"}}>
-						<center><a href="#" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
+						<center><a href="twitter.com" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
                          padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}>
           								 Continue
        							 </a></center>
 					</p>
 
-					<center><a href="#" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/><br/>
+					<center><a href="google.com" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/><br/>
 					
-					<center><p style={{fontSize:"14px" , fontFamily:"Montserrat"}}>No Account? <a href="#0" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Create One</a></p></center>
+					<center><p style={{fontSize:"14px" , fontFamily:"Montserrat"}}>No Account? <a href="#0" data-signin="signup" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Create One</a></p></center>
 
 				</form>
 				
@@ -173,11 +174,11 @@ class Header extends Component {
                     <form className="cd-signin-modal__form">
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}>
                     Join Numo Uno</p>
-                    <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",letterSpacing:"1px"}}>
+                    <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px"}}>
                     Create an account to access personalized articles, podcasts,
                      career enhancement services along with interest based professional communication groups.</p><br/>
 
- 	<center><a  src="./img/cd-logo.svg" className="fb btn">
+ 	<center><a  href="./img/cd-logo.svg" className="fb btn">
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
@@ -248,14 +249,14 @@ class Header extends Component {
 					</p></div></div>
 
 					<p style={{margin:"1em 0"}}>
-						<center><a href="#" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
+						<center><a href="twitter.com" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
                          padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}>
           								 Continue
        							 </a></center>
 					</p>
 
 					<p style={{fontSize:"14px" , fontFamily:"Montserrat"}}><center>Already Have an Account?
-                        <a href="#0" style={{fontSize:"14px" , fontFamily:"Montserrat"}}>Signin</a></center></p>
+                        <a href="#0" data-signin="signup" style={{fontSize:"14px" , fontFamily:"Montserrat"}}>Signin</a></center></p>
 
 				</form>
 				
