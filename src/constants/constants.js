@@ -1,4 +1,4 @@
-export const BACKEND_URL = "http://a4216632b7a8.ngrok.io";
+export const BACKEND_URL = "http://cf337265ac72.ngrok.io";
 
 export const BLOG_URL = "http://localhost:2368/ghost/api/v3/content";
 
