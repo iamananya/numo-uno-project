@@ -342,7 +342,7 @@
   float: left;
 }
 
-#podCard {
+.podCard {
   margin-top: 20px;
   border: 0px solid white;
   position: -webkit-sticky; /* Safari */

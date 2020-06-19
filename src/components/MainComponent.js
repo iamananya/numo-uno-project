@@ -16,8 +16,10 @@ class Main extends Component {
     const HomePage = () => {
       return <Home />;
     };
+    
+    
     return (
-      <div>
+      <div id="root">
         <Switch>
           <Route path="/home" component={Home} />
           <Route
@@ -32,6 +34,7 @@ class Main extends Component {
       </div>
     );
   }
+
 }
 
 export default Main;
