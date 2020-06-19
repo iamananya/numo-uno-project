@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Blog extends Component {
+class BlogPage extends Component {
   render() {
     return (
       <div id="row">
@@ -11,7 +11,8 @@ class Blog extends Component {
                 <img
                   className="image_blog"
                   src="../images/Rectangle_52.png"
-                ></img>
+                  alt="blog not found"
+                />
               </div>
               <div id="column">
                 <h2>Column 2</h2>
@@ -26,15 +27,18 @@ class Blog extends Component {
                   <img
                     className="bottom_img"
                     src="../images/Rectangle_53.png"
-                  ></img>
+                    alt="blog not found"
+                  />
                   <img
                     className="bottom_img"
                     src="../images/Rectangle_54.png"
-                  ></img>
+                    alt="blog not found"
+                  />
                   <img
                     className="bottom_img"
                     src="../images/Rectangle_55.png"
-                  ></img>
+                    alt="blog not found"
+                  />
                 </div>
               </div>
             </div>
@@ -44,7 +48,8 @@ class Blog extends Component {
               <img
                 className="image_blog1"
                 src="../images/Rectangle_16.png"
-              ></img>
+                alt="blog not found"
+              />
               <div className="textOnImg">
                 <h2>Must see places for summer 2019</h2>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -61,7 +66,9 @@ class Blog extends Component {
                 <img
                   className="image_article"
                   src="../images/Rectangle_52_b.png"
-                ></img>
+                  alt="blog not found"
+                  
+                />
               </div>
               <div className="column1">
                 <h2>Column 2</h2>
@@ -81,7 +88,8 @@ class Blog extends Component {
                 <img
                   className="image_article"
                   src="../images/Rectangle_52_b.png"
-                ></img>
+                  alt="blog not found"
+                />
               </div>
               <div className="column1">
                 <h2>Column 2</h2>
@@ -101,7 +109,8 @@ class Blog extends Component {
                 <img
                   className="image_article"
                   src="../images/Rectangle_52_b.png"
-                ></img>
+                  alt="blog not found"
+                />
               </div>
               <div className="column1">
                 <h2>Column 2</h2>
@@ -121,7 +130,8 @@ class Blog extends Component {
                 <img
                   className="image_article"
                   src="../images/Rectangle_52_b.png"
-                ></img>
+                  alt="blog not found"
+                />
               </div>
               <div className="column1">
                 <h2>Column 2</h2>
@@ -141,7 +151,8 @@ class Blog extends Component {
                 <img
                   className="image_article"
                   src="../images/Rectangle_52_b.png"
-                ></img>
+                  alt="blog not found"
+                />
               </div>
               <div className="column1">
                 <h2>Column 2</h2>
@@ -161,7 +172,8 @@ class Blog extends Component {
                 <img
                   className="image_article"
                   src="../images/Rectangle_52_b.png"
-                ></img>
+                  alt="blog not found"
+                />
               </div>
               <div className="column1">
                 <h2>Column 2</h2>
@@ -184,117 +196,117 @@ class Blog extends Component {
             </button>
             <div className="popRow">
               <div>
-                <img className="popImg" src="../images/Rectangle_29.png"></img>
+                <img className="popImg" src="../images/Rectangle_29.png" alt="Rectangle"/>
               </div>
               <div className="popText">
-                <p>
+                <div>
                   <h3>CODING</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
-                </p>
+                </div>
               </div>
             </div>
             <div className="popRow">
               <div>
-                <img className="popImg" src="../images/Rectangle_30.png"></img>
+                <img className="popImg" src="../images/Rectangle_30.png" alt="Rectangle"/>
               </div>
               <div className="popText">
-                <p>
+              <div>
                   <h3>CODING</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
-                </p>
+                </div>
               </div>
             </div>
             <div className="popRow">
               <div>
-                <img className="popImg" src="../images/Rectangle_31.png"></img>
+                <img className="popImg" src="../images/Rectangle_31.png" alt="Rectangle"/>
               </div>
               <div className="popText">
-                <p>
+              <div>
                   <h3>CODING</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
-                </p>
+                </div>
               </div>
             </div>
             <div className="popRow">
               <div>
-                <img className="popImg" src="../images/Rectangle_32.png"></img>
+                <img className="popImg" src="../images/Rectangle_32.png" alt="Rectangle"/>
               </div>
               <div className="popText">
-                <p>
+              <div>
                   <h3>CODING</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
-                </p>
+                </div>
               </div>
             </div>
             <div className="popRow">
               <div>
-                <img className="popImg" src="../images/Rectangle_33.png"></img>
+                <img className="popImg" src="../images/Rectangle_33.png " alt="blog not found"/>
               </div>
               <div className="popText">
-                <p>
+              <div>
                   <h3>CODING</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
-                </p>
+                </div>
               </div>
             </div>
             <div className="popRow">
               <div>
-                <img className="popImg" src="../images/Rectangle_30.png"></img>
+                <img className="popImg" src="../images/Rectangle_30.png" alt="blog not found"/>
               </div>
               <div className="popText">
-                <p>
+              <div>
                   <h3>CODING</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
-                </p>
+                </div>
               </div>
             </div>
             <div className="popRow">
               <div>
-                <img className="popImg" src="../images/Rectangle_31.png"></img>
+                <img className="popImg" src="../images/Rectangle_31.png" alt="blog not found"/>
               </div>
               <div className="popText">
-                <p>
+              <div>
                   <h3>CODING</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
-                </p>
+                </div>
               </div>
             </div>
           </div>
-          <div id="podCard">
+          <div className="podCard">
             <button href="" className="custom-button3">
               Latest Podcast
             </button>
             <div className="podRow">
               <div>
-                <img className="podImg" src="../images/Rectangle_13.png"></img>
+                <img className="podImg" src="../images/Rectangle_13.png" alt="blog not found"/>
               </div>
               <div className="podText">
-                <p>
+                <div>
                   <h3>Apple</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
-                </p>
+                </div>
               </div>
             </div>
             <div className="podRow">
               <div>
-                <img className="podImg" src="../images/Rectangle_14.png"></img>
+                <img className="podImg" src="../images/Rectangle_14.png" alt="blog not found"/>
               </div>
               <div className="podText">
-                <p>
+              <div>
                   <h3>Apple</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
-                </p>
+                </div>
               </div>
             </div>
             <div className="podRow">
               <div>
-                <img className="podImg" src="../images/Rectangle_15.png"></img>
+                <img className="podImg" src="../images/Rectangle_15.png" alt="blog not found"/>
               </div>
               <div className="podText">
-                <p>
+              <div>
                   <h3>Apple</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -304,4 +316,4 @@ class Blog extends Component {
   }
 }
 
-export default Blog;
+export default BlogPage;

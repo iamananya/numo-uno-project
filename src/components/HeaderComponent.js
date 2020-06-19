@@ -32,6 +32,10 @@ class Header extends Component {
         this.setState({
             isMdodalOpenj: !this.state.isMdodalOpenj
         });
+        document.getElementById("root").style.filter = "blur(20px)";
+        if(this.state.isMdodalOpenj){
+            document.getElementById("root").style.filter = "blur(0px)";
+        }
     }
     handleLogin(event){
         this.toggleModal();
@@ -72,10 +76,11 @@ class Header extends Component {
                             </NavItem>
                             
                             <NavItem className="ml-5 ">
-                                <NavLink className="nav-link" to='/contactus' id="login" onClick={this.toggleModalj}> Login</NavLink>
+                                <div onClick={this.toggleModal} id="login"> Login </div>
+                                
                             </NavItem>
                             <NavItem className="ml-2 ">
-                                <button className="custom-button" onClick={this.toggleModal}>
+                                <button className="custom-button" onClick={this.toggleModalj}>
                                      Join
                                 </button>
                             </NavItem>
@@ -86,7 +91,8 @@ class Header extends Component {
                     </div>
                 </Navbar>
                 
-                <Modal  isOpen={this.state.isMdodalOpen} toggle={this.toggleModal} style={{marginTop:"150px",borderRadius:"10px"}} >
+                <Modal  isOpen={this.state.isMdodalOpen} toggle={this.toggleModal} centered={true} 
+                centered={true}  style={{borderRadius:"15px",border:"0px",background:"white"}}style={{borderRadius:"15px"}} >
            
            <center>
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"10px"
@@ -96,7 +102,7 @@ class Header extends Component {
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}> Welcome Back</p>
                     <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",letterSpacing:"1px"}}>Signin to access personalized articles, podcasts, career enhancement services along with interest based professional communication groups.</p><br/>
 
- 	<center><a  src="./img/cd-logo.svg" className="fb btn" alt="logo missing">
+ 	<center><a  href="./img/cd-logo.svg" className="fb btn" alt="logo missing">
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
@@ -150,13 +156,13 @@ class Header extends Component {
 					</p></div></div>
 
 					<p style={{margin:"1em 0"}}>
-						<center><a href="#" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
+						<center><a href="twitter.com" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
                          padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}>
           								 Continue
        							 </a></center>
 					</p>
 
-					<center><a href="#" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/><br/>
+					<center><a href="google.com" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/><br/>
 					
 					<center><p style={{fontSize:"14px" , fontFamily:"Montserrat"}}>No Account? <a href="#0" data-signin="signup" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Create One</a></p></center>
 
@@ -164,8 +170,8 @@ class Header extends Component {
 				
 				</div></center>
        </Modal>
-       <Modal  isOpen={this.state.isMdodalOpenj} toggle={this.toggleModalj} style={{marginTop:"150px",letterSpacing:"1px"}}>
-           
+       <Modal  isOpen={this.state.isMdodalOpenj} toggle={this.toggleModalj} centered={true} 
+       backdropTransition={{ timeout: 500000 }} style={{letterSpacing:"1px",border:"0px",background:"white"}}>
            <center>
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"10px"
                     ,boxShadow: "0 0 8px rgba(0,0,0,.15)",width:"auto",
@@ -177,7 +183,7 @@ class Header extends Component {
                     Create an account to access personalized articles, podcasts,
                      career enhancement services along with interest based professional communication groups.</p><br/>
 
- 	<center><a  src="./img/cd-logo.svg" className="fb btn">
+ 	<center><a  href="./img/cd-logo.svg" className="fb btn">
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
@@ -238,6 +244,13 @@ class Header extends Component {
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
+					<p style={{margin:"1em 0"}}>  
+						<center>
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Confirm Password"
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
+						
+						<span className="cd-signin-modal__error">Error message here!</span></center>
+					</p>
                     
 					<div className="row">
 						{/* <div className="b"><p>.</p></div> */}
@@ -248,7 +261,7 @@ class Header extends Component {
 					</p></div></div>
 
 					<p style={{margin:"1em 0"}}>
-						<center><a href="#" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
+						<center><a href="twitter.com" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
                          padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}>
           								 Continue
        							 </a></center>

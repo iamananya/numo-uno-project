@@ -1,39 +1,32 @@
-import React, { Component } from 'react';
-import Menu from './MenuComponent';
-import { DISHES } from '../shared/dishes';
+import React, { Component } from "react";
+import Menu from "./MenuComponent";
 
-import Home from './HomeComponent';
+import Home from "./HomeComponent";
 
-import BlogFinal from './SirfBlog';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import BlogFinal from "./SirfBlog";
+import { Switch, Route, Redirect } from "react-router-dom";
+import ArticleFinal from "./ArticleCall";
 
 class Main extends Component {
-
   constructor(props) {
     super(props);
-    this.state = {
-        dishes: DISHES,
-    };
   }
 
-
   render() {
-    const HomePage = () => {
-      return(
-          <Home 
-          />
-      );
-    }
+    
     return (
-      <div>
-        
+      <div id="root">
         <Switch>
-              <Route path='/home'component={Home} />
-              <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
-              <Route path='/blog' component={BlogFinal} />
-              <Redirect to="/home" />
-          </Switch>
-        
+          <Route path="/home" component={Home} />
+          <Route
+            exact
+            path="/menu"
+            component={() => <Menu dishes={this.state.dishes} />}
+          />
+          <Route exact path="/blog" component={BlogFinal} />
+          <Route path="/blog/:id" component={ArticleFinal} />
+          <Redirect to="/home" />
+        </Switch>
       </div>
     );
   }
