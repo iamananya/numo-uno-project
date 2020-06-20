@@ -30,7 +30,7 @@ function Home(props) {
                                                    {/* This is the second row */}
           <div id="row1" className="row">
             <div className="col-12 col-md-5 mx-auto">
-                <img width="100%" src={`${process.env.PUBLIC_URL}%assets/images/man.png`} alt="not found"/>
+                <img width="100%" src={`${process.env.PUBLIC_URL}assets/images/man.png`} alt="not found"/>
             </div>
             <div id="center-text" className="col-12 col-md-5 ">
               <div  >
