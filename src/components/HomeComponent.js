@@ -23,14 +23,14 @@ function Home(props) {
               </button>
             </div>
             <div className="col-12 col-md-4 ">
-              <img  id="numounomobile"src="/assets/images/mobile.png" alt="not found"/>
+              <img  id="numounomobile"src={`${process.env.PUBLIC_URL}/assets/images/mobile.png`} alt="not found"/>
             </div>
           </div>
 
                                                    {/* This is the second row */}
           <div id="row1" className="row">
             <div className="col-12 col-md-5 mx-auto">
-                <img width="100%" src="/assets/images/man.png" alt="not found"/>
+                <img width="100%" src={`${process.env.PUBLIC_URL}%assets/images/man.png`} alt="not found"/>
             </div>
             <div id="center-text" className="col-12 col-md-5 ">
               <div  >
@@ -69,7 +69,7 @@ Our job is to build your website so that it is functional and user-friendly but 
           <div  className="col-12 col-md-6 col-lg-3 ">
             <Card id="card-odd" width="100%">
               <CardBody>
-                <img id ="card-img" top src="/assets/images/grey_rectangle.png" alt="Grey rectangle not found"/>
+                <img id ="card-img" top src={`${process.env.PUBLIC_URL}/assets/images/grey_rectangle.png`} alt="Grey rectangle not found"/>
                 <div id="bottom-text">
                 <CardTitle id="card-heading">PARCELS</CardTitle>
                 <CardText id="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  </CardText>
@@ -80,7 +80,7 @@ Our job is to build your website so that it is functional and user-friendly but 
           <div  className="col-12 col-md-6 col-lg-3">
             <Card id="card-even" width="100%">
               <CardBody>
-                <img id ="card-img" top src="/assets/images/grey_rectangle.png" alt="Grey rectangle not found"/>
+                <img id ="card-img" top src={`${process.env.PUBLIC_URL}/assets/images/grey_rectangle.png`} alt="Grey rectangle not found"/>
                 <div id="bottom-text">
                 <CardTitle id="card-heading">PARCELS</CardTitle>
                 <CardText id="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  </CardText>
@@ -92,7 +92,7 @@ Our job is to build your website so that it is functional and user-friendly but 
             <Card id="card-odd" width="100%">
               
               <CardBody>
-                <img id ="card-img" top src="/assets/images/grey_rectangle.png" alt="Grey rectangle not found"/>
+                <img id ="card-img" top src="%PUBLIC_URL%/assets/images/grey_rectangle.png" alt="Grey rectangle not found"/>
                 <div id="bottom-text">
                 <CardTitle id="card-heading">PARCELS</CardTitle>
                 <CardText id="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  </CardText>
@@ -103,7 +103,7 @@ Our job is to build your website so that it is functional and user-friendly but 
           <div  className="col-12 col-md-6 col-lg-3">
             <Card id="card-even" width="100%">
               <CardBody>
-                <img id ="card-img" top src="/assets/images/grey_rectangle.png" alt="Grey rectangle not found"/>
+                <img id ="card-img" top src={`${process.env.PUBLIC_URL}/assets/images/grey_rectangle.png`} alt="Grey rectangle not found"/>
                 <div id="bottom-text">
                 <CardTitle id="card-heading">PARCELS</CardTitle>
                 <CardText id="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  </CardText>
