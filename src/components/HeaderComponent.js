@@ -19,7 +19,10 @@ class Header extends Component {
             email: '',
             password: '',
             confirmPassword: '',
-            instiEmail: ''
+            instiEmail: '',
+
+            loginEmail: '',
+            loginPassword: ''
         };
         this.toggleNav=this.toggleNav.bind(this);
         this.toggleModal=this.toggleModal.bind(this);
@@ -58,6 +61,36 @@ class Header extends Component {
             + " Remember: " + this.remember.checked);
         event.preventDefault();
     }
+
+    handleLoginClick = e => {
+        e.preventDefault()
+
+        const data = {
+            email: this.state.loginEmail,
+            password: this.state.loginPassword
+        }
+
+        const URL = `${BACKEND_URL}/user/login/`
+        console.log("data is ", data)
+        console.log("url is ", URL)
+        axios
+            .post(URL, data)
+            .then(res => {
+                console.log("res is ", res.data);
+                if(res.data.message === "success") {
+                    localStorage.setItem("tttoken",res.data.token)
+                    console.log("FRONTEND TEAM LOGIN SUCES REDIRECT TO LOGIN PAGE")
+                }
+            })
+            .catch(err => {
+                console.log("err is ", err)
+                if(err.response.status === 401) {
+                    console.log("FRONTEND TEAM SHOW INVALID CREDENTIALS")
+                }
+
+            })
+    }
+
 
     handleSubmit = (e) => {
       e.preventDefault()
@@ -189,6 +222,7 @@ class Header extends Component {
 					<p style={{margin:"1em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password"   placeholder="Password"
+                        onChange={e => this.setState({ loginPassword: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
@@ -204,7 +238,9 @@ class Header extends Component {
 
 					<p style={{margin:"0em 0"}}>
 						<center><a href="twitter.com" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
-                         padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}>
+                         padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}
+                         onClick={this.handleLoginClick}
+                         >
           								 Continue
        							 </a></center>
 					</p>
@@ -269,28 +305,28 @@ class Header extends Component {
 					<p class="cd-signin-modal__fieldset">
 						
                         <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userfname" type="text"
-                         placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px", height:"70%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
+                         placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
 						
 					</p></div>
 					<div class="d"><p>.</p></div>
 					<div class="a">
 						<p class="cd-signin-modal__fieldset">
                         <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userlname" type="text"
-                         placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px", height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
+                         placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
 						
 					</p></div></div>
 					<p style={{margin:"1em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
                         onChange={(e) => this.setState({email: e.target.value})}
-                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 					<p style={{margin:"1em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="Institute E-mail" 
                         onChange={(e) => this.setState({instiEmail: e.target.value})}
-                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans", height:"70%"}}/>
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 
@@ -312,7 +348,8 @@ class Header extends Component {
 					</p>
 					<p style={{margin:"1em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Confirm Password"
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Confirm Password"
+                        onChange={(e) => this.setState({confirmPassword: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
@@ -326,7 +363,7 @@ class Header extends Component {
 							<label for="remember-me" style={{fontSize:"12px", fontFamily:"Montserrat"}}>I agree to Terms and Conditions</label>
 					</p></div></div>
 
-					<p style={{margin:"0em 0"}}>
+					<p style={{margin:"1em 0"}}>
 						<center><a  className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
                          padding:"5px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}
                          onClick={(e) => this.handleSubmit(e)}

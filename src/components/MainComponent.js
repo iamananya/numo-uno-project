@@ -6,6 +6,7 @@ import Home from "./HomeComponent";
 import BlogFinal from "./SirfBlog";
 import { Switch, Route, Redirect } from "react-router-dom";
 import ArticleFinal from "./ArticleCall";
+import VerifyComponent from "./VerifyComponent";
 
 class Main extends Component {
   constructor(props) {
@@ -16,8 +17,6 @@ class Main extends Component {
     const HomePage = () => {
       return <Home />;
     };
-    
-    
     return (
       <div id="root">
         <Switch>
@@ -28,7 +27,9 @@ class Main extends Component {
             component={() => <Menu dishes={this.state.dishes} />}
           />
           <Route exact path="/blog" component={BlogFinal} />
+
           <Route path="/blog/:id" component={ArticleFinal} />
+          <Route path="/user/verify/:id" component={VerifyComponent} />
           <Redirect to="/home" />
         </Switch>
       </div>
