@@ -92,10 +92,10 @@ class Header extends Component {
                 </Navbar>
                 
                 <Modal  isOpen={this.state.isMdodalOpen} toggle={this.toggleModal} centered={true} 
-                centered={true}  style={{borderRadius:"15px",border:"0px",background:"white"}}style={{borderRadius:"15px"}} >
-           
+                centered={true}  style={{borderRadius:"15px",border:"0px",background:"white"}} >
+                    <div className="modal-content" style={{borderRadius:"15px"}}>
            <center>
-                    <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"10px"
+                    <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
                     ,boxShadow: "0 0 6px rgba(0,0,0,.1)",width:"auto",
                 }}>			
                     <form className="cd-signin-modal__form">
@@ -135,14 +135,14 @@ class Header extends Component {
 					<p style={{margin:"1em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
-                        style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans"}}/>
+                        style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 
 					<p style={{margin:"1em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password"
-                        style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans"}}/>
+                        style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
@@ -150,38 +150,40 @@ class Header extends Component {
 						<div className="b"><p>.</p></div>
 						<div className="c" style={{textAlign:"left"}}>
                             
-						<p  style={{margin:"1em 0"}}>
+						<p  style={{margin:"0.5em 0 0.5em 0.3em"}}>
 							<input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
 							<label for="remember-me" style={{fontSize:"12px", fontFamily:"Montserrat"}}>Remember me</label>
 					</p></div></div>
 
-					<p style={{margin:"1em 0"}}>
+					<p style={{margin:"0em 0"}}>
 						<center><a href="twitter.com" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
                          padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}>
           								 Continue
        							 </a></center>
 					</p>
 
-					<center><a href="google.com" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/><br/>
+					<center><a href="google.com" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/>
 					
 					<center><p style={{fontSize:"14px" , fontFamily:"Montserrat"}}>No Account? <a href="#0" data-signin="signup" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Create One</a></p></center>
 
 				</form>
 				
 				</div></center>
+                </div>
        </Modal>
        <Modal  isOpen={this.state.isMdodalOpenj} toggle={this.toggleModalj} centered={true} 
-       backdropTransition={{ timeout: 500000 }} style={{letterSpacing:"1px",border:"0px",background:"white"}}>
+       backdropTransition={{ timeout: 500000 }} style={{letterSpacing:"1px"}}>
+           <div className="modal-content" style={{borderRadius:"15px"}}>
            <center>
-                    <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"10px"
-                    ,boxShadow: "0 0 8px rgba(0,0,0,.15)",width:"auto",
+                    <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
+                    ,boxShadow: "0 0 8px rgba(0,0,0,.1)",width:"auto",
                 }}>			
                     <form className="cd-signin-modal__form">
-	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}>
+	                <p style={{fontSize:"30px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black",marginBottom:"0px"}}>
                     Join Numo Uno</p>
-                    <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px"}}>
+                    <p style={{fontSize:"12px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",marginBottom:".5em"}}>
                     Create an account to access personalized articles, podcasts,
-                     career enhancement services along with interest based professional communication groups.</p><br/>
+                     career enhancement services along with interest based professional communication groups.</p>
 
  	<center><a  href="./img/cd-logo.svg" className="fb btn">
 		<div className="b">
@@ -208,10 +210,10 @@ class Header extends Component {
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
 		Signin with Apple</div>
         	</a></center>
-		<p  style={{margin:"1em 0"}}>
+		<p  style={{margin:".5em 0"}}>
             <center>
 		or</center></p> 
-            <br/>
+            
 
             <div class="row">
 					<div class="b"><p>.</p></div>
@@ -220,34 +222,34 @@ class Header extends Component {
 					<p class="cd-signin-modal__fieldset">
 						
                         <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userfname" type="text"
-                         placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px"}}/>
+                         placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}}/>
 						
 					</p></div>
 					<div class="d"><p>.</p></div>
 					<div class="a">
 						<p class="cd-signin-modal__fieldset">
                         <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userlname" type="text"
-                         placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px"}}/>
+                         placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}}/>
 						
 					</p></div></div>
 					<p style={{margin:"1em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
-                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 
 					<p style={{margin:"1em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password"
-                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 					<p style={{margin:"1em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Confirm Password"
-                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
@@ -255,24 +257,25 @@ class Header extends Component {
 					<div className="row">
 						{/* <div className="b"><p>.</p></div> */}
 						<div className="c" style={{width: "80%", textAlign:"left"}}>
-						<p  style={{margin:"1em 60px"}}>
+						<p  style={{margin:".5em 60px 0px 60px"}}>
 							<input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
 							<label for="remember-me" style={{fontSize:"12px", fontFamily:"Montserrat"}}>I agree to Terms and Conditions</label>
 					</p></div></div>
 
-					<p style={{margin:"1em 0"}}>
+					<p style={{margin:"0em 0"}}>
 						<center><a href="twitter.com" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
-                         padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}>
+                         padding:"5px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}>
           								 Continue
        							 </a></center>
 					</p>
 
-					<p style={{fontSize:"14px" , fontFamily:"Montserrat"}}><center>Already Have an Account?
-                        <a href="#0" data-signin="signup" style={{fontSize:"14px" , fontFamily:"Montserrat"}}>Signin</a></center></p>
+					<p style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>Already Have an Account?
+                        <a href="#0" data-signin="signup" style={{fontSize:"12px" , fontFamily:"Montserrat"}}> Signin</a></center></p>
 
 				</form>
 				
 				</div></center>
+                </div>
        </Modal>
             </div>
         );
