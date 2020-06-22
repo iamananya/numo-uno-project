@@ -267,7 +267,7 @@ x sigin/signup popup
 }
 
 .cd-signin-modal__form {
-  padding: 1.4em;
+  padding: 1.0em 1.4em;
 }
 
 .cd-signin-modal__fieldset {
@@ -330,7 +330,7 @@ x sigin/signup popup
 }
 
 .cd-signin-modal__input.cd-signin-modal__input--has-padding {
-  padding: 12px 20px 12px 50px;
+  padding: 12px 20px 12px 20px;
 }
 
 .cd-signin-modal__input.cd-signin-modal__input--has-border {
@@ -427,7 +427,7 @@ x sigin/signup popup
 
 @media only screen and (min-width: 600px) {
   .cd-signin-modal__form {
-    padding: 2em;
+    padding: 1em 2em;
   }
   .cd-signin-modal__fieldset {
     margin: 2em 0;
@@ -439,7 +439,7 @@ x sigin/signup popup
     margin-bottom: 0;
   }
   .cd-signin-modal__input.cd-signin-modal__input--has-padding {
-    padding: 16px 20px 16px 50px;
+    padding: 16px 20px 16px 20px;
   }
   .cd-signin-modal__input[type=submit] {
     padding: 16px 0;

@@ -97,14 +97,14 @@ class Contact extends Component {
                       type="text"
                       id="firstname"
                       name="firstname"
-                      id="grey-border"
                       placeholder="First Name"
                       value={this.state.firstname}
                       valid={errors.firstname === ""}
                       invalid={errors.firstname !== ""}
                       onBlur={this.handleBlur("firstname")}
                       onChange={this.handleInputChange}
-                      style={{ fontSize: "18px" }}
+                      style={{ fontSize: "18px",borderColor: "rgb(53, 53, 53)",
+                      height: "64px" }}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
                       {errors.firstname}
@@ -117,14 +117,14 @@ class Contact extends Component {
                       type="tel"
                       id="telnum"
                       name="telnum"
-                      id="grey-border"
                       placeholder="Tel. number"
                       value={this.state.telnum}
                       valid={errors.telnum === ""}
                       invalid={errors.telnum !== ""}
                       onBlur={this.handleBlur("telnum")}
                       onChange={this.handleInputChange}
-                      style={{ fontSize: "18px" }}
+                      style={{ fontSize: "18px",borderColor: "rgb(53, 53, 53)",
+                      height: "64px" }}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
                       {errors.telnum}
@@ -138,14 +138,14 @@ class Contact extends Component {
                       type="email"
                       id="email"
                       name="email"
-                      id="grey-border"
                       placeholder="Email"
                       value={this.state.email}
                       valid={errors.email === ""}
                       invalid={errors.email !== ""}
                       onBlur={this.handleBlur("email")}
                       onChange={this.handleInputChange}
-                      style={{ fontSize: "18px" }}
+                      style={{ fontSize: "18px",borderColor: "rgb(53, 53, 53)",
+                      height: "64px" }}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
                       {errors.lastname}
