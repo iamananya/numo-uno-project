@@ -12,7 +12,7 @@ import Main from "./components/MainComponent";
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter  basename={window.location.pathname || ''} >
         <div className="App">
           <Main />
         </div>
