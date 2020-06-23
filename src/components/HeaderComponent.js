@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,
    Modal } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
+import { BACKEND_URL } from '../constants/constants'
+import axios from 'axios'
 
 class Header extends Component {
 
@@ -10,7 +12,17 @@ class Header extends Component {
         this.state={
             isNavOpen: false,
             isMdodalOpen: false,
-            isMdodalOpenj:false
+            isMdodalOpenj:false,
+            
+            firstName: '',
+            lastName: '',
+            email: '',
+            password: '',
+            confirmPassword: '',
+            instiEmail: '',
+
+            loginEmail: '',
+            loginPassword: ''
         };
         this.toggleNav=this.toggleNav.bind(this);
         this.toggleModal=this.toggleModal.bind(this);
@@ -53,6 +65,74 @@ class Header extends Component {
             + " Remember: " + this.remember.checked);
         event.preventDefault();
     }
+
+    handleLoginClick = e => {
+        e.preventDefault()
+
+        const data = {
+            email: this.state.loginEmail,
+            password: this.state.loginPassword
+        }
+
+        const URL = `${BACKEND_URL}/user/login/`
+        console.log("data is ", data)
+        console.log("url is ", URL)
+        axios
+            .post(URL, data)
+            .then(res => {
+                console.log("res is ", res.data);
+                if(res.data.message === "success") {
+                    localStorage.setItem("tttoken",res.data.token)
+                    console.log("FRONTEND TEAM LOGIN SUCES REDIRECT TO LOGIN PAGE")
+                }
+            })
+            .catch(err => {
+                console.log("err is ", err)
+                if(err.response.status === 401) {
+                    console.log("FRONTEND TEAM SHOW INVALID CREDENTIALS")
+                }
+
+            })
+    }
+
+
+    handleSubmit = (e) => {
+      e.preventDefault()
+      
+      // check if password and confirm password match, raise error accordingly
+      if(this.state.password !== this.state.confirmPassword) {
+        console.log("FRONTEND TEAM, please show the error");
+        return
+      }
+
+      const data = {
+        name: this.state.firstName + ' ' + this.state.lastName,
+        email: this.state.email,
+        password_hash: this.state.password,
+        insti_email: this.state.instiEmail
+      }
+
+      const URL = BACKEND_URL + '/user/signup/'
+      console.log("sending this ", data)
+      axios
+        .post(URL,data)
+        .then(res => {
+          console.log("res is ", res.data);
+          if (res.message === "success") {
+            console.log("FRONTEND TEAM TELL THEM TO SEE THEIR MAIL I")
+          }
+        })
+        .catch(err => {
+          if (err.response.status === 400) 
+          console.log("FRONTEND TEAM - SHOW WRONG EMAIL ADDRESS GIVEN BOLKE")
+          else if (err.response.status === 500) 
+          console.log("FRONTEND TEAM - SHOW unable to conect to server GIVEN BOLKE")
+          else if (err.response.status === 409)
+          console.log("FRONTEND TEAM SHOW USER ALREADY REG")
+        })
+
+    }
+
     render() {
         
         return(
@@ -103,7 +183,7 @@ class Header extends Component {
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
                     ,boxShadow: "0 0 6px rgba(0,0,0,.1)",width:"auto",
                 }}>			
-                    <form className="cd-signin-modal__form" style={{padding:}}>
+                    <form className="cd-signin-modal__form" style={{padding:"2em"}}>
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}> Welcome Back</p>
                     <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",letterSpacing:"1px"}}>Signin to access personalized articles, podcasts, career enhancement services along with interest based professional communication groups.</p><br/>
 
@@ -146,7 +226,8 @@ class Header extends Component {
 
 					<p style={{margin:"1em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password"
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password"   placeholder="Password"
+                        onChange={e => this.setState({ loginPassword: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
@@ -162,7 +243,9 @@ class Header extends Component {
 
 					<p style={{margin:"0em 0"}}>
 						<center><a href="twitter.com" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
-                         padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}>
+                         padding:"8px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}
+                         onClick={this.handleLoginClick}
+                         >
           								 Continue
        							 </a></center>
 					</p>
@@ -227,26 +310,35 @@ class Header extends Component {
 					<p class="cd-signin-modal__fieldset">
 						
                         <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userfname" type="text"
-                         placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}}/>
+                         placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
 						
 					</p></div>
 					<div class="d"><p>.</p></div>
 					<div class="a">
 						<p class="cd-signin-modal__fieldset">
                         <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userlname" type="text"
-                         placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}}/>
+                         placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
 						
 					</p></div></div>
 					<p style={{margin:"1em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
-                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
+                        onChange={(e) => this.setState({email: e.target.value})}
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
+					{/* <p style={{margin:"1em 0"}}>
+						<center>
+                        <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="Institute E-mail" 
+                        onChange={(e) => this.setState({instiEmail: e.target.value})}
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans"}}/>
+						<span className="cd-signin-modal__error">Error message here!</span></center>
+					</p> */}
 
 					<p style={{margin:"1em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password"
+                        onChange={(e) => this.setState({password: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
@@ -254,6 +346,16 @@ class Header extends Component {
 					<p style={{margin:"1em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Confirm Password"
+                        onChange={(e) => this.setState({password: e.target.value})}
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
+						
+						<span className="cd-signin-modal__error">Error message here!</span></center>
+					</p>
+				
+					<p style={{margin:"1em 0"}}>  
+						<center>
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Confirm Password"
+                        onChange={(e) => this.setState({confirmPassword: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
@@ -268,8 +370,10 @@ class Header extends Component {
 					</p></div></div>
 
 					<p style={{margin:"0em 0"}}>
-						<center><a href="twitter.com" className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
-                         padding:"5px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}>
+						<center><a  className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
+                         padding:"5px 12px",fontSize: "20px", textAlign:"center",  fontFamily:"Josefin Sans",boxShadow:"0 2",borderRadius:"10px"}}
+                         onClick={(e) => this.handleSubmit(e)}
+                         >
           								 Continue
        							 </a></center>
 					</p>
