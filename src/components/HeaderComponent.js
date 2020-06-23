@@ -159,7 +159,7 @@ class Header extends Component {
                                 <NavLink className="nav-link" to='/contactus'> Contact Us</NavLink>
                             </NavItem>
                             
-                            <NavItem className="ml-5 ">
+                            {/* <NavItem className="ml-5 ">
                                 <div onClick={this.toggleModal} id="login"> Login </div>
                                 
                             </NavItem>
@@ -167,7 +167,7 @@ class Header extends Component {
                                 <button className="custom-button" onClick={this.toggleModalj}>
                                      Join
                                 </button>
-                            </NavItem>
+                            </NavItem> */}
                             </Nav>
                             
                            
