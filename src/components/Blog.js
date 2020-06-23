@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Sticky from "react-stickynode";
 class BlogPage extends Component {
   render() {
     return (
@@ -67,7 +67,6 @@ class BlogPage extends Component {
                   className="image_article"
                   src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
                   alt="blog not found"
-                  
                 />
               </div>
               <div className="column1">
@@ -196,7 +195,11 @@ class BlogPage extends Component {
             </button>
             <div className="popRow">
               <div>
-                <img className="popImg" src={`${process.env.PUBLIC_URL}/images/Rectangle_29.png`} alt="Rectangle"/>
+                <img
+                  className="popImg"
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_29.png`}
+                  alt="Rectangle"
+                />
               </div>
               <div className="popText">
                 <div>
@@ -207,109 +210,150 @@ class BlogPage extends Component {
             </div>
             <div className="popRow">
               <div>
-                <img className="popImg" src={`${process.env.PUBLIC_URL}/images/Rectangle_30.png`} alt="Rectangle"/>
+                <img
+                  className="popImg"
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_30.png`}
+                  alt="Rectangle"
+                />
               </div>
               <div className="popText">
-              <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="popRow">
-              <div>
-                <img className="popImg" src={`${process.env.PUBLIC_URL}/images/Rectangle_31.png`} alt="Rectangle"/>
-              </div>
-              <div className="popText">
-              <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="popRow">
-              <div>
-                <img className="popImg" src={`${process.env.PUBLIC_URL}/images/Rectangle_32.png`} alt="Rectangle"/>
-              </div>
-              <div className="popText">
-              <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="popRow">
-              <div>
-                <img className="popImg" src={`${process.env.PUBLIC_URL}/images/Rectangle_33.png `} alt="blog not found"/>
-              </div>
-              <div className="popText">
-              <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="popRow">
-              <div>
-                <img className="popImg" src={`${process.env.PUBLIC_URL}/images/Rectangle_30.png`} alt="blog not found"/>
-              </div>
-              <div className="popText">
-              <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="popRow">
-              <div>
-                <img className="popImg" src={`${process.env.PUBLIC_URL}/images/Rectangle_31.png`} alt="blog not found"/>
-              </div>
-              <div className="popText">
-              <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="podCard">
-            <button href="" className="custom-button3">
-              Latest Podcast
-            </button>
-            <div className="podRow">
-              <div>
-                <img className="podImg" src={`${process.env.PUBLIC_URL}/images/Rectangle_13.png`} alt="blog not found"/>
-              </div>
-              <div className="podText">
                 <div>
-                  <h3>Apple</h3>
+                  <h3>CODING</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
                 </div>
               </div>
             </div>
-            <div className="podRow">
+            <div className="popRow">
               <div>
-                <img className="podImg" src={`${process.env.PUBLIC_URL}/images/Rectangle_14.png`} alt="blog not found"/>
+                <img
+                  className="popImg"
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_31.png`}
+                  alt="Rectangle"
+                />
               </div>
-              <div className="podText">
-              <div>
-                  <h3>Apple</h3>
+              <div className="popText">
+                <div>
+                  <h3>CODING</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
                 </div>
               </div>
             </div>
-            <div className="podRow">
+            <div className="popRow">
               <div>
-                <img className="podImg" src={`${process.env.PUBLIC_URL}/images/Rectangle_15.png`} alt="blog not found"/>
+                <img
+                  className="popImg"
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_32.png`}
+                  alt="Rectangle"
+                />
               </div>
-              <div className="podText">
+              <div className="popText">
+                <div>
+                  <h3>CODING</h3>
+                  Some text about me in culpa qui officia deserunt mollit anim..
+                </div>
+              </div>
+            </div>
+            <div className="popRow">
               <div>
-                  <h3>Apple</h3>
+                <img
+                  className="popImg"
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_33.png`}
+                  alt="blog not found"
+                />
+              </div>
+              <div className="popText">
+                <div>
+                  <h3>CODING</h3>
+                  Some text about me in culpa qui officia deserunt mollit anim..
+                </div>
+              </div>
+            </div>
+            <div className="popRow">
+              <div>
+                <img
+                  className="popImg"
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_30.png`}
+                  alt="blog not found"
+                />
+              </div>
+              <div className="popText">
+                <div>
+                  <h3>CODING</h3>
+                  Some text about me in culpa qui officia deserunt mollit anim..
+                </div>
+              </div>
+            </div>
+            <div className="popRow">
+              <div>
+                <img
+                  className="popImg"
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_31.png`}
+                  alt="blog not found"
+                />
+              </div>
+              <div className="popText">
+                <div>
+                  <h3>CODING</h3>
                   Some text about me in culpa qui officia deserunt mollit anim..
                 </div>
               </div>
             </div>
           </div>
+          <Sticky top="#header" bottomBoundary={3400}>
+            <div className="podCard">
+              <button href="" className="custom-button3">
+                Latest Podcast
+              </button>
+              <div className="podRow">
+                <div>
+                  <img
+                    className="podImg"
+                    src={`${process.env.PUBLIC_URL}/images/Rectangle_13.png`}
+                    alt="blog not found"
+                  />
+                </div>
+                <div className="podText">
+                  <div>
+                    <h3>Apple</h3>
+                    Some text about me in culpa qui officia deserunt mollit
+                    anim..
+                  </div>
+                </div>
+              </div>
+              <div className="podRow">
+                <div>
+                  <img
+                    className="podImg"
+                    src={`${process.env.PUBLIC_URL}/images/Rectangle_14.png`}
+                    alt="blog not found"
+                  />
+                </div>
+                <div className="podText">
+                  <div>
+                    <h3>Apple</h3>
+                    Some text about me in culpa qui officia deserunt mollit
+                    anim..
+                  </div>
+                </div>
+              </div>
+              <div className="podRow">
+                <div>
+                  <img
+                    className="podImg"
+                    src={`${process.env.PUBLIC_URL}/images/Rectangle_15.png`}
+                    alt="blog not found"
+                  />
+                </div>
+                <div className="podText">
+                  <div>
+                    <h3>Apple</h3>
+                    Some text about me in culpa qui officia deserunt mollit
+                    anim..
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Sticky>
         </div>
       </div>
     );

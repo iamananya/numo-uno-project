@@ -158,6 +158,7 @@
 }
 #column h2 {
   font-size: 25px;
+  padding-top: 10px;
   font-weight: 700;
 }
 .column1 {
@@ -342,10 +343,10 @@
   float: left;
 }
 
-.podCard {
+div.podCard {
   margin-top: 20px;
   border: 0px solid white;
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
