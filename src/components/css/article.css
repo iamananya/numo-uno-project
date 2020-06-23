@@ -2,6 +2,8 @@
 #brand_art {
   margin-left: 4%;
   text-align: left;
+  width: 200px;
+  height: 200px;
 }
 #content_art {
   margin: 0 auto;
@@ -11,8 +13,13 @@
   font-family: Josefin Sans;
   font-size: 40px;
 }
-.container-img_art {
+#container-img_art {
   text-align: center;
+  border-radius: 5px;
+}
+#container-img_art img {
+  border-radius: 5px;
+  max-width: 375px;
 }
 .bigImg_art {
   max-width: 100%;

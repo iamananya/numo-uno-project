@@ -1,58 +1,57 @@
 import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
-import axios from "axios"
-import { BLOG_URL, BLOG_KEY } from "../constants/constants"
+import axios from "axios";
+import { BLOG_URL, BLOG_KEY } from "../constants/constants";
 import renderHTML from "react-render-html";
 
-import "../components/css/article.css"
+import "../components/css/article.css";
 
 class Article extends Component {
   state = {
-    title: '',
+    title: "",
     content: ``,
-    feature_image: ''
-  }
+    feature_image: "",
+  };
 
   componentDidMount() {
-    const postId = window.location.pathname.split('/')[2];
-    const URL = BLOG_URL + `/posts/${postId}/?key=${BLOG_KEY}`
+    const postId = window.location.pathname.split("/")[2];
+    const URL = BLOG_URL + `/posts/${postId}/?key=${BLOG_KEY}`;
     axios
       .get(URL)
-      .then(res => {
-        console.log("res.data ", res.data)
+      .then((res) => {
+        console.log("res.data ", res.data);
         this.setState({
           title: res.data.posts[0].title,
           content: res.data.posts[0].html,
-          feature_image: res.data.posts[0].feature_image
-        })
+          feature_image: res.data.posts[0].feature_image,
+        });
       })
-      .catch(err => {
-        console.log("err is ",err)
-      })
+      .catch((err) => {
+        console.log("err is ", err);
+      });
   }
-  
+
   render() {
     return (
       <div>
         <div id="brand_art">
-          <img style ={{ width: '400px', height: '400px'}}src={this.state.feature_image}></img>
+          <img src="../images/logo_black_croped2.png"></img>
         </div>
         <div id="content_art">
-          <h1>
-         Title:  {this.state.title}
-           </h1>
-           <div className="social_art">
+          <h1>Title: {this.state.title}</h1>
+          <div className="social_art">
             <i className="fab fa-facebook fa-3x"></i>
             <i class="fab fa-linkedin fa-3x"></i>
             <i class="fab fa-instagram fa-3x"></i>
           </div>
-          <div className="container-img_art">
-            <img className="bigImg_art" src="../images/Rectangle_502.png"></img>
+          <div id="container-img_art">
+            <img
+              style={{ width: "400px" }}
+              src={this.state.feature_image}
+            ></img>
           </div>
-          <div className="text_art">
-            {renderHTML(this.state.content)}
-            </div>
+          <div className="text_art">{renderHTML(this.state.content)}</div>
         </div>
         {/* <div className="podcast">
           <CardDeck>
