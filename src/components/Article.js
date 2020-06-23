@@ -23,9 +23,11 @@ class Article extends Component {
         console.log("res.data ", res.data);
         this.setState({
           title: res.data.posts[0].title,
-          content: res.data.posts[0].html,
-          feature_image: res.data.posts[0].feature_image,
+          content: res.data.posts[0].html.replace(/<img src="http:/g,'<img src="https:'),
+          feature_image: res.data.posts[0].feature_image.replace(/http:/g,'https:'),
         });
+
+
       })
       .catch((err) => {
         console.log("err is ", err);
