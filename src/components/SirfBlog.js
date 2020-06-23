@@ -14,7 +14,7 @@ function BlogFinal() {
     <div className="App">
       <Land />
       <div className="responsive">
-        <img className="title" src="../images/logo_black_croped2.png" alt="black logo"></img>
+        <img className="title" src={`${process.env.PUBLIC_URL}/images/logo_black_croped2.png`} alt="black logo"></img>
         <Navigate />
       </div>
       <HeadCards />

@@ -140,7 +140,7 @@ class Header extends Component {
                 <Navbar className="custom-nav" color="white" light expand="md">
                     <div className="container-fluid">
                         <NavbarToggler onClick={this.toggleNav} />
-                        <NavbarBrand className="mr-auto" href="/"><img src='assets/images/logo.png' height="45" width="auto" alt='Ristorante Con Fusion' /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/"><img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} height="45" width="auto" alt='Ristorante Con Fusion' /></NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav className="ml-auto" navbar>
                             <NavItem>
@@ -191,7 +191,7 @@ class Header extends Component {
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-		<img src="/assets/images/un.png" style={{width: "40%",marginTop:"2px"}} alt="Logo missing"/></div>
+		<img src={`${process.env.PUBLIC_URL}/assets/images/un.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
 		Signin with Linkedin</div>
         	</a></center>
@@ -199,7 +199,7 @@ class Header extends Component {
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-          	<img src="/assets/images/abc.svg"  style={{width: "40%",marginTop:"2px"}} alt=" twitter logo missing"/></div>
+          	<img src={`${process.env.PUBLIC_URL}/assets/images/abc.svg`}  style={{width: "40%",marginTop:"2px"}} alt=" twitter logo missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
  		Signin with Google</div>
         	</a></center>
@@ -208,7 +208,7 @@ class Header extends Component {
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-           	<img src="/assets/images/apple.webp" style={{width: "40%",marginTop:"2px"} } alt=" twitter logo missing"
+           	<img src={`${process.env.PUBLIC_URL}/assets/images/apple.webp`} style={{width: "40%",marginTop:"2px"} } alt=" twitter logo missing"
                /></div>
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
 		Signin with Apple</div>
@@ -277,7 +277,7 @@ class Header extends Component {
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-		<img src="/assets/images/un.png" style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+		<img src={`${process.env.PUBLIC_URL}/assets/images/un.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
 		Signin with Linkedin</div>
         	</a></center>
@@ -285,7 +285,7 @@ class Header extends Component {
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-          	<img src="/assets/images/abc.svg"  style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+          	<img src={`${process.env.PUBLIC_URL}/assets/images/abc.svg`}  style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
 		<div className="e" style={{textAlign: "left" ,marginTop:"5px"}}>
  		Signin with Google</div>
         	</a></center>
@@ -294,7 +294,7 @@ class Header extends Component {
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-           	<img src="/assets/images/apple.webp" style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+           	<img src={`${process.env.PUBLIC_URL}/assets/images/apple.webp`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
 		Signin with Apple</div>
         	</a></center>
@@ -338,14 +338,6 @@ class Header extends Component {
 					<p style={{margin:"1em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password"
-                        onChange={(e) => this.setState({password: e.target.value})}
-                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
-						
-						<span className="cd-signin-modal__error">Error message here!</span></center>
-					</p>
-					<p style={{margin:"1em 0"}}>  
-						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Confirm Password"
                         onChange={(e) => this.setState({password: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
 						

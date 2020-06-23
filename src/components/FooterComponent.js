@@ -7,7 +7,7 @@ function Footer(props) {
           <div className="row">
             <div className="col-12 col-md-4 mr-5" href="/">
               <img
-                src="../assets/images/logo.png"
+                src={`${process.env.PUBLIC_URL}/assets/images/logo.png`}
                 height="auto"
                 width="100%"
                 alt="Ristorante Con Fusion"

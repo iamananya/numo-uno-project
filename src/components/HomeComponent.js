@@ -117,7 +117,7 @@ Our job is to build your website so that it is functional and user-friendly but 
             <Card id="card-odd" width="100%">
               
               <CardBody>
-                <img id ="card-img" top src="%PUBLIC_URL%/assets/images/grey_rectangle.png" alt="Grey rectangle not found"/>
+                <img id ="card-img" top src={`${process.env.PUBLIC_URL}/assets/images/grey_rectangle.png`} alt="Grey rectangle not found"/>
                 <div id="bottom-text">
                 <CardTitle id="card-heading">PARCELS</CardTitle>
                 <CardText id="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam  </CardText>
@@ -159,7 +159,7 @@ Our job is to build your website so that it is functional and user-friendly but 
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-		<img src="/assets/images/un.png" style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+		<img src={`${process.env.PUBLIC_URL}/assets/images/un.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
 		Signin with Linkedin</div>
         	</a></center>
@@ -167,7 +167,7 @@ Our job is to build your website so that it is functional and user-friendly but 
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-          	<img src="/assets/images/abc.svg"  style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+          	<img src={`${process.env.PUBLIC_URL}/assets/images/abc.svg`}  style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
 		<div className="e" style={{textAlign: "left" ,marginTop:"5px"}}>
  		Signin with Google</div>
         	</a></center>
@@ -176,7 +176,7 @@ Our job is to build your website so that it is functional and user-friendly but 
 		<div className="b">
             	<p>.</p></div>
 		<div className="f">
-           	<img src="/assets/images/apple.webp" style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+           	<img src={`${process.env.PUBLIC_URL}/assets/images/apple.webp`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
 		Signin with Apple</div>
         	</a></center>

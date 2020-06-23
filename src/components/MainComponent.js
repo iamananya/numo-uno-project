@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Menu from "./MenuComponent";
 
 import Home from "./HomeComponent";
 
@@ -21,11 +20,6 @@ class Main extends Component {
       <div id="root">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route
-            exact
-            path="/menu"
-            component={() => <Menu dishes={this.state.dishes} />}
-          />
           <Route exact path="/blog" component={BlogFinal} />
 
           <Route path="/blog/:id" component={ArticleFinal} />

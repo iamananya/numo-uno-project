@@ -99,21 +99,12 @@ class Article extends Component {
               </Card.Body>
             </Card>
           </CardDeck>
-<<<<<<< HEAD
-        </div>
-        <div className="Poppost">
-          <div className="card">
-            <div className="popRow">
-              <div>
-                <img className="popImg" src="../images/Rectangle_30.png"></img>
-=======
         </div> */}
         {/* <div className="Poppost">
           <div className="card">
             <div className="popRow">
               <div>
                 <img className="popImg" src={this.state.feature_image}></img>
->>>>>>> 215fc84ebacfe6178f2a2de0837cfc4dd3650ea2
               </div>
               <div className="popText">
                 <p>
