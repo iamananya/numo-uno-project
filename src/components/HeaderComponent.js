@@ -27,6 +27,10 @@ class Header extends Component {
         this.setState({
             isMdodalOpen: !this.state.isMdodalOpen
         });
+        document.getElementById("root").style.filter = "blur(20px)";
+        if(this.state.isMdodalOpen){
+            document.getElementById("root").style.filter = "blur(0px)";
+        }
     }
     toggleModalj(){
         this.setState({
@@ -92,13 +96,14 @@ class Header extends Component {
                 </Navbar>
                 
                 <Modal  isOpen={this.state.isMdodalOpen} toggle={this.toggleModal} centered={true} 
+                backdropTransition={{ timeout: 500000 }}
                 centered={true}  style={{borderRadius:"15px",border:"0px",background:"white"}} >
                     <div className="modal-content" style={{borderRadius:"15px"}}>
            <center>
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
                     ,boxShadow: "0 0 6px rgba(0,0,0,.1)",width:"auto",
                 }}>			
-                    <form className="cd-signin-modal__form">
+                    <form className="cd-signin-modal__form" style={{padding:}}>
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}> Welcome Back</p>
                     <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",letterSpacing:"1px"}}>Signin to access personalized articles, podcasts, career enhancement services along with interest based professional communication groups.</p><br/>
 
@@ -255,7 +260,7 @@ class Header extends Component {
 					</p>
                     
 					<div className="row">
-						{/* <div className="b"><p>.</p></div> */}
+						<div className="b"><p>.</p></div>
 						<div className="c" style={{width: "80%", textAlign:"left"}}>
 						<p  style={{margin:".5em 60px 0px 60px"}}>
 							<input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
