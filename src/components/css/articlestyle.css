@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@400;700&display=swap");
+#brand_art {
+  text-align: left;
+  width: 200px;
+  height: 5%;
+  margin: 20px 20px;
+}
+
+#content_art {
+  margin: 0 auto;
+}
+
+#content_art h1 {
+  text-align: center;
+  font-family: Josefin Sans;
+  font-size: 50px;
+}
+
+#container-img_art {
+  text-align: center;
+  border-radius: 5px;
+}
+
+#container-img_art img {
+  border-radius: 5px;
+  max-width: 375px;
+}
+
+.social_art {
+  letter-spacing: 20px;
+  text-align: right;
+  margin-right: 15%;
+  margin-top: 5%;
+  margin-bottom: 30px;
+}
+
+.text_art {
+  padding: 20px;
+}
+
+.text_art p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.text_art img {
+  width: 500px;
+  max-width: 380px;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text_art p {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 20px;
+  font-family: Montserrat;
+}
+
+.text_art h2 {
+  font-size: 25px;
+  padding: 40px;
+}
+/*# sourceMappingURL=articlestyle.css.map */

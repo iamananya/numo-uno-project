@@ -5,7 +5,7 @@ import axios from "axios";
 import { BLOG_URL, BLOG_KEY } from "../constants/constants";
 import renderHTML from "react-render-html";
 
-import "../components/css/article.css";
+import "../components/css/articlestyle.css";
 
 class Article extends Component {
   state = {
@@ -36,7 +36,9 @@ class Article extends Component {
     return (
       <div>
         <div id="brand_art">
-          <img src="../images/logo_black_croped2.png"></img>
+          <img
+            src={`${process.env.PUBLIC_URL}/images/logo_black_croped2.png`}
+          ></img>
         </div>
         <div id="content_art">
           <h1>Title: {this.state.title}</h1>
@@ -46,10 +48,7 @@ class Article extends Component {
             <i class="fab fa-instagram fa-3x"></i>
           </div>
           <div id="container-img_art">
-            <img
-              style={{ width: "400px" }}
-              src={this.state.feature_image}
-            ></img>
+            <img src={this.state.feature_image}></img>
           </div>
           <div className="text_art">{renderHTML(this.state.content)}</div>
         </div>

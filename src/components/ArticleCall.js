@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/css/article.css";
+import "../components/css/articlestyle.css";
 import Article from "./Article";
 import SubscribeComponent from "./SubscribeComponent";
 import FooterComponent from "./FooterComponent";

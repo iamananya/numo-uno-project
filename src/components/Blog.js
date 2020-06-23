@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Sticky from "react-stickynode";
+import axios from "axios";
+import { BLOG_URL, BLOG_KEY } from "../constants/constants";
 class BlogPage extends Component {
   render() {
     return (
@@ -15,13 +17,15 @@ class BlogPage extends Component {
                 />
               </div>
               <div id="column">
-                <h2>Column 2</h2>
-                <p>Some text..</p>
+                <h2>Coloumn 2</h2>
+
                 <p>
-                  Sunt in culpa qui officia deserunt mollit anim id est laborum
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco.
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC, making it over 2000 years old. Richard McClintock,
+                  a Latin professor at Hampden-Sydney College in Virginia,
+                  looked up one of the more obscure Latin words, consectetur,
+                  from a Lorem Ipsum passage, and going through the cites of the
                 </p>
                 <div className="small_imgs">
                   <img
@@ -166,7 +170,7 @@ class BlogPage extends Component {
             </div>
           </div>
           <div id="card">
-            <div className="row_article">
+            <div className="row_article" id="last">
               <div className="coloumn_card1">
                 <img
                   className="image_article"
@@ -299,7 +303,7 @@ class BlogPage extends Component {
               </div>
             </div>
           </div>
-          <Sticky top="#header" bottomBoundary={3400}>
+          <Sticky top="#header" bottomBoundary="#last">
             <div className="podCard">
               <button href="" className="custom-button3">
                 Latest Podcast

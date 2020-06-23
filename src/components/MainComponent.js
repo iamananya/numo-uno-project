@@ -24,12 +24,10 @@ class Main extends Component {
 
           <Route path="/blog/:id" component={ArticleFinal} />
           <Route path="/user/verify/:id" component={VerifyComponent} />
-          <Redirect to="/home" />
         </Switch>
       </div>
     );
   }
-
 }
 
 export default Main;

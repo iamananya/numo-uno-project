@@ -5,7 +5,7 @@ import "./components/css/reset.css";
 import "./components/css/style.css";
 import "./App.css";
 import "./components/css/blog.css";
-import "./components/css/article.css";
+import "./components/css/articlestyle.css";
 import { BrowserRouter } from "react-router-dom";
 import Main from "./components/MainComponent";
 
