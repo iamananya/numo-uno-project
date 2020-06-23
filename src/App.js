@@ -10,9 +10,23 @@ import { BrowserRouter } from "react-router-dom";
 import Main from "./components/MainComponent";
 
 class App extends Component {
+  
+  state = {
+    basename: ''
+  }
+
+  componentWillMount() {
+    // in case of development and production server
+    if (window.location.hostname.includes("localhost") || window.location.hostname.includes("numouno.tech"))
+      this.setState({ basename: ''})
+    // in case of test server at github pages
+      else 
+      this.setState({ basename: '/frontend/' })
+  }
+
   render() {
     return (
-      <BrowserRouter  basename={window.location.pathname || ''} >
+      <BrowserRouter  basename={this.state.basename} >
         <div className="App">
           <Main />
         </div>
