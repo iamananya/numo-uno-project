@@ -11,22 +11,10 @@ import Main from "./components/MainComponent";
 
 class App extends Component {
   
-  state = {
-    basename: ''
-  }
-
-  componentWillMount() {
-    // in case of development and production server
-    if (window.location.hostname.includes("localhost") || window.location.hostname.includes("numouno.tech"))
-      this.setState({ basename: ''})
-    // in case of test server at github pages
-      else 
-      this.setState({ basename: '/frontend/' })
-  }
-
+  
   render() {
     return (
-      <BrowserRouter  basename={this.state.basename} >
+      <BrowserRouter>
         <div className="App">
           <Main />
         </div>
