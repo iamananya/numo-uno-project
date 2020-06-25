@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardImg, CardBody, CardText, CardTitle } from "reactstrap";
+import { withRouter } from "react-router-dom";
 
 function Blog(props) {
   return (
@@ -25,7 +26,7 @@ function Blog(props) {
             style={{
               boxShadow: "-1px 3px 20px rgba(0,0,0,.16)",
               padding: "0px",
-              margin: "0px",
+              margin: "20px 0px",
               borderRadius: "10px",
             }}
           />
@@ -49,7 +50,7 @@ function Blog(props) {
             style={{
               boxShadow: "-1px 3px 10px rgba(0,0,0,.16)",
               padding: "0px",
-              margin: "0px",
+              margin: "20px 0px",
               borderRadius: "10px",
             }}
           >
@@ -74,8 +75,9 @@ function Blog(props) {
           className="col-12 col-md-7"
           style={{
             boxShadow: "-1px 3px 20px rgba(0,0,0,.16)",
-            padding: "0px",
+            padding: "10px",
             marginRight: "auto",
+            marginBottom:" 20px",
             borderRadius: "10px",
             display: "inherit",
           }}
@@ -87,21 +89,20 @@ function Blog(props) {
             style={{ margin: " auto 1.0vw", width: "10vw", height: "10vw" }}
           />
           <div
+            
             id="blog-bottom-left"
             style={{
-              fontSize: "1vm",
-              margin: "auto 0px",
-              paddingBottom: " 10px",
-              lineHeight: ".9",
+              fontSize: "1vw",
+              margin: "auto 0px"
             }}
           >
             {" "}
             FOOD & LIFESTYLE
-            <p id="blog-text" style={{ margin: "0vw", lineHeight: ".95" }}>
+            <p id="blog-text" style={{ margin: "1vw 0vw", lineHeight: ".95" }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>{" "}
-          nn
+
           <img
             width="20%"
             src={`${process.env.PUBLIC_URL}/assets/images/blr.png`}
@@ -111,15 +112,16 @@ function Blog(props) {
           <div
             id="blog-bottom-left"
             style={{
-              fontSize: "1vm",
-              margin: "auto 0px",
-              paddingBottom: " 10px",
-              lineHeight: ".9",
+              fontSize: "1vw",
+              margin: "auto 0px"
+              
             }}
           >
             {" "}
+            <div style={{color: "rgb(231, 0, 193)"}}>
             FOOD & LIFESTYLE
-            <p id="blog-text" style={{ margin: "0vw", lineHeight: ".9" }}>
+            </div>
+            <p id="blog-text" style={{ margin: "1vw 0vw", lineHeight: ".9" }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>
@@ -131,6 +133,7 @@ function Blog(props) {
             padding: "0px",
             margin: "0px",
             borderRadius: "10px",
+            marginBottom:" 20px",
           }}
         >
           <img
@@ -138,7 +141,18 @@ function Blog(props) {
             height="100%"
             src={`${process.env.PUBLIC_URL}/assets/images/blrr.png`}
             alt="notfound"
+            style={{boxShadow: "-1px 3px 20px rgba(0,0,0,.16)"}}
           />
+          <p style={{
+            position:"absolute",
+            bottom: "10px",
+            padding:"10px",
+            color:"white",
+            fontSize:"1vw",
+          }}>
+            This is lake on the side of a river with blue water
+          </p>
+          
         </div>
         <div className="mx-auto">
           <button className="custom-button2" type="submit">

@@ -53,8 +53,7 @@ body{
     font-weight: 200;
 }
 #numounomobile{
-    width: 100%;
-    height: auto;
+    height:450px;
 }
 input{
     margin: 40px 0px 20px 0px;
@@ -154,9 +153,9 @@ nav{
     border-radius: 15px;
 }
 
-#subscribe{
-    padding: 50px 100px 0px 100px;
-    background-image: url(/assets/images/map.png);
+#subscribe1{
+    padding: 0px 100px;
+    background-image: url({`${process.env.PUBLIC_URL}/assets/images/map.png`});
 }
 #center-text{
     margin: auto;
@@ -165,7 +164,7 @@ nav{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 40px;
     color: #FFD700;
-    text-shadow: 0px 3px 2px #FFD700;
+    text-shadow: 0px 1px 2px #FFD700;
     margin-top: 100px;
 }
 #card-even{
@@ -229,9 +228,9 @@ nav{
     color: #ffd700;
     background-color: black;
     border: 0px;
-    width: 250px;
-    height: 60px;
-    font-size: 28px;
+    width: 230px;
+    height: 55px;
+    font-size: 24px;
     border-radius: 10px;
     margin: 20px 20px 20px 0px;
     
@@ -260,6 +259,7 @@ nav{
     font-size: 50px;
     font-weight: bold;
     text-shadow: 0px 3px 3px #0000002d;
+    text-align: left;
     
 }
 .social-button{
@@ -272,6 +272,7 @@ nav{
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     font-weight: lighter;
+    text-align: left;
 }
 #copyright{
     text-align: center;
@@ -341,33 +342,81 @@ nav{
     margin-right: 60px;
     left: 0px;
     top: 0px;
+    width:500px;
+    height: 600px;
+    transition: width .5s,height .5s;
+    transition-timing-function: ease
+}
+#tl:hover{
+    width: 520px;
+    height: 620px;
 }
 #tr{
     position: absolute;
     right: 0px;
     top: 0px;
+    width: 550px;
+    height:300px;
+    transition: width .5s,height .5s;
+    transition-timing-function: ease
+}
+#tr:hover{
+    width: 570px;
+    height:315px
 }
 #ml{
     margin-right: 60px;
     position: absolute;
     bottom:450px;
     left: 0px;
+    width:500px;
+    height:200px;
+    transition: width .5s,height .5s;
+    transition-timing-function: ease
+}
+#ml:hover{
+    width: 520px;
+    height: 210px;
 }
 #mr{
     position: absolute;
     bottom:300px;
     right: 0px;
+    width:550px;
+    height:650px;
+    transition: width .5s,height .5s;
+    transition-timing-function: ease
+}
+#mr:hover{
+    width: 570px;
+    height: 670px;
 }
 #bl{
     margin-right: 60px;
     position: absolute;
     bottom: 0px;
     left: 0px;
+    width:500px;
+    height:450px;
+    transition: width .5s,height .5s;
+    transition-timing-function: ease
+}
+#bl:hover{
+    width: 520px;
+    height: 470px;
 }
 #br{
     position: absolute;
     bottom:0px;
     right: 0px;
+    width:550px;
+    height:300px;
+    transition: width .5s,height .5s;
+    transition-timing-function: ease
+}
+#br:hover{
+    width: 570px;
+    height: 310px;
 }
 #skill-box{
     position: relative;
@@ -423,17 +472,32 @@ nav{
         bottom:0px;
     }
 }
+@media (max-width: 1000px){
+    .main-text{
+        font-size: 55px;
+    }
+    .main-text2{
+        font-size: 55px;
+    }
+    .sub-text{
+        margin-top: 0px;
+    }
+}
 @media (max-width: 768px){
     #pad{
         padding-right: 20px;
         
-        margin-left: 20px;
+        padding-left: 20px;
     }
     .main-text{
         font-family: 'Josefin Sans', sans-serif;
         font-size: 50px;
         font-weight: 200;
         
+    }
+    #subscribe1{
+        padding: 0px 50px;
+        background-image: url({`${process.env.PUBLIC_URL}/assets/images/map.png`});
     }
     .main-text2{
         font-size: 50px;

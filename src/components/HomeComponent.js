@@ -91,7 +91,7 @@ class Home extends Component {
                 Our job is to build your website so that it is functional and
                 user-friendly but at the same time attractive.
               </p>
-              <button className="custom-button2">Know More</button>
+              <button className="custom-button2" style={{position:"absolute",left:"20px"}}>Know More</button>
             </div>
           </div>
           {/* This is the third row */}
@@ -113,7 +113,7 @@ class Home extends Component {
 
             <div className="col-12 col-md-6 ml-auto">
               <ReactPlayer
-                height="560px"
+                height="400px"
                 width="auto"
                 controls
                 url="https://www.youtube.com/watch?v=giYeaKsXnsI.mp4"
