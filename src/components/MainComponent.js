@@ -6,6 +6,7 @@ import BlogFinal from "./SirfBlog";
 import { Switch, Route, Redirect } from "react-router-dom";
 import ArticleFinal from "./ArticleCall";
 import VerifyComponent from "./VerifyComponent";
+import PodcastCall from './PodcastCall';
 
 class Main extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Main extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/blog" component={BlogFinal} />
-
+          <Route exact path="/podcast" component={PodcastCall} />
           <Route path="/blog/:id" component={ArticleFinal} />
           <Route path="/user/verify/:id" component={VerifyComponent} />
         </Switch>

@@ -158,7 +158,7 @@ class Header extends Component {
                             </NavItem>
                             
                             <NavItem>
-                                <NavLink className="nav-link" to='/contactus'> Pod Casts</NavLink>
+                                <NavLink className="nav-link" to='/podcast'> Pod Casts</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to='/contactus'> Contact Us</NavLink>
