@@ -140,18 +140,23 @@ class Header extends Component {
                 <Navbar className="custom-nav" color="white" light expand="md">
                     <div className="container-fluid">
                         <NavbarToggler onClick={this.toggleNav} />
-                        <NavbarBrand className="mr-auto" href="/"><img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} height="45" width="auto" alt='Ristorante Con Fusion' /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/">
+                            <NavLink className="nav-link"  to='/home'
+                            style={{padding:"0px",
+                                    margin:"0px"}}>
+                                <img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`}
+                                height="50" width="auto" alt='Ristorante Con Fusion' />
+                                </NavLink>
+                            </NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/home' > Home</NavLink>
-                            </NavItem>
+                                <NavLink className="nav-link"  to='/menu'> About us</NavLink>
+                            </NavItem>c
                             <NavItem>
                                 <NavLink className="nav-link" to='/blog'> Blog</NavLink>
                             </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link"  to='/menu'> About us</NavLink>
-                            </NavItem>
+                            
                             <NavItem>
                                 <NavLink className="nav-link" to='/contactus'> Pod Casts</NavLink>
                             </NavItem>
