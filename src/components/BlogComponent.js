@@ -159,7 +159,7 @@ function Blog(props) {
             Blog
           </button>
           <button className="custom-button2" type="submit">
-            Pod Casts
+            PodCasts
           </button>
         </div>
       </div>

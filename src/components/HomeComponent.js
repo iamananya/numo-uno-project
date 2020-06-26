@@ -123,7 +123,7 @@ class Home extends Component {
 
           {/* This is the Card row */}
           <div id="row1" className="row justify-content-center">
-            <div className="col-12 col-md-6 col-lg-3 ">
+            <div className="col-6 col-md-3">
               <Card id="card-odd" width="100%">
                 <CardBody>
                   <img
@@ -142,8 +142,8 @@ class Home extends Component {
                 </CardBody>
               </Card>
             </div>
-            <div className="col-12 col-md-6 col-lg-3">
-              <Card id="card-even" width="100%">
+            <div className="col-6 col-md-3">
+              <Card id="card-even" >
                 <CardBody>
                   <img
                     id="card-img"
@@ -161,7 +161,7 @@ class Home extends Component {
                 </CardBody>
               </Card>
             </div>
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-6 col-md-3">
               <Card id="card-odd" width="100%">
                 <CardBody>
                   <img
@@ -180,7 +180,7 @@ class Home extends Component {
                 </CardBody>
               </Card>
             </div>
-            <div className="col-12 col-md-6 col-lg-3">
+            <div className="col-6 col-md-3">
               <Card id="card-even" width="100%">
                 <CardBody>
                   <img
