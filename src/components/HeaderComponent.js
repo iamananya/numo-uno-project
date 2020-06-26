@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,
    Modal } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
-import { BACKEND_URL } from '../constants/constants'
-import axios from 'axios'
+import { BACKEND_URL } from '../constants/constants';
+import Scroll from 'react-scroll';
+
+import axios from 'axios';
+const ScrollLink = Scroll.ScrollLink;
 
 class Header extends Component {
 
@@ -140,26 +143,30 @@ class Header extends Component {
                 <Navbar className="custom-nav" color="white" light expand="md">
                     <div className="container-fluid">
                         <NavbarToggler onClick={this.toggleNav} />
-                        <NavbarBrand className="mr-auto" href="/"><img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} height="45" width="auto" alt='Ristorante Con Fusion' /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/">
+                            <NavLink className="nav-link"  to='/home'
+                            style={{padding:"0px",
+                                    margin:"0px"}}>
+                                <img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`}
+                                height="50" width="auto" alt='Ristorante Con Fusion' />
+                                </NavLink>
+                            </NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/home' > Home</NavLink>
+                                <NavLink className="nav-link"  to='/about'> About us</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink className="nav-link" to='/podcast'> PodCasts</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to='/blog'> Blog</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/menu'> About us</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to='/podcast'> Pod Casts</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to='/contactus'> Contact Us</NavLink>
+                                <NavLink onClick={this.scroll}className="nav-link" to='/'> Contact Us</NavLink>
                             </NavItem>
                             
-                            <NavItem className="ml-5 ">
+                            {/* <NavItem className="ml-5 ">
                                 <div onClick={this.toggleModal} id="login"> Login </div>
                                 
                             </NavItem>
@@ -167,7 +174,7 @@ class Header extends Component {
                                 <button className="custom-button" onClick={this.toggleModalj}>
                                      Join
                                 </button>
-                            </NavItem>
+                            </NavItem> */}
                             </Nav>
                             
                            
