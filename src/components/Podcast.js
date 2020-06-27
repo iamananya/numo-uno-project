@@ -17,18 +17,21 @@ class Podcast extends Component {
             </button>
           </div>
           <div id="pod-logo">
-            <img src="../images/logo_white_crop.png"></img>
+            <img src="../images/Final_Black.png"></img>
+          </div>
+          <div id="podTitle">
+            <p>Podcast</p>
           </div>
         </div>
 
-        <CardDeck className="podRow first">
+        <CardDeck className="first" id="podRow">
           <Card id="podCard">
             <ReactPlayer
               id="podLive"
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
+            <Card.Body id="podText">
               <Card.Title>Card title</Card.Title>
               <Card.Text>
                 This is a wider card with supporting text below as a natural
@@ -44,7 +47,7 @@ class Podcast extends Component {
               style
               url="https://www.youtube.com/watch?v=yqc9zX04DXs"
             />
-            <Card.Body>
+            <Card.Body id="podText">
               <Card.Title>Card title</Card.Title>
               <Card.Text>
                 This card has supporting text below as a natural lead-in to
@@ -58,7 +61,7 @@ class Podcast extends Component {
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
+            <Card.Body id="podText">
               <Card.Title>Card title</Card.Title>
               <Card.Text>
                 This is a wider card with supporting text below as a natural
@@ -68,14 +71,14 @@ class Podcast extends Component {
             </Card.Body>
           </Card>
         </CardDeck>
-        <CardDeck className="podRow">
+        <CardDeck id="podRow">
           <Card id="podCard">
             <ReactPlayer
               id="podLive"
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
+            <Card.Body id="podText">
               <Card.Title>Card title</Card.Title>
               <Card.Text>
                 This is a wider card with supporting text below as a natural
@@ -90,7 +93,7 @@ class Podcast extends Component {
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
+            <Card.Body id="podText">
               <Card.Title>Card title</Card.Title>
               <Card.Text>
                 This card has supporting text below as a natural lead-in to
@@ -104,7 +107,7 @@ class Podcast extends Component {
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
+            <Card.Body id="podText">
               <Card.Title>Card title</Card.Title>
               <Card.Text>
                 This is a wider card with supporting text below as a natural
@@ -114,14 +117,14 @@ class Podcast extends Component {
             </Card.Body>
           </Card>
         </CardDeck>
-        <CardDeck className="podRow">
+        <CardDeck id="podRow">
           <Card id="podCard">
             <ReactPlayer
               id="podLive"
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
+            <Card.Body id="podText">
               <Card.Title>Card title</Card.Title>
               <Card.Text>
                 This is a wider card with supporting text below as a natural
@@ -136,7 +139,7 @@ class Podcast extends Component {
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
+            <Card.Body id="podText">
               <Card.Title>Card title</Card.Title>
               <Card.Text>
                 This card has supporting text below as a natural lead-in to
@@ -149,7 +152,7 @@ class Podcast extends Component {
               id="podLive"
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
+            <Card.Body id="podText">
               <Card.Title>Card title</Card.Title>
               <Card.Text>
                 This is a wider card with supporting text below as a natural
@@ -160,7 +163,8 @@ class Podcast extends Component {
           </Card>
         </CardDeck>
         <div className="Poppost">
-          <div className="card">
+          <div id="card">
+            <h2>Give It A Read</h2>
             <div className="popRow">
               <div>
                 <img className="popImg" src="../images/Rectangle_30.png"></img>
