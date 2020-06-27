@@ -8,20 +8,19 @@ class BlogPage extends Component {
     posts2: [],
   };
 
-  componentWillMount() {
+  componentDidMount() {
     const URL = BLOG_URL + "/posts/?key=" + BLOG_KEY;
     console.log("URL IS ", URL);
     axios
       .get(URL)
       .then((res) => {
-        console.log("res.data is ", res.data.posts.slice(4, 5));
-        this.setState({ posts1: res.data.posts.slice(4, 6) }, () =>
-          console.log("state1 is ", this.state.posts1)
+        console.log("res.data is ", res.data);
+        this.setState({ posts1: res.data.posts.slice(4, 5) }, () =>
+          console.log("state is ", this.state.posts)
         );
-        this.setState({ posts2: res.data.posts.slice(6) }, () =>
-          console.log("state2 is ", this.state.posts2)
+        this.setState({ posts2: res.data.posts.slice(5, 9) }, () =>
+          console.log("state is ", this.state.posts)
         );
-        console.log(this.state.posts1);
       })
       .catch((err) => {
         console.log("err in fetch in blog ", err);
@@ -33,42 +32,46 @@ class BlogPage extends Component {
     return (
       <div id="row">
         <div className="leftcolumn">
-          <div id="card">
-            <div className="row_card">
-              <div id="column_card">
-                <img
-                  className="image_blog"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div id="column">
-                <h2>
-                  {" "}
-                  <a>{this.state.posts1[0].title}</a>
-                </h2>
+          {this.state.posts1.map((post) => {
+            return (
+              <div id="card">
+                <div className="row_card">
+                  <div id="column_card">
+                    <img
+                      className="image_blog"
+                      src={post.feature_image}
+                      alt="blog not found"
+                    />
+                  </div>
+                  <div id="column">
+                    <h2>
+                      {" "}
+                      <a href={`/blog/${post.id}`}>{post.title}</a>
+                    </h2>
 
-                <p>{this.state.posts1[0].custom_excerpt}</p>
-                <div className="small_imgs">
-                  <img
-                    className="bottom_img"
-                    src={`${process.env.PUBLIC_URL}/images/Rectangle_53.png`}
-                    alt="blog not found"
-                  />
-                  <img
-                    className="bottom_img"
-                    src={`${process.env.PUBLIC_URL}/images/Rectangle_54.png`}
-                    alt="blog not found"
-                  />
-                  <img
-                    className="bottom_img"
-                    src={`${process.env.PUBLIC_URL}/images/Rectangle_55.png`}
-                    alt="blog not found"
-                  />
+                    <p>{post.custom_excerpt}</p>
+                    <div className="small_imgs">
+                      <img
+                        className="bottom_img"
+                        src={`${process.env.PUBLIC_URL}/images/Rectangle_53.png`}
+                        alt="blog not found"
+                      />
+                      <img
+                        className="bottom_img"
+                        src={`${process.env.PUBLIC_URL}/images/Rectangle_54.png`}
+                        alt="blog not found"
+                      />
+                      <img
+                        className="bottom_img"
+                        src={`${process.env.PUBLIC_URL}/images/Rectangle_55.png`}
+                        alt="blog not found"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
 
           {/* end of card */}
           {this.state.posts2.map((post) => {
@@ -78,7 +81,7 @@ class BlogPage extends Component {
                   <div className="coloumn_card1">
                     <img
                       className="image_article"
-                      src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
+                      src={post.feature_image}
                       alt="blog not found"
                     />
                   </div>

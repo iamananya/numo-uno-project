@@ -94,6 +94,11 @@
   margin-left: 6%;
   margin-right: 6%;
 }
+.headStyle {
+  max-width: 100%;
+  border-radius: 10px;
+  height: 80%;
+}
 #navstyle {
   color: black;
   text-shadow: none;
@@ -102,8 +107,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.055);
   border: 0px solid white;
   font-size: 15px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px;
 }
 .Pod {
   margin-top: 20px;
@@ -182,6 +186,7 @@
   font-family: Montserrat;
   font-size: 25px;
   font-weight: 700;
+  text-decoration: none;
 }
 #column_card {
   float: left;
@@ -227,6 +232,7 @@
   height: 60vh;
   width: 60vw;
   margin-left: 7%;
+  border-radius: 10px;
 }
 .image_blog1 {
   max-width: 100%;
@@ -362,7 +368,7 @@
 }
 
 .image_article {
-  max-width: 90%;
+  width: 50%;
   margin-right: 20px;
   height: 35vh;
   float: left;

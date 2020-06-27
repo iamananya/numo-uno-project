@@ -25,7 +25,7 @@ function BlogFinal() {
         <Navigate />
       </div>
       <HeadCards />
-      {/*<BlogPage />*/}
+      <BlogPage />
       <SubscribeComponent />
       <FooterComponent />
     </div>
