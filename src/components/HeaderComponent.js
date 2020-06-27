@@ -3,10 +3,8 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,
    Modal } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
 import { BACKEND_URL } from '../constants/constants';
-import Scroll from 'react-scroll';
 
 import axios from 'axios';
-const ScrollLink = Scroll.ScrollLink;
 
 class Header extends Component {
 
@@ -98,7 +96,10 @@ class Header extends Component {
             })
     }
 
-
+    scrollToFooter(){
+        const anchor = document.querySelector('#footer')
+        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
     handleSubmit = (e) => {
       e.preventDefault()
       
@@ -163,7 +164,7 @@ class Header extends Component {
                                 <NavLink className="nav-link" to='/blog'> Blog</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink onClick={this.scroll}className="nav-link" to='/'> Contact Us</NavLink>
+                                <NavLink onClick={this.scrollToFooter}className="nav-link" to='/'> Contact Us</NavLink>
                             </NavItem>
                             
                             {/* <NavItem className="ml-5 ">
