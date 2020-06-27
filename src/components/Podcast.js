@@ -163,7 +163,7 @@ class Podcast extends Component {
           </Card>
         </CardDeck>
         <div className="Poppost">
-          <div id="card">
+          <div id="cardPod">
             <h2>Give It A Read</h2>
             <div className="popRow">
               <div>

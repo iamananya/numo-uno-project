@@ -17,7 +17,7 @@ class HeadCards extends Component {
       .get(URL)
       .then((res) => {
         console.log("res.data is ", res.data);
-        this.setState({ posts: res.data.posts }, () =>
+        this.setState({ posts: res.data.posts.slice(0, 4) }, () =>
           console.log("state is ", this.state.posts)
         );
       })
@@ -37,7 +37,7 @@ class HeadCards extends Component {
                 <Card.Img
                   className="headStyle"
                   variant="top"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_2_ea.png`}
+                  src={post.feature_image}
                 />
                 <Card.Body>
                   <Card.Title>

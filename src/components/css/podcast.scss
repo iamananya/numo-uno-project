@@ -75,7 +75,7 @@
 .first {
   margin-top: 5%;
 }
-#card {
+#cardPod {
   border: 0px solid white;
   & h2 {
     font-size: 30px;
@@ -120,9 +120,7 @@
   letter-spacing: 2px;
   font-weight: 500;
 }
-.card {
-  border: 0px solid white;
-}
+
 .popRow {
   display: flex;
   margin: 2% 10%;

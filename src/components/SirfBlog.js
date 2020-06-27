@@ -16,13 +16,16 @@ function BlogFinal() {
       <div className="responsive">
         <img
           className="title"
-          src={`${process.env.PUBLIC_URL}/images/logo_black_croped2.png`}
+          src={`${process.env.PUBLIC_URL}/images/Final_Black.png`}
           alt="black logo"
         ></img>
+        <div id="blog-title">
+          <p>BLOG</p>
+        </div>
         <Navigate />
       </div>
       <HeadCards />
-      <BlogPage />
+      {/*<BlogPage />*/}
       <SubscribeComponent />
       <FooterComponent />
     </div>

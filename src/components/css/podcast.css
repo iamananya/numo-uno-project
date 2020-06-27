@@ -82,11 +82,11 @@
   margin-top: 5%;
 }
 
-#card {
+#cardPod {
   border: 0px solid white;
 }
 
-#card h2 {
+#cardPod h2 {
   font-size: 30px;
   word-spacing: 2px;
   text-shadow: 1px 1px grey;
@@ -131,10 +131,6 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
-}
-
-.card {
-  border: 0px solid white;
 }
 
 .popRow {
