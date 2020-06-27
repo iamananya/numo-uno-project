@@ -471,6 +471,9 @@ nav{
         
         padding-left: 20px;
     }
+    .sub-text{
+        font-size: 5vw;
+    }
     #card-heading{
         font-size: 3vw;
     }
