@@ -23,7 +23,7 @@ class Main extends Component {
           <Route exact path="/blog" component={BlogFinal} />
           <Route exact path="/podcast" component={PodcastCall} />
           <Route path="/blog/:id" component={ArticleFinal} />
-          <Route path="/user/verify/:id" component={VerifyComponent} />
+          <Route path="/verify/:id" component={VerifyComponent} />
           <Redirect to="/home" />
         </Switch>
       </div>

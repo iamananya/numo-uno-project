@@ -3,7 +3,7 @@ import { BACKEND_URL } from "../constants/constants";
 import axios from "axios";
 class VerifyComponent extends Component {
   componentDidMount() {
-    const token = window.location.pathname.split("/")[3];
+    const token = window.location.pathname.split("/")[4];
     console.log("token is ", token)
     const URL = `${BACKEND_URL}/user/verify/${token}/`;
 
