@@ -17,7 +17,7 @@ class HeadCards extends Component {
       .get(URL)
       .then((res) => {
         console.log("res.data is ", res.data);
-        this.setState({ posts: res.data.posts }, () =>
+        this.setState({ posts: res.data.posts.slice(0, 4) }, () =>
           console.log("state is ", this.state.posts)
         );
       })
@@ -34,17 +34,19 @@ class HeadCards extends Component {
           {this.state.posts.map((post) => {
             return (
               <Card id="shadowa">
-                <Card.Img
-                  className="headStyle"
-                  variant="top"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_2_ea.png`}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <a href={`/blog/${post.id}`}>{post.title}</a>
-                  </Card.Title>
-                  <Card.Text>{post.custom_excerpt}</Card.Text>
-                </Card.Body>
+                <a href={`/blog/${post.id}`}>
+                  <Card.Img
+                    id="headStyle"
+                    variant="top"
+                    src={post.feature_image}
+                  />
+                  <Card.Body>
+                    <Card.Title id="headTitle">
+                      <a href={`/blog/${post.id}`}>{post.title}</a>
+                    </Card.Title>
+                    <Card.Text>{post.custom_excerpt}</Card.Text>
+                  </Card.Body>
+                </a>
               </Card>
             );
           })}

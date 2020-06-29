@@ -9,31 +9,43 @@ class Podcast extends Component {
       <div className="podCast">
         <div className="podHead">
           <div className="ninja-header">
-            <button href="" className="custom-buttona2">
-              Blog
-            </button>
-            <button href="" className="custom-buttona1">
-              Podcast
-            </button>
+            <a href="/podcast">
+              <button href="" className="custom-buttona2">
+                Podcast
+              </button>
+            </a>
+            <a href="/blog">
+              <button href="" className="custom-buttona1">
+                Blog
+              </button>
+            </a>
           </div>
           <div id="pod-logo">
-            <img src="../images/logo_white_crop.png"></img>
+            <img src="../images/Final_Black.png"></img>
+          </div>
+          <div id="podTitle">
+            <p>Podcast</p>
           </div>
         </div>
 
-        <CardDeck className="podRow first">
+        <CardDeck className="first" id="podRow">
           <Card id="podCard">
             <ReactPlayer
               id="podLive"
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
+            <Card.Body id="podText">
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -44,11 +56,18 @@ class Podcast extends Component {
               style
               url="https://www.youtube.com/watch?v=yqc9zX04DXs"
             />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
+            <Card.Body id="podText">
+              <Card.Title>
+                <h4>
+                  The history of our world in 18 minutes | David Christian
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This card has supporting text below as a natural lead-in to
-                additional content.{" "}
+                David Christian narrates a complete history of the universe,
+                from the Big Bang to the Internet, in a riveting 18 minutes.
+                This is "Big History": an enlightening, wide-angle look at
+                complexity, life and humanity, set against our slim share of the
+                cosmic timeline.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -58,29 +77,39 @@ class Podcast extends Component {
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
+            <Card.Body id="podText">
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
         </CardDeck>
-        <CardDeck className="podRow">
+        <CardDeck id="podRow">
           <Card id="podCard">
             <ReactPlayer
               id="podLive"
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
+            <Card.Body id="podText">
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -90,11 +119,17 @@ class Podcast extends Component {
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
+            <Card.Body id="podText">
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This card has supporting text below as a natural lead-in to
-                additional content.{" "}
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -104,29 +139,39 @@ class Podcast extends Component {
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
+            <Card.Body id="podText">
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
         </CardDeck>
-        <CardDeck className="podRow">
+        <CardDeck id="podRow">
           <Card id="podCard">
             <ReactPlayer
               id="podLive"
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
+            <Card.Body id="podText">
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -136,11 +181,17 @@ class Podcast extends Component {
               controls
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
+            <Card.Body id="podText">
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This card has supporting text below as a natural lead-in to
-                additional content.{" "}
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -149,18 +200,24 @@ class Podcast extends Component {
               id="podLive"
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
+            <Card.Body id="podText">
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
         </CardDeck>
         <div className="Poppost">
-          <div className="card">
+          <div id="cardPod">
+            <h2>Give It A Read</h2>
             <div className="popRow">
               <div>
                 <img className="popImg" src="../images/Rectangle_30.png"></img>

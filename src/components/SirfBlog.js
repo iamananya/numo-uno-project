@@ -16,9 +16,15 @@ function BlogFinal() {
       <div className="responsive">
         <img
           className="title"
-          src={`${process.env.PUBLIC_URL}/images/logo_black_croped2.png`}
+          src={`${process.env.PUBLIC_URL}/images/Final_Black.png`}
           alt="black logo"
         ></img>
+        <div id="blog-title">
+          <p>
+            <br></br>
+            NUMO UNO
+          </p>
+        </div>
         <Navigate />
       </div>
       <HeadCards />
