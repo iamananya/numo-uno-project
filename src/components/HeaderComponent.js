@@ -186,7 +186,7 @@ class Header extends Component {
                 
                 <Modal  isOpen={this.state.isMdodalOpen} toggle={this.toggleModal} centered={true} 
                 backdropTransition={{ timeout: 500000 }}
-                centered={true}  style={{borderRadius:"15px",border:"0px",background:"white"}} >
+                centered={true}  style={{borderRadius:"15px",border:"0px",background:"white",height:"auto",}} >
                     <div className="modal-content" style={{borderRadius:"15px",height:"auto",}}>
            <center>
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
