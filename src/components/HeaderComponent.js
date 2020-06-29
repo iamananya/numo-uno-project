@@ -229,6 +229,7 @@ class Header extends Component {
 					<p style={{margin:"1em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
+                        onChange={e => this.setState({ loginEmail: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
