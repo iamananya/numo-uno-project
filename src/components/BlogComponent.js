@@ -155,10 +155,10 @@ function Blog(props) {
           
         </div>
         <div className="mx-auto">
-          <button className="custom-button2" type="submit">
+          <button className="custom-button-blog-podcast" type="submit">
             Blog
           </button>
-          <button className="custom-button2" type="submit">
+          <button className="custom-button-blog-podcast" type="submit">
             PodCasts
           </button>
         </div>
