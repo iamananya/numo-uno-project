@@ -198,7 +198,7 @@ class Header extends Component {
 
  	<center><a  href="./img/cd-logo.svg" className="fb btn" alt="logo missing">
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
 		<img src={`${process.env.PUBLIC_URL}/assets/images/un.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
@@ -206,7 +206,7 @@ class Header extends Component {
         	</a></center>
        <center><a  href="http://google.com/" className="twitter btn">
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
           	<img src={`${process.env.PUBLIC_URL}/assets/images/abc.svg`}  style={{width: "40%",marginTop:"2px"}} alt=" twitter logo missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
@@ -215,7 +215,7 @@ class Header extends Component {
 
         <center><a  href="http://apple.com/" className="google btn">
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
            	<img src={`${process.env.PUBLIC_URL}/assets/images/apple.webp`} style={{width: "40%",marginTop:"2px"} } alt=" twitter logo missing"
                /></div>
@@ -242,7 +242,7 @@ class Header extends Component {
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 					<div className="row">
-						<div className="b"><p>.</p></div>
+						<div className="b"><p style={{color:"white"}}>.</p></div>
 						<div className="c" style={{textAlign:"left"}}>
                             
 						<p  style={{margin:"0.5em 0 0.5em 0.3em"}}>
@@ -284,7 +284,7 @@ class Header extends Component {
 
  	<center><a  href="./img/cd-logo.svg" className="fb btn">
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
 		<img src={`${process.env.PUBLIC_URL}/assets/images/un.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
@@ -292,7 +292,7 @@ class Header extends Component {
         	</a></center>
        <center><a  href="http://google.com/" className="twitter btn">
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
           	<img src={`${process.env.PUBLIC_URL}/assets/images/abc.svg`}  style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
 		<div className="e" style={{textAlign: "left" ,marginTop:"5px"}}>
@@ -301,7 +301,7 @@ class Header extends Component {
 
         <center><a  href="http://apple.com/" className="google btn">
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
            	<img src={`${process.env.PUBLIC_URL}/assets/images/apple.webp`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
@@ -313,7 +313,7 @@ class Header extends Component {
             
 
             <div class="row">
-					<div class="b"><p>.</p></div>
+					<div class="b"><p style={{color:"white"}}>.</p></div>
 					<div class="a">
 					
 					<p class="cd-signin-modal__fieldset">
@@ -322,7 +322,7 @@ class Header extends Component {
                          placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
 						
 					</p></div>
-					<div class="d"><p>.</p></div>
+					<div class="d"><p style={{color:"white"}}>.</p></div>
 					<div class="a">
 						<p class="cd-signin-modal__fieldset">
                         <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userlname" type="text"
@@ -363,7 +363,7 @@ class Header extends Component {
 					</p>
                     
 					<div className="row">
-						<div className="b"><p>.</p></div>
+						<div className="b"><p style={{color:"white"}}>.</p></div>
 						<div className="c" style={{width: "80%", textAlign:"left"}}>
 						<p  style={{margin:".5em 60px 0px 60px"}}>
 							<input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
