@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import ReactPlayer from "react-player";
 
 import axios from "axios";
 import { BLOG_URL, BLOG_KEY } from "../constants/constants";
+import Sticky from "react-sticky-el";
+
 class BlogPage extends Component {
   state = {
     posts1: [],
@@ -36,38 +39,40 @@ class BlogPage extends Component {
             return (
               <div id="card">
                 <div className="row_card">
-                  <div id="column_card">
-                    <img
-                      className="image_blog"
-                      src={post.feature_image}
-                      alt="blog not found"
-                    />
-                  </div>
-                  <div id="column">
-                    <h2>
-                      {" "}
-                      <a href={`/blog/${post.id}`}>{post.title}</a>
-                    </h2>
-
-                    <p>{post.custom_excerpt}</p>
-                    <div className="small_imgs">
+                  <a href={`/blog/${post.id}`}>
+                    <div id="column_card">
                       <img
-                        className="bottom_img"
-                        src={`${process.env.PUBLIC_URL}/images/Rectangle_53.png`}
-                        alt="blog not found"
-                      />
-                      <img
-                        className="bottom_img"
-                        src={`${process.env.PUBLIC_URL}/images/Rectangle_54.png`}
-                        alt="blog not found"
-                      />
-                      <img
-                        className="bottom_img"
-                        src={`${process.env.PUBLIC_URL}/images/Rectangle_55.png`}
+                        className="image_blog"
+                        src={post.feature_image}
                         alt="blog not found"
                       />
                     </div>
-                  </div>
+                    <div id="column">
+                      <h2>
+                        {" "}
+                        <a href={`/blog/${post.id}`}>{post.title}</a>
+                      </h2>
+
+                      <p>{post.custom_excerpt}</p>
+                      <div className="small_imgs">
+                        <img
+                          className="bottom_img"
+                          src={`${process.env.PUBLIC_URL}/images/Rectangle_53.png`}
+                          alt="blog not found"
+                        />
+                        <img
+                          className="bottom_img"
+                          src={`${process.env.PUBLIC_URL}/images/Rectangle_54.png`}
+                          alt="blog not found"
+                        />
+                        <img
+                          className="bottom_img"
+                          src={`${process.env.PUBLIC_URL}/images/Rectangle_55.png`}
+                          alt="blog not found"
+                        />
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
             );
@@ -78,20 +83,22 @@ class BlogPage extends Component {
             return (
               <div id="card">
                 <div className="row_article">
-                  <div className="coloumn_card1">
-                    <img
-                      className="image_article"
-                      src={post.feature_image}
-                      alt="blog not found"
-                    />
-                  </div>
-                  <div className="column1">
-                    <h2>
-                      <a href={`/blog/${post.id}`}>{post.title}</a>
-                    </h2>
-                    <p>Some text..</p>
-                    <p>{post.custom_excerpt}</p>
-                  </div>
+                  <a href={`/blog/${post.id}`}>
+                    <div className="coloumn_card1">
+                      <img
+                        className="image_article"
+                        src={post.feature_image}
+                        alt="blog not found"
+                      />
+                    </div>
+                    <div className="column1">
+                      <h2>
+                        <a href={`/blog/${post.id}`}>{post.title}</a>
+                      </h2>
+                      <p>Some text..</p>
+                      <p>{post.custom_excerpt}</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             );
@@ -205,7 +212,7 @@ class BlogPage extends Component {
         </div>{" "}
         {/* end of left col */}
         <div className="rightcolumn">
-          <div id="card">
+          {/*<div id="card">
             <button href="" className="custom-button3">
               Latest Post
             </button>
@@ -314,58 +321,64 @@ class BlogPage extends Component {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="podCard">
-            <button href="" className="custom-button3">
-              Latest Podcast
-            </button>
-            <div className="podRow">
-              <div>
-                <img
-                  className="podImg"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_13.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div className="podText">
+      </div>*/}
+          <Sticky scrollElement=".rightcolumn">
+            <div className="podCard">
+              <a href="/podcast">
+                <button href="" className="custom-button3">
+                  Latest Podcast
+                </button>
+              </a>
+              <div className="podRow">
                 <div>
-                  <h3>Apple</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
+                  <ReactPlayer
+                    id="podLive"
+                    controls
+                    url="https://www.youtube.com/watch?v=dEv99vxKjVI"
+                  />
+                </div>
+                <div className="podText">
+                  <div>
+                    <h3>Apple</h3>
+                    Some text about me in culpa qui officia deserunt mollit
+                    anim..
+                  </div>
+                </div>
+              </div>
+              <div className="podRow">
+                <div>
+                  <ReactPlayer
+                    id="podLive"
+                    controls
+                    url="https://www.youtube.com/watch?v=dEv99vxKjVI"
+                  />
+                </div>
+                <div className="podText">
+                  <div>
+                    <h3>Apple</h3>
+                    Some text about me in culpa qui officia deserunt mollit
+                    anim..
+                  </div>
+                </div>
+              </div>
+              <div className="podRow">
+                <div>
+                  <ReactPlayer
+                    id="podLive"
+                    controls
+                    url="https://www.youtube.com/watch?v=dEv99vxKjVI"
+                  />
+                </div>
+                <div className="podText">
+                  <div>
+                    <h3>Apple</h3>
+                    Some text about me in culpa qui officia deserunt mollit
+                    anim..
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="podRow">
-              <div>
-                <img
-                  className="podImg"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_14.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div className="podText">
-                <div>
-                  <h3>Apple</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="podRow">
-              <div>
-                <img
-                  className="podImg"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_15.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div className="podText">
-                <div>
-                  <h3>Apple</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-          </div>
+          </Sticky>
         </div>
       </div>
     );

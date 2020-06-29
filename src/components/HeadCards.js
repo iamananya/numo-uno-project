@@ -34,17 +34,19 @@ class HeadCards extends Component {
           {this.state.posts.map((post) => {
             return (
               <Card id="shadowa">
-                <Card.Img
-                  className="headStyle"
-                  variant="top"
-                  src={post.feature_image}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <a href={`/blog/${post.id}`}>{post.title}</a>
-                  </Card.Title>
-                  <Card.Text>{post.custom_excerpt}</Card.Text>
-                </Card.Body>
+                <a href={`/blog/${post.id}`}>
+                  <Card.Img
+                    id="headStyle"
+                    variant="top"
+                    src={post.feature_image}
+                  />
+                  <Card.Body>
+                    <Card.Title id="headTitle">
+                      <a href={`/blog/${post.id}`}>{post.title}</a>
+                    </Card.Title>
+                    <Card.Text>{post.custom_excerpt}</Card.Text>
+                  </Card.Body>
+                </a>
               </Card>
             );
           })}

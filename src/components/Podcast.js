@@ -9,12 +9,16 @@ class Podcast extends Component {
       <div className="podCast">
         <div className="podHead">
           <div className="ninja-header">
-            <button href="" className="custom-buttona2">
-              Blog
-            </button>
-            <button href="" className="custom-buttona1">
-              Podcast
-            </button>
+            <a href="/podcast">
+              <button href="" className="custom-buttona2">
+                Podcast
+              </button>
+            </a>
+            <a href="/blog">
+              <button href="" className="custom-buttona1">
+                Blog
+              </button>
+            </a>
           </div>
           <div id="pod-logo">
             <img src="../images/Final_Black.png"></img>
@@ -32,11 +36,16 @@ class Podcast extends Component {
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
             <Card.Body id="podText">
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -48,10 +57,17 @@ class Podcast extends Component {
               url="https://www.youtube.com/watch?v=yqc9zX04DXs"
             />
             <Card.Body id="podText">
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>
+                <h4>
+                  The history of our world in 18 minutes | David Christian
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This card has supporting text below as a natural lead-in to
-                additional content.{" "}
+                David Christian narrates a complete history of the universe,
+                from the Big Bang to the Internet, in a riveting 18 minutes.
+                This is "Big History": an enlightening, wide-angle look at
+                complexity, life and humanity, set against our slim share of the
+                cosmic timeline.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -62,11 +78,16 @@ class Podcast extends Component {
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
             <Card.Body id="podText">
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -79,11 +100,16 @@ class Podcast extends Component {
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
             <Card.Body id="podText">
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -94,10 +120,16 @@ class Podcast extends Component {
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
             <Card.Body id="podText">
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This card has supporting text below as a natural lead-in to
-                additional content.{" "}
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -108,11 +140,16 @@ class Podcast extends Component {
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
             <Card.Body id="podText">
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -125,11 +162,16 @@ class Podcast extends Component {
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
             <Card.Body id="podText">
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -140,10 +182,16 @@ class Podcast extends Component {
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
             <Card.Body id="podText">
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This card has supporting text below as a natural lead-in to
-                additional content.{" "}
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -153,11 +201,16 @@ class Podcast extends Component {
               url="https://www.youtube.com/watch?v=dEv99vxKjVI"
             />
             <Card.Body id="podText">
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>
+                <h4>
+                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
+                  Podcast
+                </h4>
+              </Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
+                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
+                co-founder of several other companies. This is our first
+                conversation on the podcast.
               </Card.Text>
             </Card.Body>
           </Card>

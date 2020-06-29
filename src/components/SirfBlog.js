@@ -20,7 +20,10 @@ function BlogFinal() {
           alt="black logo"
         ></img>
         <div id="blog-title">
-          <p>BLOG</p>
+          <p>
+            <br></br>
+            NUMO UNO
+          </p>
         </div>
         <Navigate />
       </div>

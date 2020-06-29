@@ -83,7 +83,7 @@ class Contact extends Component {
     return (
       <div className="container">
         <div className="row row-content">
-          <div className="col-12">
+          <div className="col-12" id="bottom">
             <div>
               <h3 className="center-heading">Subscribe to keep Updated</h3>
             </div>
@@ -99,12 +99,18 @@ class Contact extends Component {
                       name="firstname"
                       placeholder="First Name"
                       value={this.state.firstname}
-                      valid={errors.firstname === ""&&this.state.touched.firstname}
+                      valid={
+                        errors.firstname === "" && this.state.touched.firstname
+                      }
                       invalid={errors.firstname !== ""}
                       onBlur={this.handleBlur("firstname")}
                       onChange={this.handleInputChange}
-                      style={{ fontSize: "18px",borderColor: "rgb(53, 53, 53)",
-                      height: "64px",borderRadius:"5px" }}
+                      style={{
+                        fontSize: "18px",
+                        borderColor: "rgb(53, 53, 53)",
+                        height: "64px",
+                        borderRadius: "5px",
+                      }}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
                       {errors.firstname}
@@ -119,14 +125,18 @@ class Contact extends Component {
                       name="telnum"
                       placeholder="Tel. number"
                       value={this.state.telnum}
-                      valid={errors.telnum === ""&&this.state.touched.lastname}
+                      valid={
+                        errors.telnum === "" && this.state.touched.lastname
+                      }
                       invalid={errors.telnum !== ""}
                       onBlur={this.handleBlur("telnum")}
                       onChange={this.handleInputChange}
-                      style={{ fontSize: "18px",
-                              borderColor: "rgb(53, 53, 53)",
-                              height: "64px",
-                              borderRadius:"5px" }}
+                      style={{
+                        fontSize: "18px",
+                        borderColor: "rgb(53, 53, 53)",
+                        height: "64px",
+                        borderRadius: "5px",
+                      }}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
                       {errors.telnum}
@@ -142,12 +152,16 @@ class Contact extends Component {
                       name="email"
                       placeholder="Email"
                       value={this.state.email}
-                      valid={errors.email === "" &&this.state.touched.email}
+                      valid={errors.email === "" && this.state.touched.email}
                       invalid={errors.email !== ""}
                       onBlur={this.handleBlur("email")}
                       onChange={this.handleInputChange}
-                      style={{ fontSize: "18px",borderColor: "rgb(53, 53, 53)",
-                      height: "64px",borderRadius:"5px" }}
+                      style={{
+                        fontSize: "18px",
+                        borderColor: "rgb(53, 53, 53)",
+                        height: "64px",
+                        borderRadius: "5px",
+                      }}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
                       {errors.lastname}
