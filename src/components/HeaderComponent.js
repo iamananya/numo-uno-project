@@ -186,11 +186,11 @@ class Header extends Component {
                 
                 <Modal  isOpen={this.state.isMdodalOpen} toggle={this.toggleModal} centered={true} 
                 backdropTransition={{ timeout: 500000 }}
-                centered={true}  style={{borderRadius:"15px",border:"0px",background:"white",height:"auto",boxShadow: "0 0 6px rgba(0,0,0,.1)",}} >
-                    <div className="modal-content" style={{borderRadius:"15px",height:"auto",boxShadow: "0 0 6px rgba(0,0,0,.1)",}}>
+                centered={true}  style={{letterSpacing:"1px"}} >
+                    <div className="modal-content" style={{borderRadius:"15px"}}>
            <center>
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
-                    ,width:"auto",
+                    ,boxShadow: "0 0 6px rgba(0,0,0,.1)",width:"auto",
                 }}>			
                     <form className="cd-signin-modal__form" style={{padding:"2em"}}>
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}> Welcome Back</p>
