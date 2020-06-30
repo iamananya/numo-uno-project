@@ -11,36 +11,47 @@
   background-position: center;
 }
 #podText {
-  font-size: 12px;
+  font-size: 15px;
+  color: #303336;
+
+  margin-top: 10px;
 }
-.custom-buttona1 {
+#podText h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #303336;
+  margin-bottom: 15px;
+}
+.custom-buttonb1 {
   text-align: center;
   width: 100px;
-
+  padding: 3px;
   float: right;
   border-radius: 10px;
 
-  margin-right: -10px;
   border: 0px solid white;
-  background-color: black;
-  color: #ffd700;
+  background-color: white;
+  color: black;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.514));
 }
 
-.custom-buttona2 {
+.custom-buttonb2 {
   text-align: center;
   float: right;
   right: 0;
-
+  padding: 3px;
   width: 100px;
   border: 0px solid white;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-color: white;
-  color: black;
-  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.247));
+  border-radius: 10px;
+  margin-left: -10px;
+  z-index: 1;
+  background-color: black;
+  color: #ffd700;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 00.514));
 }
-.custom-buttona2:hover {
+.custom-buttonb1:hover {
   background-color: black;
   color: #ffd700;
   transition: ease 0.5s;
@@ -75,8 +86,9 @@
 .first {
   margin-top: 5%;
 }
-#cardPod {
+.Poppost {
   border: 0px solid white;
+
   & h2 {
     font-size: 30px;
     word-spacing: 2px;
@@ -87,11 +99,16 @@
     color: rgb(11, 11, 65);
   }
 }
+#cardPod {
+  display: flex;
+}
 
 #podCard {
   border: 0px solid white;
   margin-bottom: 5%;
-
+  margin-left: 5%;
+  margin-right: 5%;
+  max-height: 500px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.048),
     0 6px 20px 0 rgba(0, 0, 0, 0.062);
@@ -101,29 +118,32 @@
 }
 #podLive {
   max-width: 100%;
-  width: 30%;
+  max-height: 60%;
   border-radius: 10px;
   background-color: black;
-  padding: 5%;
+  padding: 1%;
 }
 .popText {
   float: left;
-  width: 30%;
+  width: 50%;
   text-align: left;
   padding: 10px 10px;
   font-family: Montserrat;
   font-size: 14px;
+  color: black;
 }
-.popText h3 {
+.popText h3 a {
   font-size: 15px;
-  text-transform: uppercase;
+  color: black;
   letter-spacing: 2px;
   font-weight: 500;
 }
 
 .popRow {
   display: flex;
-  margin: 2% 10%;
+  margin-top: 2px;
+
+  width: 100%;
 }
 .popRow:after {
   content: "";
@@ -131,8 +151,7 @@
   clear: both;
 }
 .popImg {
-  max-width: 100%;
-  width: 100%;
+  width: 50%;
   padding: 10px;
   float: left;
 }

@@ -22,8 +22,8 @@
   text-shadow: 2px 2px gray;
 }
 .title {
-  width: 5%;
-  height: 8%;
+  width: 4%;
+  height: 5%;
   margin-left: 1%;
   margin-top: -4%;
 }
@@ -34,7 +34,7 @@
   font-size: 18px;
   border: 0px solid black;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   border-radius: 15px;
   background-color: black;
   color: #ffd700;
@@ -45,24 +45,26 @@
 
   float: right;
   border-radius: 10px;
-
+  padding: 3px;
   margin-right: -10px;
   border: 0px solid white;
-
   color: #ffd700;
+  background-color: black;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.514));
 }
 
 .custom-buttona2 {
   text-align: center;
   float: right;
   right: 0;
-
+  padding: 3px;
+  color: black;
+  background-color: white;
   width: 100px;
   border: 0px solid white;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: white;
-  color: black;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.514));
 }
 .custom-buttona2:hover {
   background-color: black;
@@ -84,6 +86,8 @@
   font-family: Montserrat;
   margin: 0 auto;
   margin-bottom: 20px;
+
+  justify-content: space-evenly;
 }
 #navcontent:hover {
   transition: 0.5s ease-in;
@@ -95,13 +99,19 @@
   margin-right: 6%;
 }
 #headStyle {
-  width: 100%;
-  max-height: 50%;
+  max-width: 100%;
+  max-height: 70%;
 }
 #navstyle {
-  color: black;
+  color: #303336a4;
   text-shadow: none;
   letter-spacing: 1px;
+}
+#navstyle.active {
+  color: #000000;
+}
+#post_row {
+  margin-bottom: 2%;
 }
 #shadowa {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.055);
@@ -110,7 +120,7 @@
   border-radius: 10px;
 }
 #headTitle a {
-  color: black;
+  color: #303336;
   font-size: 17px;
 }
 #headTitle a:hover {
@@ -185,6 +195,7 @@
   font-size: 25px;
   padding-top: 10px;
   font-weight: 700;
+  color: #303336;
 }
 #column h2 a {
   color: #303336;
@@ -200,20 +211,28 @@
   text-align: left;
   font-family: Montserrat;
   font-size: 15px;
-  color: black;
+  color: #303336;
 }
 .column1 h2 {
+  margin-top: 20px;
   font-family: Montserrat;
   font-size: 25px;
   font-weight: 700;
   text-decoration: none;
+  color: #303336;
+}
+.column1 p {
+  margin-top: 20px;
+  font-size: 17px;
+  padding-right: 5%;
+  color: #303336;
 }
 .column1 h2 a {
   color: #303336;
+  font-weight: 700;
   font-size: 20px;
 }
 .column1 h2 a:hover {
-  text-decoration: none;
   font-size: 22px;
   transition: all 1s ease;
 }
@@ -229,12 +248,14 @@
   padding: 10px;
   text-align: left;
 }
-#podLive {
+
+#podBlog {
   max-width: 100%;
 
+  max-height: 150px;
   border-radius: 10px;
-  background-color: black;
-  padding: 2%;
+  background-color: #000000;
+  padding: 2px;
 }
 .column_card2 {
   text-align: left;
@@ -252,6 +273,9 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.055);
   margin-left: 4%;
   border-radius: 10px;
+}
+#card a:hover {
+  text-decoration: none;
 }
 .row_article:after {
   content: "";
@@ -411,7 +435,7 @@
 }
 
 div.podCard {
-  margin-top: 20px;
+  margin-top: 5px;
   border: 0px solid white;
   position: -webkit-sticky;
   position: sticky;
@@ -420,9 +444,11 @@ div.podCard {
 .podRow {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.659));
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.055),
+    0 6px 20px 0 rgba(0, 0, 0, 0.055);
   margin: 18px auto;
-  max-width: 100%;
+  max-width: 90%;
 }
 
 .podText {

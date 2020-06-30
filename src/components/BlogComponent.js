@@ -77,7 +77,7 @@ function Blog(props) {
             boxShadow: "-1px 3px 20px rgba(0,0,0,.16)",
             padding: "10px",
             marginRight: "auto",
-            marginBottom:" 20px",
+            marginBottom: " 20px",
             borderRadius: "10px",
             display: "inherit",
           }}
@@ -89,11 +89,10 @@ function Blog(props) {
             style={{ margin: " auto 1.0vw", width: "10vw", height: "10vw" }}
           />
           <div
-            
             id="blog-bottom-left"
             style={{
               fontSize: "1vw",
-              margin: "auto 0px"
+              margin: "auto 0px",
             }}
           >
             {" "}
@@ -102,7 +101,6 @@ function Blog(props) {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>{" "}
-
           <img
             width="20%"
             src={`${process.env.PUBLIC_URL}/assets/images/blr.png`}
@@ -113,14 +111,11 @@ function Blog(props) {
             id="blog-bottom-left"
             style={{
               fontSize: "1vw",
-              margin: "auto 0px"
-              
+              margin: "auto 0px",
             }}
           >
             {" "}
-            <div style={{color: "rgb(231, 0, 193)"}}>
-            FOOD & LIFESTYLE
-            </div>
+            <div style={{ color: "rgb(231, 0, 193)" }}>FOOD & LIFESTYLE</div>
             <p id="blog-text" style={{ margin: "1vw 0vw", lineHeight: ".9" }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -133,7 +128,7 @@ function Blog(props) {
             padding: "0px",
             margin: "0px",
             borderRadius: "10px",
-            marginBottom:" 20px",
+            marginBottom: " 20px",
           }}
         >
           <img
@@ -141,18 +136,19 @@ function Blog(props) {
             height="100%"
             src={`${process.env.PUBLIC_URL}/assets/images/blrr.png`}
             alt="notfound"
-            style={{boxShadow: "-1px 3px 20px rgba(0,0,0,.16)"}}
+            style={{ boxShadow: "-1px 3px 20px rgba(0,0,0,.16)" }}
           />
-          <p style={{
-            position:"absolute",
-            bottom: "10px",
-            padding:"10px",
-            color:"white",
-            fontSize:"1vw",
-          }}>
+          <p
+            style={{
+              position: "absolute",
+              bottom: "10px",
+              padding: "10px",
+              color: "white",
+              fontSize: "1vw",
+            }}
+          >
             This is lake on the side of a river with blue water
           </p>
-          
         </div>
         <div className="mx-auto">
           <button className="custom-button2" type="submit">

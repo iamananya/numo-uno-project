@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 #brand_art {
   text-align: left;
-  width: 200px;
+  width: 4%;
   height: 5%;
   margin: 20px 20px;
 }
@@ -11,7 +11,8 @@
 }
 #content_art h1 {
   text-align: center;
-
+  margin-left: 15%;
+  margin-right: 15%;
   font-family: Josefin Sans;
   font-size: 50px;
 }
@@ -30,6 +31,9 @@
   margin-right: 15%;
   padding: 5px;
   margin-bottom: 30px;
+}
+.social_art a {
+  color: black;
 }
 .text_art {
   padding: 20px;
@@ -57,8 +61,16 @@
     & strong {
       font-weight: 700;
       font-size: 20px;
-      text-align: start;
+      flex: none;
+      display: block;
+      margin: 0;
+      padding: 0;
       text-align: left;
+    }
+    & em {
+      font-size: 18px;
+      font-weight: 500;
+      font-style: italic;
     }
   }
   & h3 {
@@ -92,5 +104,12 @@
     font-size: 20px;
     font-family: Montserrat;
     list-style-type: square;
+  }
+  & blockquote {
+    font-size: 20px;
+    font-style: italic;
+    font-family: Montserrat;
+    text-align: left;
+    margin-left: 15%;
   }
 }

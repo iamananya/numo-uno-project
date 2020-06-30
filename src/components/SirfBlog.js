@@ -14,11 +14,13 @@ function BlogFinal() {
     <div className="App">
       <Land />
       <div className="responsive">
-        <img
-          className="title"
-          src={`${process.env.PUBLIC_URL}/images/Final_Black.png`}
-          alt="black logo"
-        ></img>
+        <a href="/about">
+          <img
+            className="title"
+            src={`${process.env.PUBLIC_URL}/images/Final_Black.png`}
+            alt="black logo"
+          ></img>
+        </a>
         <div id="blog-title">
           <p>
             <br></br>
