@@ -234,7 +234,7 @@ class Header extends Component {
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 
-					<p style={{margin:"1em 0"}}>  
+					<p style={{margin:"1em 0 0.5em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password"   placeholder="Password"
                         onChange={e => this.setState({ loginPassword: e.target.value })}
@@ -354,7 +354,7 @@ class Header extends Component {
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 				
-					<p style={{margin:"1em 0"}}>  
+					<p style={{margin:"1em 0 0.5em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Confirm Password"
                         onChange={(e) => this.setState({confirmPassword: e.target.value})}
