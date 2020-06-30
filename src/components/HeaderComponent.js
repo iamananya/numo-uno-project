@@ -204,7 +204,7 @@ class Header extends Component {
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
-       <center><a  href="http://google.com/" className="twitter btn">
+       <center><a  href="http://google.com/" className="twitter btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -213,7 +213,7 @@ class Header extends Component {
  		Signin with Google</div>
         	</a></center>
 
-        <center><a  href="http://apple.com/" className="google btn">
+        <center><a  href="http://apple.com/" className="google btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -283,7 +283,7 @@ class Header extends Component {
                     Create an account to access personalized articles, podcasts,
                      career enhancement services along with interest based professional communication groups.</p>
 
- 	<center><a  href="./img/cd-logo.svg" className="fb btn">
+ 	<center><a  href="./img/cd-logo.svg" className="fb btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -291,7 +291,7 @@ class Header extends Component {
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
-       <center><a  href="http://google.com/" className="twitter btn">
+       <center><a  href="http://google.com/" className="twitter btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -300,7 +300,7 @@ class Header extends Component {
  		Signin with Google</div>
         	</a></center>
 
-        <center><a  href="http://apple.com/" className="google btn">
+        <center><a  href="http://apple.com/" className="google btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
