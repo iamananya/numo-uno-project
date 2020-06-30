@@ -9,29 +9,23 @@ class Navigate extends Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav id="navcontent">
-            <Nav.Link id="navstyle" href="#">
-              Internships
-            </Nav.Link>
-            <Nav.Link id="navstyle" href="#">
+            <Nav.Link id="navstyle" href="#competitiveCoding">
               Competitve Coding
             </Nav.Link>
-            <Nav.Link id="navstyle" href="#">
+            <Nav.Link id="navstyle" href="#ArtificialIntelligenc">
               Artificial Intelligence
             </Nav.Link>
-            <Nav.Link id="navstyle" href="#">
+            <Nav.Link id="navstyle" href="#Finance">
               Finance
             </Nav.Link>
-            <Nav.Link id="navstyle" href="#">
+            <Nav.Link id="navstyle" href="#Business">
               Business
             </Nav.Link>
-            <Nav.Link id="navstyle" href="#">
+            <Nav.Link id="navstyle" href="#Management">
               Manangement
             </Nav.Link>
-            <Nav.Link id="navstyle" href="#">
+            <Nav.Link id="navstyle" href="#Consultancy">
               Consultancy
-            </Nav.Link>
-            <Nav.Link id="navstyle" href="#">
-              Arts
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

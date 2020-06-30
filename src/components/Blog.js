@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
-
+import MetaTags from "react-meta-tags";
 import axios from "axios";
 import { BLOG_URL, BLOG_KEY } from "../constants/constants";
-import Sticky from "react-sticky-el";
-
+import Sticky from "react-stickynode";
 class BlogPage extends Component {
   state = {
-    posts1: [],
     posts2: [],
   };
 
@@ -17,11 +15,7 @@ class BlogPage extends Component {
     axios
       .get(URL)
       .then((res) => {
-        console.log("res.data is ", res.data);
-        this.setState({ posts1: res.data.posts.slice(4, 5) }, () =>
-          console.log("state is ", this.state.posts)
-        );
-        this.setState({ posts2: res.data.posts.slice(5, 9) }, () =>
+        this.setState({ posts2: res.data.posts.slice(4) }, () =>
           console.log("state is ", this.state.posts)
         );
       })
@@ -35,55 +29,18 @@ class BlogPage extends Component {
     return (
       <div id="row">
         <div className="leftcolumn">
-          {this.state.posts1.map((post) => {
-            return (
-              <div id="card">
-                <div className="row_card">
-                  <a href={`/blog/${post.id}`}>
-                    <div id="column_card">
-                      <img
-                        className="image_blog"
-                        src={post.feature_image}
-                        alt="blog not found"
-                      />
-                    </div>
-                    <div id="column">
-                      <h2>
-                        {" "}
-                        <a href={`/blog/${post.id}`}>{post.title}</a>
-                      </h2>
-
-                      <p>{post.custom_excerpt}</p>
-                      <div className="small_imgs">
-                        <img
-                          className="bottom_img"
-                          src={`${process.env.PUBLIC_URL}/images/Rectangle_53.png`}
-                          alt="blog not found"
-                        />
-                        <img
-                          className="bottom_img"
-                          src={`${process.env.PUBLIC_URL}/images/Rectangle_54.png`}
-                          alt="blog not found"
-                        />
-                        <img
-                          className="bottom_img"
-                          src={`${process.env.PUBLIC_URL}/images/Rectangle_55.png`}
-                          alt="blog not found"
-                        />
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-
-          {/* end of card */}
           {this.state.posts2.map((post) => {
             return (
               <div id="card">
-                <div className="row_article">
-                  <a href={`/blog/${post.id}`}>
+                <MetaTags>
+                  <title>Numo Uno-Blog</title>
+                  <meta
+                    name="Numo Uno Blog"
+                    content="We present to you Numo Uno blog. For college students, job-seekers, and the insatiably curious. "
+                  />
+                </MetaTags>
+                <a href={`/blog/${post.id}`}>
+                  <div className="row_article">
                     <div className="coloumn_card1">
                       <img
                         className="image_article"
@@ -95,234 +52,18 @@ class BlogPage extends Component {
                       <h2>
                         <a href={`/blog/${post.id}`}>{post.title}</a>
                       </h2>
-                      <p>Some text..</p>
-                      <p>{post.custom_excerpt}</p>
+
+                      <p>{post.meta_description}</p>
                     </div>
-                  </a>
-                </div>
+                  </div>
+                </a>
               </div>
             );
           })}
-          {/*<div id="card">
-            <div className="row_article">
-              <div className="coloumn_card1">
-                <img
-                  className="image_article"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div className="column1">
-                <h2>Column 2</h2>
-                <p>Some text..</p>
-                <p>
-                  Sunt in culpa qui officia deserunt mollit anim id est laborum
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="card">
-            <div className="row_article">
-              <div className="coloumn_card1">
-                <img
-                  className="image_article"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div className="column1">
-                <h2>Column 2</h2>
-                <p>Some text..</p>
-                <p>
-                  Sunt in culpa qui officia deserunt mollit anim id est laborum
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="card">
-            <div className="row_article">
-              <div className="coloumn_card1">
-                <img
-                  className="image_article"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div className="column1">
-                <h2>Column 2</h2>
-                <p>Some text..</p>
-                <p>
-                  Sunt in culpa qui officia deserunt mollit anim id est laborum
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="card">
-            <div className="row_article">
-              <div className="coloumn_card1">
-                <img
-                  className="image_article"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div className="column1">
-                <h2>Column 2</h2>
-                <p>Some text..</p>
-                <p>
-                  Sunt in culpa qui officia deserunt mollit anim id est laborum
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="card">
-            <div className="row_article" id="last">
-              <div className="coloumn_card1">
-                <img
-                  className="image_article"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div className="column1">
-                <h2>Column 2</h2>
-                <p>Some text..</p>
-                <p>
-                  Sunt in culpa qui officia deserunt mollit anim id est laborum
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco.
-                </p>
-              </div>
-            </div>
-          </div>
-        */}
         </div>{" "}
         {/* end of left col */}
         <div className="rightcolumn">
-          {/*<div id="card">
-            <button href="" className="custom-button3">
-              Latest Post
-            </button>
-            <div className="popRow_blog">
-              <div>
-                <img
-                  className="popImg_blog"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_29.png`}
-                  alt="Rectangle"
-                />
-              </div>
-              <div className="popText_blog">
-                <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="popRow_blog">
-              <div>
-                <img
-                  className="popImg_blog"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_30.png`}
-                  alt="Rectangle"
-                />
-              </div>
-              <div className="popText_blog">
-                <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="popRow_blog">
-              <div>
-                <img
-                  className="popImg_blog"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_31.png`}
-                  alt="Rectangle"
-                />
-              </div>
-              <div className="popText_blog">
-                <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="popRow_blog">
-              <div>
-                <img
-                  className="popImg_blog"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_32.png`}
-                  alt="Rectangle"
-                />
-              </div>
-              <div className="popText_blog">
-                <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="popRow_blog">
-              <div>
-                <img
-                  className="popImg_blog"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_33.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div className="popText_blog">
-                <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="popRow_blog">
-              <div>
-                <img
-                  className="popImg_blog"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_30.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div className="popText_blog">
-                <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-            <div className="popRow_blog">
-              <div>
-                <img
-                  className="popImg_blog"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_31.png`}
-                  alt="blog not found"
-                />
-              </div>
-              <div className="popText_blog">
-                <div>
-                  <h3>CODING</h3>
-                  Some text about me in culpa qui officia deserunt mollit anim..
-                </div>
-              </div>
-            </div>
-      </div>*/}
-          <Sticky scrollElement=".rightcolumn">
+          <Sticky top="#header" bottomBoundary="#subs">
             <div className="podCard">
               <a href="/podcast">
                 <button href="" className="custom-button3">
@@ -332,7 +73,7 @@ class BlogPage extends Component {
               <div className="podRow">
                 <div>
                   <ReactPlayer
-                    id="podLive"
+                    id="podBlog"
                     controls
                     url="https://www.youtube.com/watch?v=dEv99vxKjVI"
                   />
@@ -348,7 +89,7 @@ class BlogPage extends Component {
               <div className="podRow">
                 <div>
                   <ReactPlayer
-                    id="podLive"
+                    id="podBlog"
                     controls
                     url="https://www.youtube.com/watch?v=dEv99vxKjVI"
                   />
@@ -364,7 +105,7 @@ class BlogPage extends Component {
               <div className="podRow">
                 <div>
                   <ReactPlayer
-                    id="podLive"
+                    id="podBlog"
                     controls
                     url="https://www.youtube.com/watch?v=dEv99vxKjVI"
                   />

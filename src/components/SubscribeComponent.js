@@ -85,7 +85,9 @@ class Contact extends Component {
         <div className="row row-content">
           <div className="col-12" id="bottom">
             <div>
-              <h3 className="center-heading">Subscribe to keep Updated</h3>
+              <h3 id="subs" className="center-heading">
+                Subscribe to keep Updated
+              </h3>
             </div>
           </div>
           <div className="col-12" id="subscribe1">

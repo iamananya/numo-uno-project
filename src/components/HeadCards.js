@@ -30,7 +30,7 @@ class HeadCards extends Component {
   render() {
     return (
       <div className="headCard">
-        <CardDeck>
+        <CardDeck id="post_row">
           {this.state.posts.map((post) => {
             return (
               <Card id="shadowa">
@@ -51,6 +51,27 @@ class HeadCards extends Component {
             );
           })}
         </CardDeck>
+        {/* <CardDeck id="post_row">
+          {this.state.posts1.map((post) => {
+            return (
+              <Card id="shadowa">
+                <a href={`/blog/${post.id}`}>
+                  <Card.Img
+                    id="headStyle"
+                    variant="top"
+                    src={post.feature_image}
+                  />
+                  <Card.Body>
+                    <Card.Title id="headTitle">
+                      <a href={`/blog/${post.id}`}>{post.title}</a>
+                    </Card.Title>
+                    <Card.Text>{post.custom_excerpt}</Card.Text>
+                  </Card.Body>
+                </a>
+              </Card>
+            );
+          })}
+        </CardDeck>*/}
       </div>
     );
   }
