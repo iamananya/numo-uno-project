@@ -96,8 +96,7 @@ class Podcast extends Component {
                 David Christian narrates a complete history of the universe,
                 from the Big Bang to the Internet, in a riveting 18 minutes.
                 This is "Big History": an enlightening, wide-angle look at
-                complexity, life and humanity, set against our slim share of the
-                cosmic timeline.
+                complexity, life and humanity.
               </Card.Text>
             </Card.Body>
           </Card>
