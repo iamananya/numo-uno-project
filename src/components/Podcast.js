@@ -31,12 +31,12 @@ class Podcast extends Component {
         <div className="podHead">
           <div className="ninja-header">
             <a href="/podcast">
-              <button href="" className="custom-buttonb2">
+              <button href="" id="custom-buttonb2">
                 Podcast
               </button>
             </a>
             <a href="/blog">
-              <button href="" className="custom-buttonb1">
+              <button href="" id="custom-buttonb1">
                 Blog
               </button>
             </a>
