@@ -71,12 +71,18 @@ class Home extends Component {
 
           {/* This is the second row */}
           <div id="row1" className="row">
-            <div className="col-12 col-md-5 mx-auto">
-              <img
-                width="100%"
-                src={`${process.env.PUBLIC_URL}/images/man.webp`}
-                alt="not found"
-              />
+            <div className="col-12 col-md-6 mx-auto">
+              <div style={{position:"relative",t0p:"0px",left:"0px"}}>
+                <img 
+                  src={`${process.env.PUBLIC_URL}/images/mobile.png`}
+                  />
+              </div>
+              <ReactPlayer
+                  height="400px"
+                  width="auto"
+                  controls
+                  url="https://www.youtube.com/watch?v=giYeaKsXnsI.mp4"
+                />
             </div>
             <div id="center-text" className="col-12 col-md-5 ">
               <div>
@@ -91,11 +97,11 @@ class Home extends Component {
                 Our job is to build your website so that it is functional and
                 user-friendly but at the same time attractive.
               </p>
-              <button className="custom-button2" style={{position:"absolute",left:"20px"}}>Know More</button>
+              {/* <button className="custom-button2" style={{position:"absolute",left:"20px"}}>Know More</button> */}
             </div>
           </div>
           {/* This is the third row */}
-          <div id="row2" className="row">
+          {/* <div id="row2" className="row">
             <div className="col-12 col-md-5" id="content">
               <div>
                 <h3 id="side-heading">Sneak Peek !</h3>
@@ -119,7 +125,7 @@ class Home extends Component {
                 url="https://www.youtube.com/watch?v=giYeaKsXnsI.mp4"
               />
             </div>
-          </div>
+          </div> */}
 
           {/* This is the Card row */}
           <div id="row1" className="row justify-content-center">
