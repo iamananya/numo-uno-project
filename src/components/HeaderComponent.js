@@ -262,7 +262,7 @@ class Header extends Component {
 
 					<center><a href="google.com" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/>
 					
-					<center><p style={{fontSize:"14px" , fontFamily:"Montserrat"}}>No Account? <a href="#0" data-signin="signup" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Create One</a></p></center>
+					<center><p style={{fontSize:"14px" , fontFamily:"Montserrat"}}>No Account? <a href="#" onclick={this.toggleModalj} style={{fontSize: "14px", fontFamily: "Montserrat"}}>Create One</a></p></center>
 
 				</form>
 				
@@ -381,7 +381,7 @@ class Header extends Component {
 					</p>
 
 					<p style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>Already Have an Account?
-                        <a href="#0" data-signin="signup" style={{fontSize:"12px" , fontFamily:"Montserrat"}}> Signin</a></center></p>
+                        <a href="#" onclick={this.toggleModal} style={{fontSize:"12px" , fontFamily:"Montserrat"}}> Signin</a></center></p>
 
 				</form>
 				
