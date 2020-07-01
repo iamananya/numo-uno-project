@@ -262,7 +262,8 @@ class Header extends Component {
 
 					<center><a href="google.com" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/>
 					
-					<center><p style={{fontSize:"14px" , fontFamily:"Montserrat"}}>No Account? <a href="javascript:toggleModalj()" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Create One</a></p></center>
+					<div onClick={this.toggleModalj} style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>No Account?
+                        Create One</center></div>
 
 				</form>
 				
