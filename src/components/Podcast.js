@@ -42,7 +42,7 @@ class Podcast extends Component {
             </a>
           </div>
           <a href="/about">
-            <div className="title">
+            <div className="podtitle">
               <img src="../images/Final_Black.png"></img>
             </div>
           </a>
@@ -183,67 +183,7 @@ class Podcast extends Component {
             </Card.Body>
           </Card>
         </CardDeck>
-        <CardDeck id="podRow">
-          <Card id="podCard">
-            <ReactPlayer
-              id="podLive"
-              controls
-              url="https://www.youtube.com/watch?v=dEv99vxKjVI"
-            />
-            <Card.Body id="podText">
-              <Card.Title>
-                <h4>
-                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
-                  Podcast
-                </h4>
-              </Card.Title>
-              <Card.Text>
-                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
-                co-founder of several other companies. This is our first
-                conversation on the podcast.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <Card id="podCard">
-            <ReactPlayer
-              id="podLive"
-              controls
-              url="https://www.youtube.com/watch?v=dEv99vxKjVI"
-            />
-            <Card.Body id="podText">
-              <Card.Title>
-                <h4>
-                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
-                  Podcast
-                </h4>
-              </Card.Title>
-              <Card.Text>
-                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
-                co-founder of several other companies. This is our first
-                conversation on the podcast.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <Card id="podCard">
-            <ReactPlayer
-              id="podLive"
-              url="https://www.youtube.com/watch?v=dEv99vxKjVI"
-            />
-            <Card.Body id="podText">
-              <Card.Title>
-                <h4>
-                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
-                  Podcast
-                </h4>
-              </Card.Title>
-              <Card.Text>
-                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
-                co-founder of several other companies. This is our first
-                conversation on the podcast.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </CardDeck>
+
         <div className="Poppost">
           <h2>Give It A Read</h2>
           <div id="cardPod">

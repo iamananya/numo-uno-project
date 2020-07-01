@@ -11,6 +11,13 @@
   background-position: center;
 }
 
+.podtitle {
+  width: 4%;
+  height: 5%;
+  margin-left: 1%;
+  margin-top: -4%;
+}
+
 #podText {
   font-size: 15px;
   color: #303336;
