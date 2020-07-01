@@ -42,7 +42,9 @@ class Podcast extends Component {
             </a>
           </div>
           <a href="/about">
+
             <div className="podtitle">
+
               <img src="../images/Final_Black.png"></img>
             </div>
           </a>
