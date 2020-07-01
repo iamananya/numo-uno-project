@@ -380,8 +380,8 @@ class Header extends Component {
        							 </a></center>
 					</p>
 
-					<p style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>Already Have an Account?
-                        <div onClick={this.toggleModal}  style={{fontSize:"12px" , fontFamily:"Montserrat"}}> Signin</div></center></p>
+					<div onClick={this.toggleModal} style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>Already Have an Account?
+                        Signin</center></div>
 
 				</form>
 				
