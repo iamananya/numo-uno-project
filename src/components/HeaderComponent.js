@@ -186,8 +186,8 @@ class Header extends Component {
                 
                 <Modal  isOpen={this.state.isMdodalOpen} toggle={this.toggleModal} centered={true} 
                 backdropTransition={{ timeout: 500000 }}
-                centered={true}  style={{borderRadius:"15px",border:"0px",background:"white",height:"auto",}} >
-                    <div className="modal-content" style={{borderRadius:"15px",height:"auto",}}>
+                centered={true}  style={{letterSpacing:"1px"}} >
+                    <div className="modal-content" style={{borderRadius:"15px"}}>
            <center>
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
                     ,boxShadow: "0 0 6px rgba(0,0,0,.1)",width:"auto",
@@ -196,7 +196,7 @@ class Header extends Component {
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}> Welcome Back</p>
                     <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",letterSpacing:"1px"}}>Signin to access personalized articles, podcasts, career enhancement services along with interest based professional communication groups.</p><br/>
 
- 	<center><a  href="./img/cd-logo.svg" className="fb btn" alt="logo missing">
+ 	<center><a  href="./img/cd-logo.svg" className="fb btn" alt="logo missing" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -204,7 +204,7 @@ class Header extends Component {
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
-       <center><a  href="http://google.com/" className="twitter btn">
+       <center><a  href="http://google.com/" className="twitter btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -213,7 +213,7 @@ class Header extends Component {
  		Signin with Google</div>
         	</a></center>
 
-        <center><a  href="http://apple.com/" className="google btn">
+        <center><a  href="http://apple.com/" className="google btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -234,7 +234,7 @@ class Header extends Component {
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 
-					<p style={{margin:"1em 0"}}>  
+					<p style={{margin:"1em 0 0.5em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password"   placeholder="Password"
                         onChange={e => this.setState({ loginPassword: e.target.value })}
@@ -283,7 +283,7 @@ class Header extends Component {
                     Create an account to access personalized articles, podcasts,
                      career enhancement services along with interest based professional communication groups.</p>
 
- 	<center><a  href="./img/cd-logo.svg" className="fb btn">
+ 	<center><a  href="./img/cd-logo.svg" className="fb btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -291,7 +291,7 @@ class Header extends Component {
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
-       <center><a  href="http://google.com/" className="twitter btn">
+       <center><a  href="http://google.com/" className="twitter btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -300,7 +300,7 @@ class Header extends Component {
  		Signin with Google</div>
         	</a></center>
 
-        <center><a  href="http://apple.com/" className="google btn">
+        <center><a  href="http://apple.com/" className="google btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -354,7 +354,7 @@ class Header extends Component {
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 				
-					<p style={{margin:"1em 0"}}>  
+					<p style={{margin:"1em 0 0.5em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Confirm Password"
                         onChange={(e) => this.setState({confirmPassword: e.target.value})}
