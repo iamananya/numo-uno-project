@@ -381,7 +381,7 @@ class Header extends Component {
 					</p>
 
 					<p style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>Already Have an Account?
-                        <a href="#" onclick="this.toggleModal();return false;" style={{fontSize:"12px" , fontFamily:"Montserrat"}}> Signin</a></center></p>
+                        <div onClick={this.toggleModal}  style={{fontSize:"12px" , fontFamily:"Montserrat"}}> Signin</div></center></p>
 
 				</form>
 				
