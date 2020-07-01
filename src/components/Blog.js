@@ -12,7 +12,7 @@ class BlogPage extends Component {
               <div id="column_card">
                 <img
                   className="image_blog"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52.webp`}
                   alt="blog not found"
                 />
               </div>
@@ -30,17 +30,17 @@ class BlogPage extends Component {
                 <div className="small_imgs">
                   <img
                     className="bottom_img"
-                    src={`${process.env.PUBLIC_URL}/images/Rectangle_53.png`}
+                    src={`${process.env.PUBLIC_URL}/images/Rectangle_53.webp`}
                     alt="blog not found"
                   />
                   <img
                     className="bottom_img"
-                    src={`${process.env.PUBLIC_URL}/images/Rectangle_54.png`}
+                    src={`${process.env.PUBLIC_URL}/images/Rectangle_54.webp`}
                     alt="blog not found"
                   />
                   <img
                     className="bottom_img"
-                    src={`${process.env.PUBLIC_URL}/images/Rectangle_55.png`}
+                    src={`${process.env.PUBLIC_URL}/images/Rectangle_55.webp`}
                     alt="blog not found"
                   />
                 </div>
@@ -51,7 +51,7 @@ class BlogPage extends Component {
             <div className="container_blog">
               <img
                 className="image_blog1"
-                src={`${process.env.PUBLIC_URL}/images/Rectangle_16.png`}
+                src={`${process.env.PUBLIC_URL}/images/Rectangle_16.webp`}
                 alt="blog not found"
               />
               <div className="textOnImg">
@@ -69,7 +69,7 @@ class BlogPage extends Component {
               <div className="coloumn_card1">
                 <img
                   className="image_article"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.webp`}
                   alt="blog not found"
                 />
               </div>
@@ -90,7 +90,7 @@ class BlogPage extends Component {
               <div className="coloumn_card1">
                 <img
                   className="image_article"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.webp`}
                   alt="blog not found"
                 />
               </div>
@@ -111,7 +111,7 @@ class BlogPage extends Component {
               <div className="coloumn_card1">
                 <img
                   className="image_article"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.webp`}
                   alt="blog not found"
                 />
               </div>
@@ -132,7 +132,7 @@ class BlogPage extends Component {
               <div className="coloumn_card1">
                 <img
                   className="image_article"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.webp`}
                   alt="blog not found"
                 />
               </div>
@@ -153,7 +153,7 @@ class BlogPage extends Component {
               <div className="coloumn_card1">
                 <img
                   className="image_article"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.webp`}
                   alt="blog not found"
                 />
               </div>
@@ -174,7 +174,7 @@ class BlogPage extends Component {
               <div className="coloumn_card1">
                 <img
                   className="image_article"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_52_b.webp`}
                   alt="blog not found"
                 />
               </div>
@@ -201,7 +201,7 @@ class BlogPage extends Component {
               <div>
                 <img
                   className="popImg"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_29.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_29.webp`}
                   alt="Rectangle"
                 />
               </div>
@@ -216,7 +216,7 @@ class BlogPage extends Component {
               <div>
                 <img
                   className="popImg"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_30.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_30.webp`}
                   alt="Rectangle"
                 />
               </div>
@@ -231,7 +231,7 @@ class BlogPage extends Component {
               <div>
                 <img
                   className="popImg"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_31.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_31.webp`}
                   alt="Rectangle"
                 />
               </div>
@@ -246,7 +246,7 @@ class BlogPage extends Component {
               <div>
                 <img
                   className="popImg"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_32.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_32.webp`}
                   alt="Rectangle"
                 />
               </div>
@@ -261,7 +261,7 @@ class BlogPage extends Component {
               <div>
                 <img
                   className="popImg"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_33.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_33.webp`}
                   alt="blog not found"
                 />
               </div>
@@ -276,7 +276,7 @@ class BlogPage extends Component {
               <div>
                 <img
                   className="popImg"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_30.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_30.webp`}
                   alt="blog not found"
                 />
               </div>
@@ -291,7 +291,7 @@ class BlogPage extends Component {
               <div>
                 <img
                   className="popImg"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_31.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_31.webp`}
                   alt="blog not found"
                 />
               </div>
@@ -312,7 +312,7 @@ class BlogPage extends Component {
                 <div>
                   <img
                     className="podImg"
-                    src={`${process.env.PUBLIC_URL}/images/Rectangle_13.png`}
+                    src={`${process.env.PUBLIC_URL}/images/Rectangle_13.webp`}
                     alt="blog not found"
                   />
                 </div>
@@ -328,7 +328,7 @@ class BlogPage extends Component {
                 <div>
                   <img
                     className="podImg"
-                    src={`${process.env.PUBLIC_URL}/images/Rectangle_14.png`}
+                    src={`${process.env.PUBLIC_URL}/images/Rectangle_14.webp`}
                     alt="blog not found"
                   />
                 </div>
@@ -344,7 +344,7 @@ class BlogPage extends Component {
                 <div>
                   <img
                     className="podImg"
-                    src={`${process.env.PUBLIC_URL}/images/Rectangle_15.png`}
+                    src={`${process.env.PUBLIC_URL}/images/Rectangle_15.webp`}
                     alt="blog not found"
                   />
                 </div>

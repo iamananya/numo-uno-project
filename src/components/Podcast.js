@@ -17,7 +17,7 @@ class Podcast extends Component {
             </button>
           </div>
           <div id="pod-logo">
-            <img src="../images/logo_white_crop.png"></img>
+            <img src="../images/logo_white_crop.webp"></img>
           </div>
         </div>
 
@@ -163,7 +163,7 @@ class Podcast extends Component {
           <div className="card">
             <div className="popRow">
               <div>
-                <img className="popImg" src="../images/Rectangle_30.png"></img>
+                <img className="popImg" src="../images/Rectangle_30.webp"></img>
               </div>
               <div className="popText">
                 <p>
@@ -172,7 +172,7 @@ class Podcast extends Component {
                 </p>
               </div>
               <div>
-                <img className="popImg" src="../images/Rectangle_32.png"></img>
+                <img className="popImg" src="../images/Rectangle_32.webp"></img>
               </div>
               <div className="popText">
                 <p>
@@ -181,7 +181,7 @@ class Podcast extends Component {
                 </p>
               </div>
               <div>
-                <img className="popImg" src="../images/Rectangle_33.png"></img>
+                <img className="popImg" src="../images/Rectangle_33.webp"></img>
               </div>
               <div className="popText">
                 <p>

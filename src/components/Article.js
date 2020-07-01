@@ -39,7 +39,7 @@ class Article extends Component {
       <div>
         <div id="brand_art">
           <img
-            src={`${process.env.PUBLIC_URL}/images/logo_black_croped2.png`}
+            src={`${process.env.PUBLIC_URL}/images/logo_black_croped2.webp`}
           ></img>
         </div>
         <div id="content_art">
@@ -60,7 +60,7 @@ class Article extends Component {
               <Card.Img
                 variant="top"
                 className="img-card"
-                src="../images/Rectangle_15.png"
+                src="../images/Rectangle_15.webp"
               />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
@@ -74,7 +74,7 @@ class Article extends Component {
               <Card.Img
                 className="img-card"
                 variant="top"
-                src="../images/Rectangle_15.png"
+                src="../images/Rectangle_15.webp"
               />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
@@ -88,7 +88,7 @@ class Article extends Component {
               <Card.Img
                 className="img-card"
                 variant="top"
-                src="../images/Rectangle_14.png"
+                src="../images/Rectangle_14.webp"
               />
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
@@ -113,7 +113,7 @@ class Article extends Component {
                 </p>
               </div>
               <div>
-                <img className="popImg" src="../images/Rectangle_32.png"></img>
+                <img className="popImg" src="../images/Rectangle_32.webp"></img>
               </div>
               <div className="popText">
                 <p>
@@ -122,7 +122,7 @@ class Article extends Component {
                 </p>
               </div>
               <div>
-                <img className="popImg" src="../images/Rectangle_33.png"></img>
+                <img className="popImg" src="../images/Rectangle_33.webp"></img>
               </div>
               <div className="popText">
                 <p>

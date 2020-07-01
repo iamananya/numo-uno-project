@@ -16,7 +16,7 @@ function BlogFinal() {
       <div className="responsive">
         <img
           className="title"
-          src={`${process.env.PUBLIC_URL}/images/logo_black_croped2.png`}
+          src={`${process.env.PUBLIC_URL}/images/logo_black_croped2.webp`}
           alt="black logo"
         ></img>
         <Navigate />

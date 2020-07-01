@@ -37,7 +37,7 @@ class HeadCards extends Component {
                 <Card.Img
                   className="headStyle"
                   variant="top"
-                  src={`${process.env.PUBLIC_URL}/images/Rectangle_2_ea.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Rectangle_2_ea.webp`}
                 />
                 <Card.Body>
                   <Card.Title>

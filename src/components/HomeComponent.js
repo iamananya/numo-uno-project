@@ -63,7 +63,7 @@ class Home extends Component {
             <div className="col-12 col-md-4 ">
               <img
                 id="numounomobile"
-                src={`${process.env.PUBLIC_URL}/assets/images/mobile.png`}
+                src={`${process.env.PUBLIC_URL}/images/mobile.webp`}
                 alt="not found"
               />
             </div>
@@ -74,7 +74,7 @@ class Home extends Component {
             <div className="col-12 col-md-5 mx-auto">
               <img
                 width="100%"
-                src={`${process.env.PUBLIC_URL}/assets/images/man.png`}
+                src={`${process.env.PUBLIC_URL}/images/man.webp`}
                 alt="not found"
               />
             </div>
@@ -129,7 +129,7 @@ class Home extends Component {
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/assets/images/grey_rectangle.png`}
+                    src={`${process.env.PUBLIC_URL}/images/grey_rectangle.webp`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -148,7 +148,7 @@ class Home extends Component {
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/assets/images/grey_rectangle.png`}
+                    src={`${process.env.PUBLIC_URL}/images/grey_rectangle.webp`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -167,7 +167,7 @@ class Home extends Component {
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/assets/images/grey_rectangle.png`}
+                    src={`${process.env.PUBLIC_URL}/images/grey_rectangle.webp`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -186,7 +186,7 @@ class Home extends Component {
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/assets/images/grey_rectangle.png`}
+                    src={`${process.env.PUBLIC_URL}/images/grey_rectangle.webp`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -250,7 +250,7 @@ class Home extends Component {
 
                 <center>
                   <a
-                    href={`${process.env.PUBLIC_URL}./img/cd-logo.svg`}
+                    href={`${process.env.PUBLIC_URL}/images/cd-logo.svg`}
                     className="fb btn"
                   >
                     <div className="b">
@@ -258,7 +258,7 @@ class Home extends Component {
                     </div>
                     <div className="f">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/un.png`}
+                        src={`${process.env.PUBLIC_URL}/images/un.webp`}
                         style={{ width: "40%", marginTop: "2px" }}
                         alt="Logo Missing"
                       />
@@ -278,7 +278,7 @@ class Home extends Component {
                     </div>
                     <div className="f">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/abc.svg`}
+                        src={`${process.env.PUBLIC_URL}/images/abc.svg`}
                         style={{ width: "40%", marginTop: "2px" }}
                         alt="Logo Missing"
                       />
@@ -299,7 +299,7 @@ class Home extends Component {
                     </div>
                     <div className="f">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/apple.webp`}
+                        src={`${process.env.PUBLIC_URL}/images/apple.webp`}
                         style={{ width: "40%", marginTop: "2px" }}
                         alt="Logo Missing"
                       />

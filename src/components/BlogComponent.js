@@ -45,7 +45,7 @@ class Blog extends Component {
             <img
               id="blog-main"
               width="100%"
-              src={`${process.env.PUBLIC_URL}/assets/images/img_lake.png`}
+              src={`${process.env.PUBLIC_URL}/images/img_lake.webp`}
               alt="notfound"
               style={{
                 boxShadow: "-1px 3px 20px rgba(0,0,0,.16)",
@@ -80,7 +80,7 @@ class Blog extends Component {
             >
               <img
                 width="100%"
-                src={`${process.env.PUBLIC_URL}/assets/images/side_blog.png`}
+                src={`${process.env.PUBLIC_URL}/images/side_blog.webp`}
                 alt="notfound"
               />
               <p id="travel">TRAVEL</p>
@@ -108,7 +108,7 @@ class Blog extends Component {
           >
             <img
               width="20%"
-              src={`${process.env.PUBLIC_URL}/assets/images/bll.png`}
+              src={`${process.env.PUBLIC_URL}/images/bll.webp`}
               alt="notfound"
               style={{ margin: " auto 1.0vw", width: "10vw", height: "10vw" }}
             />
@@ -129,7 +129,7 @@ class Blog extends Component {
 
             <img
               width="20%"
-              src={`${process.env.PUBLIC_URL}/assets/images/blr.png`}
+              src={`${process.env.PUBLIC_URL}/images/blr.webp`}
               alt="notfound"
               style={{ margin: " auto 1.0vw", width: "10vw", height: "10vw" }}
             />
@@ -163,7 +163,7 @@ class Blog extends Component {
             <img
               width="100%"
               height="100%"
-              src={`${process.env.PUBLIC_URL}/assets/images/blrr.png`}
+              src={`${process.env.PUBLIC_URL}/images/blrr.webp`}
               alt="notfound"
               style={{boxShadow: "-1px 3px 20px rgba(0,0,0,.16)"}}
             />
