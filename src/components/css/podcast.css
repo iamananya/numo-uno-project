@@ -11,10 +11,18 @@
   background-position: center;
 }
 
+.podtitle {
+  width: 4%;
+  height: 5%;
+  margin-left: 1%;
+  margin-top: -4%;
+}
+
 #podText {
   font-size: 15px;
   color: #303336;
   margin-top: 10px;
+
 }
 
 #podText h4 {
@@ -23,6 +31,7 @@
   color: #303336;
   margin-bottom: 15px;
 }
+
 
 .custom-buttonb1 {
   text-align: center;
