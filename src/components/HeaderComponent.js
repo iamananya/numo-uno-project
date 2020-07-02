@@ -331,14 +331,14 @@ class Header extends Component {
                          placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
 						
 					</p></div></div>
-					<p style={{margin:"1em 0"}}>
+					<p style={{margin:"0.5em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
                         onChange={(e) => this.setState({email: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
-					{/* <p style={{margin:"1em 0"}}>
+					{/* <p style={{margin:"0.5em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="Institute E-mail" 
                         onChange={(e) => this.setState({instiEmail: e.target.value})}
@@ -346,7 +346,7 @@ class Header extends Component {
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p> */}
 
-					<p style={{margin:"1em 0"}}>  
+					<p style={{margin:"0.5em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Password"
                         onChange={(e) => this.setState({password: e.target.value})}
@@ -355,7 +355,7 @@ class Header extends Component {
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 				
-					<p style={{margin:"1em 0 0.5em 0"}}>  
+					<p style={{margin:"0.5em 0 0.5em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Confirm Password"
                         onChange={(e) => this.setState({confirmPassword: e.target.value})}
