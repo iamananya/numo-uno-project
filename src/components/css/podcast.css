@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&display=swap");
 .podCast {
   margin: 0;
   padding: 0;
 }
 
 .podHead {
-  background-image: url("/images/podcast1.png");
   background-repeat: no-repeat;
   background-size: 40% 100%;
   background-position: center;
@@ -56,9 +56,11 @@
   padding: 3px;
   width: 100px;
   border: 0px solid white;
+  border-top-left-radius: 10px;
   border-radius: 10px;
   margin-left: -10px;
-  z-index: 1;
+  z-index: 2;
+  position: relative;
   background-color: black;
   color: #ffd700;
   -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.514));
@@ -87,16 +89,28 @@
   width: 5%;
 }
 
-#podTitle {
-  font-size: 50px;
+#podTitle h1 {
+  margin-top: 5%;
+  font-size: 70px;
   text-transform: uppercase;
   letter-spacing: 5px;
+  font-family: Josefin Sans;
+  font-weight: 700;
+}
+
+#podTitle h3 {
+  font-size: 30px;
+  font-family: Josefin Sans;
+  font-weight: 600;
   margin-bottom: 5%;
-  margin-top: 13%;
 }
 
 #podRow {
   margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   margin-left: 7%;
   margin-right: 7%;
 }
@@ -112,6 +126,8 @@
 .Poppost h2 {
   font-size: 30px;
   word-spacing: 2px;
+  margin-bottom: 2%;
+  margin-top: 2%;
   text-shadow: 1px 1px grey;
   text-align: center;
   font-family: Montserrat;
@@ -123,14 +139,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 #podCard {
   border: 0px solid white;
-  margin-bottom: 5%;
-  margin-left: 2%;
+  margin-bottom: 10%;
+  margin-left: 5%;
   margin-right: 2%;
-  max-height: 500px;
+  height: 500px;
+  position: relative;
   border-radius: 10px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.062);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.062);
@@ -152,8 +171,8 @@
 .popText {
   float: left;
   width: 50%;
+  margin-top: 10%;
   text-align: left;
-  padding: 10px 10px;
   font-family: Montserrat;
   font-size: 14px;
   color: black;
@@ -167,25 +186,37 @@
 }
 
 .popRow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: 2px;
-  margin-left: 5%;
-  margin-right: 5%;
   width: 100%;
-}
-
-.popRow:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .popImg {
   width: 50%;
   padding: 10px;
   float: left;
+}
+
+@media screen and (max-width: 900px) {
+  #podRow {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 765px) {
+  #podRow {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1, 1fr;
+        grid-template-columns: 1, 1fr;
+  }
+  .podtitle {
+    width: 8%;
+    position: absolute;
+    top: 30px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -203,6 +234,17 @@
   }
   .podHead {
     background-position: 50% 40%;
+  }
+  #podRow {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .podtitle {
+    width: 15%;
+    position: absolute;
+    top: 20px;
   }
 }
 /*# sourceMappingURL=podcast.css.map */
