@@ -17,7 +17,12 @@ class Login extends Component{
             loginEmail: '',
             loginPassword: ''
         };
-        
+        this.toggleModal=this.toggleModal.bind(this);
+    }
+    toggleModal(){
+        this.setState({
+            isMdodalOpen: !this.state.isMdodalOpen
+        });
     }
     render(){
         return(
