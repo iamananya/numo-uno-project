@@ -379,7 +379,7 @@ class Header extends Component {
 					<div class="a">
 					
 					<p class="cd-signin-modal__fieldset">
-					<FormGroup>
+					<FormGroup style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}}>
                         <Input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" 
                         id="firstName" type="text"
                          name="firstName" placeholder="First Name"
