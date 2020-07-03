@@ -24,7 +24,6 @@ class Main extends Component {
           <Route exact path="/podcast" component={PodcastCall} />
           <Route path="/blog/:id" component={ArticleFinal} />
           <Route path="/verify/:id" component={VerifyComponent} />
-          <Redirect to="/home" />
         </Switch>
       </div>
     );
