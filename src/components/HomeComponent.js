@@ -63,7 +63,7 @@ class Home extends Component {
             <div className="col-12 col-md-4 ">
               <img
                 id="numounomobile"
-                src={`${process.env.PUBLIC_URL}/images/mobile.webp`}
+                src={`${process.env.PUBLIC_URL}/images/scan.gif`}
                 alt="not found"
               />
             </div>
@@ -71,13 +71,15 @@ class Home extends Component {
 
           {/* This is the second row */}
           <div id="row1" className="row">
-            <div className="col-12 col-md-6 mx-auto">
-              <div style={{position:"relative",t0p:"0px",left:"0px"}}>
+            <div className="col-12 col-md-6 mx-auto" style={{padding:"0px"}}>
+              <div style={{position:"relative",top:"0vw",left:"0vw",width:"5vw",height:"5vw"}}>
                 <img 
-                  src={`${process.env.PUBLIC_URL}/images/mobile.png`}
+                  src={`${process.env.PUBLIC_URL}/images/Path 116.png`}
                   />
               </div>
               <ReactPlayer
+                  style={{position:"relative",
+                          top:"-2.5vw",left:"2.5vw"}}
                   height="400px"
                   width="auto"
                   controls
@@ -128,14 +130,19 @@ class Home extends Component {
           </div> */}
 
           {/* This is the Card row */}
-          <div id="row1" className="row justify-content-center">
-            <div className="col-6 col-md-3">
+          <div  className="row justify-content-center">
+          <div className="col-12">
+            <div className="center-heading">
+              <h3 id="yellow-heading">WHAT WE OFFER?</h3>
+            </div>
+          </div>
+            <div className="col-6 col-md-4">
               <Card id="card-odd" width="100%">
                 <CardBody>
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/grey_rectangle.webp`}
+                    src={`${process.env.PUBLIC_URL}/images/mission.webp`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -148,13 +155,13 @@ class Home extends Component {
                 </CardBody>
               </Card>
             </div>
-            <div className="col-6 col-md-3">
+            <div className="col-6 col-md-4">
               <Card id="card-even" >
                 <CardBody>
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/grey_rectangle.webp`}
+                    src={`${process.env.PUBLIC_URL}/images/flag.webp`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -167,13 +174,13 @@ class Home extends Component {
                 </CardBody>
               </Card>
             </div>
-            <div className="col-6 col-md-3">
+            <div className="col-6 col-md-4">
               <Card id="card-odd" width="100%">
                 <CardBody>
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/grey_rectangle.webp`}
+                    src={`${process.env.PUBLIC_URL}/images/mission.webp`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -186,13 +193,13 @@ class Home extends Component {
                 </CardBody>
               </Card>
             </div>
-            <div className="col-6 col-md-3">
+            {/* <div className="col-6 col-md-4">
               <Card id="card-even" width="100%">
                 <CardBody>
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/grey_rectangle.webp`}
+                    src={`${process.env.PUBLIC_URL}/images/flag.webp`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -204,7 +211,7 @@ class Home extends Component {
                   </div>
                 </CardBody>
               </Card>
-            </div>
+            </div> */}
           </div>
         </div>
         <Skill />

@@ -3,11 +3,7 @@ import React from "react";
 function Skill(props) {
   return (
     <div className="container">
-      <div className="col-12">
-        <div className="center-heading">
-          <h3 id="yellow-heading">WHAT WE OFFER?</h3>
-        </div>
-      </div>
+      
 
       <div className="col-12">
         <div>
@@ -28,12 +24,7 @@ function Skill(props) {
           src={`${process.env.PUBLIC_URL}/images/group_tr.webp`}
           alt=" not found"
         />
-        <img
-          id="ml"
-
-          src={`${process.env.PUBLIC_URL}/images/group_ml.webp`}
-          alt=" not found"
-        />
+        
         <img
           id="mr"
           
