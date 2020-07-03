@@ -186,7 +186,7 @@ class Header extends Component {
                 
                 <Modal  isOpen={this.state.isMdodalOpen} toggle={this.toggleModal} centered={true} 
                 backdropTransition={{ timeout: 500000 }}
-                centered={true}  style={{borderRadius:"15px",border:"0px",background:"white"}} >
+                centered={true}  style={{letterSpacing:"1px"}} >
                     <div className="modal-content" style={{borderRadius:"15px"}}>
            <center>
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
@@ -196,30 +196,30 @@ class Header extends Component {
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}> Welcome Back</p>
                     <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",letterSpacing:"1px"}}>Signin to access personalized articles, podcasts, career enhancement services along with interest based professional communication groups.</p><br/>
 
- 	<center><a  href="/images/cd-logo.svg" className="fb btn" alt="logo missing">
+ 	<center><a  href="./img/cd-logo.svg" className="fb btn" alt="logo missing" style={{padding:"10px 12px"}}>
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-		<img src={`${process.env.PUBLIC_URL}/images/un.webp`} style={{width: "40%",marginTop:"2px"}} alt="Logo missing"/></div>
-		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
+		<img src={`${process.env.PUBLIC_URL}/assets/images/un.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo missing"/></div>
+		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
-       <center><a  href="http://google.com/" className="twitter btn">
+       <center><a  href="http://google.com/" className="twitter btn" style={{padding:"10px 12px"}}>
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-          	<img src={`${process.env.PUBLIC_URL}/images/abc.svg`}  style={{width: "40%",marginTop:"2px"}} alt=" twitter logo missing"/></div>
-		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
+          	<img src={`${process.env.PUBLIC_URL}/assets/images/abc.svg`}  style={{width: "40%",marginTop:"2px"}} alt=" twitter logo missing"/></div>
+		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
  		Signin with Google</div>
         	</a></center>
 
-        <center><a  href="http://apple.com/" className="google btn">
+        <center><a  href="http://apple.com/" className="google btn" style={{padding:"10px 12px"}}>
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
            	<img src={`${process.env.PUBLIC_URL}/images/apple.webp`} style={{width: "40%",marginTop:"2px"} } alt=" twitter logo missing"
                /></div>
-		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
+		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Apple</div>
         	</a></center>
 		<p  style={{margin:"1em 0"}}>
@@ -229,20 +229,21 @@ class Header extends Component {
 					<p style={{margin:"1em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
+                        onChange={e => this.setState({ loginEmail: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 
-					<p style={{margin:"1em 0"}}>  
+					<p style={{margin:"1em 0 0.5em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password"   placeholder="Password"
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password" placeholder="Password"
                         onChange={e => this.setState({ loginPassword: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 					<div className="row">
-						<div className="b"><p>.</p></div>
+						<div className="b"><p style={{color:"white"}}>.</p></div>
 						<div className="c" style={{textAlign:"left"}}>
                             
 						<p  style={{margin:"0.5em 0 0.5em 0.3em"}}>
@@ -261,7 +262,8 @@ class Header extends Component {
 
 					<center><a href="google.com" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/>
 					
-					<center><p style={{fontSize:"14px" , fontFamily:"Montserrat"}}>No Account? <a href="#0" data-signin="signup" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Create One</a></p></center>
+					<p style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>No Account?
+                       <a href="#" style={{fontSize:"12px",fontFamily:"Montserrat"}}>Create One</a></center></p>
 
 				</form>
 				
@@ -282,29 +284,29 @@ class Header extends Component {
                     Create an account to access personalized articles, podcasts,
                      career enhancement services along with interest based professional communication groups.</p>
 
- 	<center><a  href="/images/cd-logo.svg" className="fb btn">
+ 	<center><a  href="./img/cd-logo.svg" className="fb btn" style={{padding:"10px 12px"}}>
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-		<img src={`${process.env.PUBLIC_URL}/images/un.webp`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
-		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
+		<img src={`${process.env.PUBLIC_URL}/assets/images/un.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
-       <center><a  href="http://google.com/" className="twitter btn">
+       <center><a  href="http://google.com/" className="twitter btn" style={{padding:"10px 12px"}}>
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-          	<img src={`${process.env.PUBLIC_URL}/images/abc.svg`}  style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
-		<div className="e" style={{textAlign: "left" ,marginTop:"5px"}}>
+          	<img src={`${process.env.PUBLIC_URL}/assets/images/abc.svg`}  style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+		<div className="e" style={{textAlign: "left" ,marginTop:"3px"}}>
  		Signin with Google</div>
         	</a></center>
 
-        <center><a  href="http://apple.com/" className="google btn">
+        <center><a  href="http://apple.com/" className="google btn" style={{padding:"10px 12px"}}>
 		<div className="b">
-            	<p>.</p></div>
+            	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-           	<img src={`${process.env.PUBLIC_URL}/images/apple.webp`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
-		<div className="e" style={{textAlign: "left",marginTop:"5px"}}>
+           	<img src={`${process.env.PUBLIC_URL}/assets/images/apple.webp`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Apple</div>
         	</a></center>
 		<p  style={{margin:".5em 0"}}>
@@ -313,7 +315,7 @@ class Header extends Component {
             
 
             <div class="row">
-					<div class="b"><p>.</p></div>
+					<div class="b"><p style={{color:"white"}}>.</p></div>
 					<div class="a">
 					
 					<p class="cd-signin-modal__fieldset">
@@ -322,21 +324,21 @@ class Header extends Component {
                          placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
 						
 					</p></div>
-					<div class="d"><p>.</p></div>
+					<div class="d"><p style={{color:"white"}}>.</p></div>
 					<div class="a">
 						<p class="cd-signin-modal__fieldset">
                         <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userlname" type="text"
                          placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
 						
 					</p></div></div>
-					<p style={{margin:"1em 0"}}>
+					<p style={{margin:"0.5em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
                         onChange={(e) => this.setState({email: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
-					{/* <p style={{margin:"1em 0"}}>
+					{/* <p style={{margin:"0.5em 0"}}>
 						<center>
                         <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="Institute E-mail" 
                         onChange={(e) => this.setState({instiEmail: e.target.value})}
@@ -344,16 +346,16 @@ class Header extends Component {
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p> */}
 
-					<p style={{margin:"1em 0"}}>  
+					<p style={{margin:"0.5em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password"
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Password"
                         onChange={(e) => this.setState({password: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
 						
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 				
-					<p style={{margin:"1em 0"}}>  
+					<p style={{margin:"0.5em 0 0.5em 0"}}>  
 						<center>
 						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Confirm Password"
                         onChange={(e) => this.setState({confirmPassword: e.target.value})}
@@ -363,9 +365,9 @@ class Header extends Component {
 					</p>
                     
 					<div className="row">
-						<div className="b"><p>.</p></div>
+						<div className="b"><p style={{color:"white"}}>.</p></div>
 						<div className="c" style={{width: "80%", textAlign:"left"}}>
-						<p  style={{margin:".5em 60px 0px 60px"}}>
+						<p  style={{margin:"0.5em 0 0.5em 0.3em"}}>
 							<input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
 							<label for="remember-me" style={{fontSize:"12px", fontFamily:"Montserrat"}}>I agree to Terms and Conditions</label>
 					</p></div></div>
@@ -380,7 +382,7 @@ class Header extends Component {
 					</p>
 
 					<p style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>Already Have an Account?
-                        <a href="#0" data-signin="signup" style={{fontSize:"12px" , fontFamily:"Montserrat"}}> Signin</a></center></p>
+                        <a href="#" style={{fontSize:"12px", fontFamily: "Montserrat"}}>Signin</a></center></p>
 
 				</form>
 				

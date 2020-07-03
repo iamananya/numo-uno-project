@@ -83,9 +83,11 @@ class Contact extends Component {
     return (
       <div className="container">
         <div className="row row-content">
-          <div className="col-12">
+          <div className="col-12" id="bottom">
             <div>
-              <h3 className="center-heading">Subscribe to keep Updated</h3>
+              <h3 id="subs" className="center-heading">
+                Subscribe to keep Updated
+              </h3>
             </div>
           </div>
           <div className="col-12" id="subscribe1">
@@ -119,7 +121,9 @@ class Contact extends Component {
                       name="telnum"
                       placeholder="Contact"
                       value={this.state.telnum}
-                      valid={errors.telnum === ""&&this.state.touched.lastname}
+                      valid={
+                        errors.telnum === "" && this.state.touched.lastname
+                      }
                       invalid={errors.telnum !== ""}
                       onBlur={this.handleBlur("telnum")}
                       onChange={this.handleInputChange}
@@ -143,7 +147,7 @@ class Contact extends Component {
                       name="email"
                       placeholder="Email Id"
                       value={this.state.email}
-                      valid={errors.email === "" &&this.state.touched.email}
+                      valid={errors.email === "" && this.state.touched.email}
                       invalid={errors.email !== ""}
                       onBlur={this.handleBlur("email")}
                       onChange={this.handleInputChange}
