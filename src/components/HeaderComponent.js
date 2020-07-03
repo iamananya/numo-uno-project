@@ -228,7 +228,7 @@ class Header extends Component {
  
 					<p style={{margin:"1em 0"}}>
 						<center>
-                        <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
+                        <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="loginEmail" type="email" placeholder="E-mail" 
                         onChange={e => this.setState({ loginEmail: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
@@ -236,7 +236,7 @@ class Header extends Component {
 
 					<p style={{margin:"1em 0 0.5em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password" placeholder="Password"
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="loginPassword" type="password" placeholder="Password"
                         onChange={e => this.setState({ loginPassword: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						
@@ -320,20 +320,20 @@ class Header extends Component {
 					
 					<p class="cd-signin-modal__fieldset">
 						
-                        <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userfname" type="text"
+                        <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="firstName" type="text"
                          placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
 						
 					</p></div>
 					<div class="d"><p style={{color:"white"}}>.</p></div>
 					<div class="a">
 						<p class="cd-signin-modal__fieldset">
-                        <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userlname" type="text"
+                        <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="lastName" type="text"
                          placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
 						
 					</p></div></div>
 					<p style={{margin:"0.5em 0"}}>
 						<center>
-                        <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
+                        <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" type="email" placeholder="E-mail" 
                         onChange={(e) => this.setState({email: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
@@ -348,7 +348,7 @@ class Header extends Component {
 
 					<p style={{margin:"0.5em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Password"
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="password" type="password"  placeholder="Password"
                         onChange={(e) => this.setState({password: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
 						
@@ -357,7 +357,7 @@ class Header extends Component {
 				
 					<p style={{margin:"0.5em 0 0.5em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Confirm Password"
+						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="confirmPassword" type="password"  placeholder="Confirm Password"
                         onChange={(e) => this.setState({confirmPassword: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
 						
