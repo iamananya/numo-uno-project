@@ -420,7 +420,7 @@ class Header extends Component {
 			valid={errors.email === ""&&this.state.touched.email}
 			invalid={errors.email!== ""}
 			onBlur={this.handleBlur("email")}
-			onChange={this.handleInputChange}
+			
 			onChange={(e) => this.setState({email: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}}/>
 			<FormFeedback style={{ fontSize: "14px" }}>
