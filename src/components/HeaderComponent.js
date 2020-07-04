@@ -413,7 +413,7 @@ class Header extends Component {
 					</p></div></div>
 					<p style={{margin:"0.5em 0"}}>
 						<center>
-                        <FormGroup>
+                        
                         <Input className="cd-signin-modal__Input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" 
                         type="email"
                       name="email"
@@ -428,7 +428,7 @@ class Header extends Component {
 			{/* <FormFeedback style={{ fontSize: "14px" }}>
                             {errors.email}
                             </FormFeedback> */}			
-                        </FormGroup>
+                        
                         </center>
 					</p>
 					{/* <p style={{margin:"0.5em 0"}}>
