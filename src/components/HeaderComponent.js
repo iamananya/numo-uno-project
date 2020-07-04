@@ -406,12 +406,10 @@ class Header extends Component {
 			onBlur={this.handleBlur("lastName")}
 			onChange={this.handleInputChange}
 			style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
-                        <span className="cd-signin-modal__error">Error message here!</span>   
-			</FormGroup>
-                         <FormFeedback style={{ fontSize: "14px" }}>
+                       <FormFeedback style={{ fontSize: "14px" }}>
                             {errors.lastName}
                             </FormFeedback>
-				
+				</FormGroup>
 					</p></div></div>
 					<p style={{margin:"0.5em 0"}}>
 						<center>
