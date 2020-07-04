@@ -79,8 +79,11 @@ class Home extends Component {
               </div>
               <ReactPlayer
                   style={{position:"relative",
-                          top:"-2.5vw",left:"2.5vw"}}
-                  height="400px"
+                          top:"-2.5vw",left:"2.5vw"
+                        ,borderRadius:"10px",padding:"1%",
+                        backgroundColor:"black"}}
+                  
+                  height="25vw"
                   width="auto"
                   controls
                   url="https://www.youtube.com/watch?v=giYeaKsXnsI.mp4"
@@ -111,8 +114,14 @@ class Home extends Component {
                     src={`${process.env.PUBLIC_URL}/images/bridge.webp`}
                     />
           </div>
-          <div>
-            Bridging the Gap between Students and Recruiters with the help of AI
+          <div className="col-4"
+          style={{
+            fontSize: "21px",
+            fontWeight: "400",
+            color: "#151D41",
+            margin: "-100px auto",
+          }}>
+            Bridging this gap between<br/> Students and Recruiters<br/> with the help of <br/>AI
           </div>
           </div>
 
