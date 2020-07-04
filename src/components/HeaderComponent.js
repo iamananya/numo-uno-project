@@ -282,12 +282,19 @@ class Header extends Component {
 						<center>
                         <FormGroup>
                         <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="loginEmail" type="email" placeholder="E-mail" 
+                       name="loginEmail"
+                        value={this.state.loginEmail} 
+			valid={errors.loginEmail === ""&&this.state.touched.loginEmail}
+			invalid={errors.loginEmail !== ""}
+			onBlur={this.handleBlur("loginEmail")}
+			onChange={this.handleInputChange}
+
                         onChange={e => this.setState({ loginEmail: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span>
                         </FormGroup>
                         <FormFeedback style={{ fontSize: "14px" }}>
-                            {errors.firstName}
+                            {errors.loginEmail}
                          </FormFeedback>
                         </center>
 
@@ -416,7 +423,8 @@ class Header extends Component {
                         
                         <FormGroup>
                         <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" type="email" placeholder="E-mail" 
-                       value={this.state.email} 
+                        name="email"
+                        value={this.state.email} 
 			valid={errors.email === ""&&this.state.touched.email}
 			invalid={errors.email !== ""}
 			onBlur={this.handleBlur("email")}
@@ -427,7 +435,7 @@ class Header extends Component {
 						<span className="cd-signin-modal__error">Error message here!</span>
                         </FormGroup>
                         <FormFeedback style={{ fontSize: "14px" }}>
-                            {errors.firstName}
+                            {errors.email}
                          </FormFeedback>		
                         
                         </center>
