@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&display=swap");
 .App {
   text-align: center;
   top: 0;
@@ -12,14 +14,19 @@
 
   background-position: center;
 }
-#blog-title {
+#blog-title h1 {
+  margin-top: 2%;
   text-align: center;
-
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-size: 70px;
+}
+#blog-title h3 {
+  text-align: center;
+  font-family: Josefin Sans;
+  font-weight: 600;
+  font-size: 30px;
   margin-bottom: 5%;
-
-  letter-spacing: 5px;
-  font-size: 50px;
-  text-shadow: 2px 2px gray;
 }
 .title {
   width: 4%;
@@ -35,7 +42,7 @@
   border: 0px solid black;
   letter-spacing: 2px;
   margin-bottom: 5px;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: black;
   color: #ffd700;
 }
@@ -226,6 +233,7 @@
   font-size: 17px;
   padding-right: 5%;
   color: #303336;
+  line-height: 25px;
 }
 .column1 h2 a {
   color: #303336;
@@ -255,7 +263,7 @@
   max-height: 150px;
   border-radius: 10px;
   background-color: #000000;
-  padding: 2px;
+  padding: 5px;
 }
 .column_card2 {
   text-align: left;
@@ -442,8 +450,8 @@ div.podCard {
   top: 0;
 }
 .podRow {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.055),
     0 6px 20px 0 rgba(0, 0, 0, 0.055);
@@ -454,13 +462,16 @@ div.podCard {
 .podText {
   margin-top: 5px;
   font-family: Montserrat;
+  text-align: left;
+  font-weight: 400;
   font-size: 13px;
   padding: 10px;
 }
 .podText h3 {
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+
   letter-spacing: 2px;
 }
 

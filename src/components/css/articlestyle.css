@@ -52,6 +52,7 @@
   display: flex;
   text-align: left;
   font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .text_art img {
@@ -67,7 +68,8 @@
   margin-left: 15%;
   margin-right: 15%;
   font-size: 20px;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
+  line-height: 30px;
 }
 
 .text_art p strong {
@@ -131,5 +133,18 @@
   font-family: Montserrat;
   text-align: left;
   margin-left: 15%;
+}
+
+@media screen and (max-width: 800px) {
+  #brand_art {
+    width: 15%;
+  }
+  .social_art {
+    text-align: center;
+    margin-left: 15%;
+  }
+  #content_art h1 {
+    font-size: 40px;
+  }
 }
 /*# sourceMappingURL=articlestyle.css.map */

@@ -1,23 +1,51 @@
 import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
-import CardDeck from "react-bootstrap/CardDeck";
+
 import ReactPlayer from "react-player";
 import axios from "axios";
-import { BLOG_URL, BLOG_KEY } from "../constants/constants";
+import {
+  BLOG_URL,
+  BLOG_KEY,
+  POD_URL,
+  POD_KEY,
+  CHANNEL_ID,
+} from "../constants/constants";
 import MetaTags from "react-meta-tags";
+
 class Podcast extends Component {
   state = {
     posts3: [],
+    videos: [],
   };
 
   componentDidMount() {
-    const URL = BLOG_URL + "/posts/?key=" + BLOG_KEY;
-    console.log("URL IS ", URL);
+    const URL1 =
+      POD_URL +
+      POD_KEY +
+      "&channelId=" +
+      CHANNEL_ID +
+      "&part=snippet,id&order=date&maxResults=20";
+    console.log("URL1 IS ", URL1);
+
     axios
-      .get(URL)
+      .get(URL1)
+      .then((res) => {
+        console.log(res.data);
+        this.setState({ videos: res.data.items.slice(0) }, () =>
+          console.log("state for videos is ", this.state.videos)
+        );
+      })
+      .catch((err) => {
+        console.log("err in fetch in podcast ", err);
+        console.log("FRONTEND TEAM SHOW ERROR ");
+      });
+    const URL2 = BLOG_URL + "/posts/?key=" + BLOG_KEY;
+    console.log("URL2 IS ", URL2);
+    axios
+      .get(URL2)
       .then((res) => {
         this.setState({ posts3: res.data.posts.slice(0, 3) }, () =>
-          console.log("state is ", this.state.posts)
+          console.log("state for blog is", this.state.posts3)
         );
       })
       .catch((err) => {
@@ -49,7 +77,8 @@ class Podcast extends Component {
             </div>
           </a>
           <div id="podTitle">
-            <p>Podcast</p>
+            <h1>NUMO UNO</h1>
+            <h3>PODCAST</h3>
           </div>
         </div>
         <MetaTags>
@@ -60,28 +89,27 @@ class Podcast extends Component {
           />
         </MetaTags>
 
-        <CardDeck className="first" id="podRow">
-          <Card id="podCard">
-            <ReactPlayer
-              id="podLive"
-              controls
-              url="https://www.youtube.com/watch?v=dEv99vxKjVI"
-            />
-            <Card.Body id="podText">
-              <Card.Title>
-                <h4>
-                  Elon Musk: Tesla Autopilot | Artificial Intelligence (AI)
-                  Podcast
-                </h4>
-              </Card.Title>
-              <Card.Text>
-                Elon Musk is the CEO of Tesla, SpaceX, Neuralink, and a
-                co-founder of several other companies. This is our first
-                conversation on the podcast.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-          <Card id="podCard">
+        <div className="first" id="podRow">
+          {this.state.videos.map((video) => {
+            return (
+              <Card id="podCard">
+                <ReactPlayer
+                  id="podLive"
+                  controls
+                  url={`https://www.youtube.com/watch?v=${video.id.videoId}`}
+                />
+                <Card.Body id="podText">
+                  <Card.Title>
+                    <h4>{video.snippet.title}</h4>
+                  </Card.Title>
+                  <Card.Text>{video.snippet.description}</Card.Text>
+                </Card.Body>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/*<Card id="podCard">
             <ReactPlayer
               id="podLive"
               controls
@@ -185,7 +213,7 @@ class Podcast extends Component {
             </Card.Body>
           </Card>
         </CardDeck>
-
+        */}
         <div className="Poppost">
           <h2>Give It A Read</h2>
           <div id="cardPod">

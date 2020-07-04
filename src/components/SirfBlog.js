@@ -14,7 +14,7 @@ function BlogFinal() {
     <div className="App">
       <Land />
       <div className="responsive">
-        <a href="/about">
+        <a href="/">
           <img
             className="title"
             src={`${process.env.PUBLIC_URL}/images/Final_Black.png`}
@@ -22,10 +22,9 @@ function BlogFinal() {
           ></img>
         </a>
         <div id="blog-title">
-          <p>
-            <br></br>
-            NUMO UNO
-          </p>
+          <h1>NUMO UNO</h1>
+
+          <h3>BLOG</h3>
         </div>
         <Navigate />
       </div>
