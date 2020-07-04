@@ -90,7 +90,7 @@ class Header extends Component {
         if (this.state.touched.confirmPassword && this.state.confirmPassword.length != this.state.password.length)
           errors.confirmPassword = "Password didn't match";
         if (this.state.touched.loginPassword && this.state.loginPassword.length < 6)
-          errors.loginPassword = "Password should be >=6";
+          errors.loginPassword = "Password is already registered";
         return errors;
       }
     toggleNav(){
