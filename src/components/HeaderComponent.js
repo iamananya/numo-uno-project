@@ -29,6 +29,7 @@ class Header extends Component {
                 firstName: false,
                 lastName: false,
                 email: false,
+                loginEmail: false,
               },
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -73,17 +74,12 @@ class Header extends Component {
     
         const reg = /^\d+$/;
         
-        if (
-          this.state.touched.email &&
-          email.split("").filter((x) => x === "@").length !== 1
-        )
+        if (this.state.touched.email && email.split("").filter((x) => x === "@").length !== 1)
           errors.email = "Email is not correct";
     
-      if (
-          this.state.touched.loginEmail &&
-          loginEmail.split("").filter((x) => x === "@").length !== 1
-        )
-          errors.loginEmail = "Email is not correct";
+      if (this.state.touched.loginEmail && loginEmail.split("").filter((x) => x === "@").length !== 1)
+        errors.loginEmail = "Email is not correct";
+
         return errors;
       }
     toggleNav(){
@@ -291,7 +287,7 @@ class Header extends Component {
                         <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="loginEmail" type="email" placeholder="E-mail" 
                        name="loginEmail"
                         value={this.state.loginEmail} 
-			valid={errors.loginEmail === ""&&this.state.touched.loginEmail}
+			valid={errors.loginEmail === "" && this.state.touched.loginEmail}
 			invalid={errors.loginEmail !== ""}
 			onBlur={this.handleBlur("loginEmail")}
 			onChange={this.handleInputChange}
@@ -299,10 +295,11 @@ class Header extends Component {
                         onChange={e => this.setState({ loginEmail: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span>
-                        </FormGroup>
+                        
                         <FormFeedback style={{ fontSize: "14px" }}>
                             {errors.loginEmail}
                          </FormFeedback>
+                         </FormGroup>
                         </center>
 
 					
@@ -432,7 +429,7 @@ class Header extends Component {
                         <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" type="email" placeholder="E-mail" 
                         name="email"
                         value={this.state.email} 
-			valid={errors.email === ""&&this.state.touched.email}
+			valid={errors.email === "" && this.state.touched.email}
 			invalid={errors.email !== ""}
 			onBlur={this.handleBlur("email")}
 			onChange={this.handleInputChange}
@@ -440,11 +437,11 @@ class Header extends Component {
                         onChange={e => this.setState({email: e.target.value })}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span>
-                        </FormGroup>
+                        
                         <FormFeedback style={{ fontSize: "14px" }}>
                             {errors.email}
                          </FormFeedback>		
-                        
+                        </FormGroup>
                         </center>
 					</p>
 					{/* <p style={{margin:"0.5em 0"}}>
