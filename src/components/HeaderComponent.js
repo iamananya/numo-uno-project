@@ -422,12 +422,7 @@ class Header extends Component {
                         </FormGroup>
                         <FormFeedback style={{ fontSize: "14px" }}>
                             {errors.firstName}
-                         </FormFeedback>
-			
-                        {*/ style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}} onChange={(e) => this.setState({email: e.target.value})}/>
-			 <FormFeedback style={{ fontSize: "14px" }}>
-                            {errors.email}
-                            </FormFeedback> */}			
+                         </FormFeedback>		
                         
                         </center>
 					</p>
