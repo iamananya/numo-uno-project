@@ -426,20 +426,20 @@ class Header extends Component {
 						<center>
                         
                         <FormGroup>
-                        <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="Semail" type="email" placeholder="E-mail" 
-                        name="Semail"
-                        value={this.state.Semail} 
-			valid={errors.Semail === "" && this.state.touched.Semail}
-			invalid={errors.Semail !== ""}
-			onBlur={this.handleBlur("Semail")}
+                        <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="loginEmail" type="email" placeholder="E-mail" 
+                        name="loginEmail"
+                        value={this.state.loginEmail} 
+			valid={errors.loginEmail === "" && this.state.touched.loginEmail}
+			invalid={errors.loginEmail !== ""}
+			onBlur={this.handleBlur("loginEmail")}
 			onChange={this.handleInputChange}
 
-                        onChange={e => this.setState({email: e.target.value })}
+                        onChange={e => this.setState({loginEmail: e.target.value })}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span>
                         
                         <FormFeedback style={{ fontSize: "14px" }}>
-                            {errors.Semail}
+                            {errors.loginEmail}
                          </FormFeedback>		
                         </FormGroup>
                         </center>
