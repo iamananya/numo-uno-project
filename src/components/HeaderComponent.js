@@ -77,8 +77,8 @@ class Header extends Component {
         if (this.state.touched.Semail && email.split("").filter((x) => x === "@").length !== 1)
           errors.Semail = "Email is not correct";
     
-      if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
-        errors.loginEmail = "Email is not correct";
+        if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
+          errors.loginEmail = "Email is not correct";
 
         return errors;
       }
