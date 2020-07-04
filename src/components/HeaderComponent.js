@@ -18,7 +18,7 @@ class Header extends Component {
             
             firstName: '',
             lastName: '',
-            Semail: '',
+            email: '',
             password: '',
             confirmPassword: '',
             instiEmail: '',
@@ -28,7 +28,7 @@ class Header extends Component {
             touched: {
                 firstName: false,
                 lastName: false,
-                Semail: false,
+                email: false,
                 loginEmail: false,
               },
         };
@@ -55,12 +55,12 @@ class Header extends Component {
         });
       };
 
-    validate(firstName, lastName, telnum, Semail,loginEmail){
+    validate(firstName, lastName, telnum, email,loginEmail){
         const errors = {
           firstName: "",
           lastName: "",
           telnum: "",
-          Semail: "",
+          email: "",
           loginEmail: "",
         };
         if (this.state.touched.firstName && firstName.length < 3)
@@ -74,8 +74,8 @@ class Header extends Component {
     
         const reg = /^\d+$/;
         
-        if (this.state.touched.Semail && email.split("").filter((x) => x === "@").length !== 1)
-          errors.Semail = "Email is not correct";
+        if (this.state.touched.email && email.split("").filter((x) => x === "@").length !== 1)
+          errors.email = "Email is not correct";
     
         if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
           errors.loginEmail = "Email is not correct";
@@ -426,20 +426,20 @@ class Header extends Component {
 						<center>
                         
                         <FormGroup>
-                        <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="loginEmail" type="email" placeholder="E-mail" 
-                        name="loginEmail"
-                        value={this.state.loginEmail} 
-			valid={errors.loginEmail === "" && this.state.touched.loginEmail}
-			invalid={errors.loginEmail !== ""}
-			onBlur={this.handleBlur("loginEmail")}
+                        <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" type="email" placeholder="E-mail" 
+                        name="email"
+                        value={this.state.email} 
+			valid={errors.email === "" && this.state.touched.email}
+			invalid={errors.email !== ""}
+			onBlur={this.handleBlur("email")}
 			onChange={this.handleInputChange}
 
-                        onChange={e => this.setState({loginEmail: e.target.value })}
+                        onChange={e => this.setState({email: e.target.value })}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span>
                         
                         <FormFeedback style={{ fontSize: "14px" }}>
-                            {errors.loginEmail}
+                            {errors.email}
                          </FormFeedback>		
                         </FormGroup>
                         </center>
