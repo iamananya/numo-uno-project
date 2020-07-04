@@ -423,7 +423,7 @@ class Header extends Component {
                        
          
 					</p></div>
-					<div class="b"><p style={{color:"white"}}>.</p></div>
+				
 					<div class="a">
 					
 					<p class="cd-signin-modal__fieldset">
