@@ -414,18 +414,18 @@ class Header extends Component {
 					<p style={{margin:"0.5em 0"}}>
 						<center>
                         
-                        <Input className="cd-signin-modal__Input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" 
-                        type="email"
-                      name="email"
-                      placeholder="Email"
-                      {/* value={this.state.email}
-                      valid={errors.email === "" && this.state.touched.email}
-                      invalid={errors.email !== ""}
-                      onBlur={this.handleBlur("email")}
-                      onChange={this.handleInputChange} */}
+                        <FormGroup>
+                        <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" type="email" placeholder="E-mail" 
+                        onChange={e => this.setState({email: e.target.value })}
+                        style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
+						<span className="cd-signin-modal__error">Error message here!</span>
+                        </FormGroup>
+                        <FormFeedback style={{ fontSize: "14px" }}>
+                            {errors.firstName}
+                         </FormFeedback>
 			
-                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}} onChange={(e) => this.setState({email: e.target.value})}/>
-			{/* <FormFeedback style={{ fontSize: "14px" }}>
+                        {*/ style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}} onChange={(e) => this.setState({email: e.target.value})}/>
+			 <FormFeedback style={{ fontSize: "14px" }}>
                             {errors.email}
                             </FormFeedback> */}			
                         
