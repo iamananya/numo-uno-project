@@ -30,6 +30,8 @@ class Header extends Component {
                 lastName: false,
                 email: false,
                 loginEmail: false,
+                password: false,
+                confirmPassword: false,
               },
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -55,22 +57,24 @@ class Header extends Component {
         });
       };
 
-    validate(firstName, lastName, telnum, email,loginEmail){
+    validate(firstName, lastName, telnum, email,loginEmail,password,confirmPassword){
         const errors = {
           firstName: "",
           lastName: "",
           telnum: "",
           email: "",
           loginEmail: "",
+          password: "",
+          confirmPassword: "",
         };
         if (this.state.touched.firstName && firstName.length < 3)
-          errors.firstName = "Name should be >= 3 characters";
+          errors.firstName = "Wrong";
         else if (this.state.touched.firstName && firstName.length >= 15)
-          errors.firstName = "First name shoubld be <=15 characters";
+          errors.firstName = "Wrong";
         if (this.state.touched.lastName && lastName.length < 3)
-          errors.lastName = "Last name should be >= 3 characters";
+          errors.lastName = "Wrong";
         else if (this.state.touched.lastName && lastName.length >= 10)
-          errors.firstName = "Last name shoubld be <=10 characters";
+          errors.firstName = "Wrong";
     
         const reg = /^\d+$/;
         
@@ -79,7 +83,12 @@ class Header extends Component {
     
         if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
           errors.loginEmail = "Email is not correct";
-
+  
+        if (this.state.touched.confirmPassword && confirmPassword.length < 6)
+          errors.confirmPassword = "Password is incorrect";
+        if (this.state.touched.password && password.length < 6)
+          errors.password = "Password is incorrect";
+        
         return errors;
       }
     toggleNav(){
@@ -192,8 +201,10 @@ class Header extends Component {
         const errors = this.validate(
             this.state.firstName,
             this.state.lastName,
-            this.state.Semail,
+            this.state.email,
             this.state.loginEmail,
+            this.state.password,
+            this.state.confirmPassword,
           );
         return(
             <div className="keep-fixed">
@@ -458,9 +469,19 @@ class Header extends Component {
 						<center>
                         <FormGroup>
 						<Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="password" type="password"  placeholder="Password"
+                        name="password"
+                        value={this.state.password} 
+			valid={errors.password === "" && this.state.touched.password}
+			invalid={errors.password !== ""}
+			onBlur={this.handleBlur("password")}
+			onChange={this.handleInputChange}
                         onChange={(e) => this.setState({password: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
-						</FormGroup>
+                        
+			<FormFeedback style={{ fontSize: "14px" }}>
+                            {errors.password}
+                         </FormFeedback>			
+                          </FormGroup>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 				
