@@ -487,9 +487,19 @@ class Header extends Component {
 						<center>
                         <FormGroup>
 						<Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="confirmPassword" type="password"  placeholder="Confirm Password"
+                        name="confirmPassword"
+                        value={this.state.confirmPassword} 
+			valid={errors.confirmPassword === "" && this.state.touched.confirmPassword}
+			invalid={errors.confirmPassword !== ""}
+			onBlur={this.handleBlur("confirmPassword")}
+			onChange={this.handleInputChange}
                         onChange={(e) => this.setState({confirmPassword: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
-						</FormGroup>
+                        
+		       <FormFeedback style={{ fontSize: "14px" }}>
+                            {errors.confirmPassword}
+                         </FormFeedback>		
+                           </FormGroup>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
                     
