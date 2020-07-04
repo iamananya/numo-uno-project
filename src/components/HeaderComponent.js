@@ -76,7 +76,7 @@ class Header extends Component {
           this.state.touched.email &&
           email.split("").filter((x) => x === "@").length !== 1
         )
-          errors.email = "Email is not correct";
+          errors.email = "Email should contain a @ sign";
     
         return errors;
       }
