@@ -83,12 +83,10 @@ class Header extends Component {
     
         if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
           errors.loginEmail = "Email is not correct";
-  
-        if (this.state.touched.confirmPassword && confirmPassword.length != password.length)
-          errors.confirmPassword = "Password is incorrect";
-        if (this.state.touched.password && password.length < 6)
+        if (this.state.touched.password && this.state.password.length < 6)
           errors.password = "Password is incorrect";
-        
+        if (this.state.touched.confirmPassword && this.state.confirmPassword.length != this.state.password.length)
+          errors.confirmPassword = "Password is incorrect";
         return errors;
       }
     toggleNav(){
