@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import { Card, CardImg, CardDeck,CardBody, CardText, CardTitle } from "reactstrap";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
-import { BLOG_URL, BLOG_KEY } from "../constants/constants";
+import ReactPlayer from "react-player";
+import { BLOG_URL, BLOG_KEY,POD_URL,
+  POD_KEY,
+  CHANNEL_ID } from "../constants/constants";
 import MetaTags from "react-meta-tags";
 class Blog extends Component {
   state = {
     posts: [],
     posts3: [],
+    videos: [],
   };
 
   componentDidMount() {
@@ -20,8 +24,38 @@ class Blog extends Component {
         this.setState({ posts: res.data.posts.slice(0, 1) }, () =>
           console.log("state is ", this.state.posts)
         );
-        this.setState({ posts3: res.data.posts.slice(0, 2) }, () =>
-          console.log("state is ", this.state.posts)
+      })
+      .catch((err) => {
+        console.log("err in fetch in blog ", err);
+        console.log("FRONTEND TEAM SHOW ERROR ");
+      });
+      const URL1 =
+      POD_URL +
+      POD_KEY +
+      "&channelId=" +
+      CHANNEL_ID +
+      "&part=snippet,id&order=date&maxResults=20";
+    console.log("URL1 IS ", URL1);
+
+    axios
+      .get(URL1)
+      .then((res) => {
+        console.log(res.data);
+        this.setState({ videos: res.data.items.slice(0,2) }, () =>
+          console.log("state for videos is ", this.state.videos)
+        );
+      })
+      .catch((err) => {
+        console.log("err in fetch in podcast ", err);
+        console.log("FRONTEND TEAM SHOW ERROR ");
+      });
+    const URL2 = BLOG_URL + "/posts/?key=" + BLOG_KEY;
+    console.log("URL2 IS ", URL2);
+    axios
+      .get(URL2)
+      .then((res) => {
+        this.setState({ posts3: res.data.posts.slice(1, 3) }, () =>
+          console.log("state for blog is", this.state.posts3)
         );
       })
       .catch((err) => {
@@ -46,7 +80,29 @@ class Blog extends Component {
             className="col-12 col-md-7"
             style={{ borderRadius: "10px", marginRight: "auto" }}
           >
-            <img
+            <div  >
+              {this.state.videos.slice(0,1).map((video) => {
+                return (
+                  <Card style={{
+                    border:"0px solid white",
+                    borderRadius:"10px",
+                    boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.062)"
+                  }}>
+                    <ReactPlayer
+                      id="podLive"
+                      controls
+                      url={`https://www.youtube.com/watch?v=${video.id.videoId}`}
+                    />
+                    <CardBody id="podText">
+                      <CardTitle>
+                        <h4>{video.snippet.title}</h4>
+                      </CardTitle>
+                    </CardBody>
+                  </Card>
+                );
+              })}
+            </div>
+            {/* <img
               id="blog-main"
               width="100%"
               src={`${process.env.PUBLIC_URL}/images/img_lake.webp`}
@@ -71,7 +127,7 @@ class Blog extends Component {
                   venenatis, vel luctus arcu pulvinar.{" "}
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="col-12 col-md-4 ">
           
@@ -125,7 +181,7 @@ class Blog extends Component {
           <div className="col-12 col-md-7"
           style={{
             boxShadow: "-1px 3px 20px rgba(0,0,0,.16)",}}>
-          <div id="cardPod" style={{marginTop:"3vw"}}>
+          <div id="cardPod">
             {this.state.posts3.map((post) => {
               return (
                 <div className="popRowS">
@@ -219,7 +275,31 @@ class Blog extends Component {
               marginBottom:" 20px",
             }}
           >
-            <img
+            <div  >
+              {this.state.videos.slice(1,2).map((video) => {
+                return (
+                  <Card style={{
+                    border:"0px solid white",
+                    borderRadius:"10px",
+                    boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.062)"
+                  }}>
+                    <ReactPlayer
+                      id="podLive"
+                      width="100%"
+                      height="100%"
+                      controls
+                      url={`https://www.youtube.com/watch?v=${video.id.videoId}`}
+                    />
+                    {/* <CardBody id="podText">
+                      <CardTitle>
+                        <h4>{video.snippet.title}</h4>
+                      </CardTitle>
+                    </CardBody> */}
+                  </Card>
+                );
+              })}
+            </div>
+            {/* <img
               width="100%"
               height="100%"
               src={`${process.env.PUBLIC_URL}/images/blrr.webp`}
@@ -234,7 +314,7 @@ class Blog extends Component {
               fontSize:"1vw",
             }}>
               This is lake on the side of a river with blue water
-            </p>
+            </p> */}
             
           </div>
           <div className="mx-auto">

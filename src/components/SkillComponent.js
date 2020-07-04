@@ -15,13 +15,13 @@ function Skill(props) {
         <img
           id="tl"
           
-          src={`${process.env.PUBLIC_URL}/images/group_tl.webp`}
+          src={`${process.env.PUBLIC_URL}images/group_tl.webp`}
           alt="not found"
         />
         <img
           id="tr"
           
-          src={`${process.env.PUBLIC_URL}/images/group_tr.webp`}
+          src={`${process.env.PUBLIC_URL}images/group_tr.webp`}
           alt=" not found"
         />
         
