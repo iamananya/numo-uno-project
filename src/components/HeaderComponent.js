@@ -418,16 +418,16 @@ class Header extends Component {
                         type="email"
                       name="email"
                       placeholder="Email"
-                      value={this.state.email}
+                      {/* value={this.state.email}
                       valid={errors.email === "" && this.state.touched.email}
                       invalid={errors.email !== ""}
                       onBlur={this.handleBlur("email")}
-                      onChange={this.handleInputChange}
+                      onChange={this.handleInputChange} */}
 			
-                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}} {/* onChange={(e) => this.setState({email: e.target.value})} */}/>
-			<FormFeedback style={{ fontSize: "14px" }}>
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}} onChange={(e) => this.setState({email: e.target.value})}/>
+			{/* <FormFeedback style={{ fontSize: "14px" }}>
                             {errors.email}
-                            </FormFeedback>			
+                            </FormFeedback> */}			
                         </FormGroup>
                         </center>
 					</p>
