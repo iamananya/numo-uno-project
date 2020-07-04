@@ -30,6 +30,9 @@ class Header extends Component {
                 lastName: false,
                 email: false,
                 loginEmail: false,
+                password: false,
+                confirmPassword: false,
+                loginPassword: false,
               },
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -55,31 +58,39 @@ class Header extends Component {
         });
       };
 
-    validate(firstName, lastName, telnum, email,loginEmail){
+    validate(firstName, lastName, telnum, email,loginEmail,password,confirmPassword,loginPassword,){
         const errors = {
           firstName: "",
           lastName: "",
           telnum: "",
           email: "",
           loginEmail: "",
+          password: "",
+          confirmPassword: "",
+          loginPassword: "",
         };
         if (this.state.touched.firstName && firstName.length < 3)
-          errors.firstName = "Name should be >= 3 characters";
+          errors.firstName = "Wrong";
         else if (this.state.touched.firstName && firstName.length >= 15)
-          errors.firstName = "First name shoubld be <=15 characters";
+          errors.firstName = "Wrong";
         if (this.state.touched.lastName && lastName.length < 3)
-          errors.lastName = "Last name should be >= 3 characters";
+          errors.lastName = "Wrong";
         else if (this.state.touched.lastName && lastName.length >= 10)
-          errors.firstName = "Last name shoubld be <=10 characters";
+          errors.firstName = "Wrong";
     
         const reg = /^\d+$/;
         
-        if (this.state.touched.email && email.split("").filter((x) => x === "@").length !== 1)
+        if (this.state.touched.email && this.state.email.split("").filter((x) => x === "@").length !== 1)
           errors.email = "Email is not correct";
     
         if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
           errors.loginEmail = "Email is not correct";
-
+        if (this.state.touched.password && this.state.password.length < 6)
+          errors.password = "Password should be >=6";
+        if (this.state.touched.confirmPassword && this.state.confirmPassword.length != this.state.password.length)
+          errors.confirmPassword = "Password didn't match";
+        if (this.state.touched.loginPassword && this.state.loginPassword.length < 6)
+          errors.loginPassword = "Password is already registered";
         return errors;
       }
     toggleNav(){
@@ -192,8 +203,11 @@ class Header extends Component {
         const errors = this.validate(
             this.state.firstName,
             this.state.lastName,
-            this.state.Semail,
+            this.state.email,
             this.state.loginEmail,
+            this.state.password,
+            this.state.confirmPassword,
+            this.state.loginPassword,
           );
         return(
             <div className="keep-fixed">
@@ -307,10 +321,20 @@ class Header extends Component {
                         
 					<p style={{margin:"1em 0 0.5em 0"}}>  
 						<center>
+                                                 <FormGroup>
 						<Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="loginPassword" type="password" placeholder="Password"
+                        name="loginPassword"
+                        value={this.state.loginPassword} 
+			valid={errors.loginPassword === "" && this.state.touched.loginPassword}
+			invalid={errors.loginPassword !== ""}
+			onBlur={this.handleBlur("loginPassword")}
+			onChange={this.handleInputChange}
                         onChange={e => this.setState({ loginPassword: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
-						
+			<FormFeedback style={{ fontSize: "14px" }}>
+                            {errors.loginPassword}
+                         </FormFeedback>
+                          </FormGroup>	
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 					<div className="row">
@@ -390,39 +414,27 @@ class Header extends Component {
 					<div class="a">
 					
 					<p class="cd-signin-modal__fieldset">
-					<FormGroup style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}}>
-                        <Input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" 
+		
+                        <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" 
                         id="firstName" type="text"
                          name="firstName" placeholder="First Name"
-                         value={this.state.firstName}
-                         valid={errors.firstName === ""&&this.state.touched.firstName}
-                         invalid={errors.firstName !== ""}
-                         onBlur={this.handleBlur("firstName")}
-                         onChange={this.handleInputChange}
-                        style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"90%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
-                        <span className="cd-signin-modal__error">Error message here!</span> 
-                        <FormFeedback style={{ fontSize: "14px" }}>
-                            {errors.firstName}
-                            </FormFeedback>
-                           </FormGroup>
+                        style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
+                 
+                       
+         
 					</p></div>
-					<div class="d"><p style={{color:"white"}}>.</p></div>
+					<div class="b"><p style={{color:"white"}}>.</p></div>
 					<div class="a">
-						<p class="cd-signin-modal__fieldset">
-                        <FormGroup>
-                        <Input class="cd-signin-modal__Input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="lastName" type="text"
+					
+					<p class="cd-signin-modal__fieldset">
+		
+                        <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" 
+                        id="lastName" type="text"
                          name="lastName" placeholder="Last Name"
-			value={this.state.lastName} 
-			valid={errors.lastName === ""&&this.state.touched.lastName}
-			invalid={errors.lastName !== ""}
-			onBlur={this.handleBlur("lastName")}
-			onChange={this.handleInputChange}
-			style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
-                           <span className="cd-signin-modal__error">Error message here!</span> 
-                       <FormFeedback style={{ fontSize: "14px" }}>
-                            {errors.lastName}
-                            </FormFeedback>
-				</FormGroup>
+                        style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
+                 
+                       
+         
 					</p></div></div>
 					<p style={{margin:"0.5em 0"}}>
 						<center>
@@ -431,7 +443,7 @@ class Header extends Component {
                         <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" type="email" placeholder="E-mail" 
                         name="email"
                         value={this.state.email} 
-			valid={errors.email === "" && this.state.touched.email}
+			valid={errors.email === ""&&this.state.touched.email}
 			invalid={errors.email !== ""}
 			onBlur={this.handleBlur("email")}
 			onChange={this.handleInputChange}
@@ -458,9 +470,19 @@ class Header extends Component {
 						<center>
                         <FormGroup>
 						<Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="password" type="password"  placeholder="Password"
+                        name="password"
+                        value={this.state.password} 
+			valid={errors.password === "" && this.state.touched.password}
+			invalid={errors.password !== ""}
+			onBlur={this.handleBlur("password")}
+			onChange={this.handleInputChange}
                         onChange={(e) => this.setState({password: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
-						</FormGroup>
+                        
+			<FormFeedback style={{ fontSize: "14px" }}>
+                            {errors.password}
+                         </FormFeedback>			
+                          </FormGroup>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 				
@@ -468,9 +490,19 @@ class Header extends Component {
 						<center>
                         <FormGroup>
 						<Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="confirmPassword" type="password"  placeholder="Confirm Password"
+                        name="confirmPassword"
+                        value={this.state.confirmPassword} 
+			valid={errors.confirmPassword === "" && this.state.touched.confirmPassword}
+			invalid={errors.confirmPassword !== ""}
+			onBlur={this.handleBlur("confirmPassword")}
+			onChange={this.handleInputChange}
                         onChange={(e) => this.setState({confirmPassword: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
-						</FormGroup>
+                        
+		       <FormFeedback style={{ fontSize: "14px" }}>
+                            {errors.confirmPassword}
+                         </FormFeedback>		
+                           </FormGroup>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
                     
