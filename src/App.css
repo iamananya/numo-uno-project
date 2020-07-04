@@ -220,6 +220,10 @@ nav{
     font-size: 21px;
     height: 45px;
 }
+.popRowS{
+    display: flex;
+    width: 100%;
+}
 .custom-button2{
     color: #ffd700;
     background-color: black;

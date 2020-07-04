@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem,
-   Modal } from 'reactstrap';
+   Modal,Form, FormGroup, Input, FormFeedback } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
 import { BACKEND_URL } from '../constants/constants';
 
@@ -24,14 +24,62 @@ class Header extends Component {
             instiEmail: '',
 
             loginEmail: '',
-            loginPassword: ''
+            loginPassword: '',
+            touched: {
+                firstName: false,
+                lastName: false,
+                email: false,
+              },
         };
+        this.handleInputChange = this.handleInputChange.bind(this);
         this.toggleNav=this.toggleNav.bind(this);
         this.toggleModal=this.toggleModal.bind(this);
         this.toggleModalj=this.toggleModalj.bind(this);
         this.handleLogin=this.handleLogin.bind(this);
         this.handleJoin=this.handleJoin.bind(this);
+        this.handleBlur = this.handleBlur.bind(this);
     }
+    handleInputChange(event) {
+        const target = event.target;
+        const value = target.type === "checkbox" ? target.checked : target.value;
+        const name = target.name;
+    
+        this.setState({
+          [name]: value,
+        });
+      }
+    handleBlur = (field) => (evt) => {
+        this.setState({
+          touched: { ...this.state.touched, [field]: true },
+        });
+      };
+
+    validate(firstName, lastName, telnum, email) {
+        const errors = {
+          firstName: "",
+          lastName: "",
+          telnum: "",
+          email: "",
+        };
+        if (this.state.touched.firstName && firstName.length < 3)
+          errors.firstName = "Name should be >= 3 characters";
+        else if (this.state.touched.firstName && firstName.length >= 15)
+          errors.firstName = "First name shoubld be <=15 characters";
+        if (this.state.touched.lastName && lastName.length < 3)
+          errors.lastName = "Last name should be >= 3 characters";
+        else if (this.state.touched.lastName && lastName.length >= 10)
+          errors.firstName = "Last name shoubld be <=10 characters";
+    
+        const reg = /^\d+$/;
+        
+        if (
+          this.state.touched.email &&
+          email.split("").filter((x) => x === "@").length !== 1
+        )
+          errors.email = "Email should contain a @ sign";
+    
+        return errors;
+      }
     toggleNav(){
         this.setState({
             isNavOpen: !this.state.isNavOpen
@@ -139,7 +187,11 @@ class Header extends Component {
     }
 
     render() {
-        
+        const errors = this.validate(
+            this.state.firstName,
+            this.state.lastName,
+            this.state.email,
+          );
         return(
             <div className="keep-fixed">
                 <Navbar className="custom-nav" color="white" light expand="md">
@@ -192,7 +244,7 @@ class Header extends Component {
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
                     ,boxShadow: "0 0 6px rgba(0,0,0,.1)",width:"auto",
                 }}>			
-                    <form className="cd-signin-modal__form" style={{padding:"2em"}}>
+                    <Form className="cd-signin-modal__form" style={{padding:"2em"}}>
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}> Welcome Back</p>
                     <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",letterSpacing:"1px"}}>Signin to access personalized articles, podcasts, career enhancement services along with interest based professional communication groups.</p><br/>
 
@@ -217,7 +269,7 @@ class Header extends Component {
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-           	<img src={`${process.env.PUBLIC_URL}/images/apple.webp`} style={{width: "40%",marginTop:"2px"} } alt=" twitter logo missing"
+           	<img src={`${process.env.PUBLIC_URL}/assets/images/apple.webp`} style={{width: "40%",marginTop:"2px"} } alt=" twitter logo missing"
                /></div>
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Apple</div>
@@ -228,15 +280,23 @@ class Header extends Component {
  
 					<p style={{margin:"1em 0"}}>
 						<center>
-                        <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
+                        <FormGroup>
+                        <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="loginEmail" type="email" placeholder="E-mail" 
                         onChange={e => this.setState({ loginEmail: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
-						<span className="cd-signin-modal__error">Error message here!</span></center>
-					</p>
+						<span className="cd-signin-modal__error">Error message here!</span>
+                        </FormGroup>
+                        <FormFeedback style={{ fontSize: "14px" }}>
+                            {errors.firstName}
+                         </FormFeedback>
+                        </center>
 
+					
+                    </p>
+                        
 					<p style={{margin:"1em 0 0.5em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password" placeholder="Password"
+						<Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="loginPassword" type="password" placeholder="Password"
                         onChange={e => this.setState({ loginPassword: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						
@@ -247,7 +307,7 @@ class Header extends Component {
 						<div className="c" style={{textAlign:"left"}}>
                             
 						<p  style={{margin:"0.5em 0 0.5em 0.3em"}}>
-							<input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
+							<Input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
 							<label for="remember-me" style={{fontSize:"12px", fontFamily:"Montserrat"}}>Remember me</label>
 					</p></div></div>
 
@@ -265,7 +325,7 @@ class Header extends Component {
 					<p style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>No Account?
                        <a href="#" style={{fontSize:"12px",fontFamily:"Montserrat"}}>Create One</a></center></p>
 
-				</form>
+				</Form>
 				
 				</div></center>
                 </div>
@@ -277,7 +337,7 @@ class Header extends Component {
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
                     ,boxShadow: "0 0 8px rgba(0,0,0,.1)",width:"auto",
                 }}>			
-                    <form className="cd-signin-modal__form">
+                    <Form className="cd-signin-modal__form">
 	                <p style={{fontSize:"30px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black",marginBottom:"0px"}}>
                     Join Numo Uno</p>
                     <p style={{fontSize:"12px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",marginBottom:".5em"}}>
@@ -319,24 +379,38 @@ class Header extends Component {
 					<div class="a">
 					
 					<p class="cd-signin-modal__fieldset">
-						
-                        <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userfname" type="text"
-                         placeholder="First Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
-						
+					<FormGroup>
+                        <Input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" 
+                        id="firstName" type="text"
+                         name="firstName" placeholder="First Name"
+                         value={this.state.firstName}
+                         valid={errors.firstName === ""&&this.state.touched.firstName}
+                         invalid={errors.firstName !== ""}
+                         onBlur={this.handleBlur("firstName")}
+                         onChange={this.handleInputChange}
+                        style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
+                        <FormFeedback style={{ fontSize: "14px" }}>
+                            {errors.firstName}
+                            </FormFeedback>
+                    </FormGroup>
 					</p></div>
 					<div class="d"><p style={{color:"white"}}>.</p></div>
 					<div class="a">
 						<p class="cd-signin-modal__fieldset">
-                        <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-userlname" type="text"
+                        <FormGroup>
+                        <Input class="cd-signin-modal__Input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="lastName" type="text"
                          placeholder="Last Name" style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
-						
+						</FormGroup>
 					</p></div></div>
 					<p style={{margin:"0.5em 0"}}>
 						<center>
-                        <input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail" 
+                        <FormGroup>
+                        <Input className="cd-signin-modal__Input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" type="email" placeholder="E-mail" 
                         onChange={(e) => this.setState({email: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans" ,height:"70%"}}/>
-						<span className="cd-signin-modal__error">Error message here!</span></center>
+						<span className="cd-signin-modal__error">Error message here!</span>
+                        </FormGroup>
+                        </center>
 					</p>
 					{/* <p style={{margin:"0.5em 0"}}>
 						<center>
@@ -348,19 +422,21 @@ class Header extends Component {
 
 					<p style={{margin:"0.5em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Password"
+                        <FormGroup>
+						<Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="password" type="password"  placeholder="Password"
                         onChange={(e) => this.setState({password: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
-						
+						</FormGroup>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 				
 					<p style={{margin:"0.5em 0 0.5em 0"}}>  
 						<center>
-						<input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="password"  placeholder="Confirm Password"
+                        <FormGroup>
+						<Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="confirmPassword" type="password"  placeholder="Confirm Password"
                         onChange={(e) => this.setState({confirmPassword: e.target.value})}
                         style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"70%"}}/>
-						
+						</FormGroup>
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
                     
@@ -368,9 +444,11 @@ class Header extends Component {
 						<div className="b"><p style={{color:"white"}}>.</p></div>
 						<div className="c" style={{width: "80%", textAlign:"left"}}>
 						<p  style={{margin:"0.5em 0 0.5em 0.3em"}}>
-							<input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
+                            <FormGroup>
+							<Input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
 							<label for="remember-me" style={{fontSize:"12px", fontFamily:"Montserrat"}}>I agree to Terms and Conditions</label>
-					</p></div></div>
+                            </FormGroup>
+                    </p></div></div>
 
 					<p style={{margin:"0em 0"}}>
 						<center><a  className="twitter btn" style={{backgroundColor: "black",color:"#ffd700",
@@ -384,7 +462,7 @@ class Header extends Component {
 					<p style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>Already Have an Account?
                         <a href="#" style={{fontSize:"12px", fontFamily: "Montserrat"}}>Signin</a></center></p>
 
-				</form>
+				</Form>
 				
 				</div></center>
                 </div>

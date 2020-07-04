@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { Card, CardImg, CardBody, CardText, CardTitle } from "reactstrap";
+import { Card, CardImg, CardDeck,CardBody, CardText, CardTitle } from "reactstrap";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
 import { BLOG_URL, BLOG_KEY } from "../constants/constants";
-
+import MetaTags from "react-meta-tags";
 class Blog extends Component {
   state = {
     posts: [],
+    posts3: [],
   };
 
   componentDidMount() {
@@ -16,7 +17,10 @@ class Blog extends Component {
       .get(URL)
       .then((res) => {
         console.log("res.data is ", res.data);
-        this.setState({ posts: res.data.posts }, () =>
+        this.setState({ posts: res.data.posts.slice(0, 1) }, () =>
+          console.log("state is ", this.state.posts)
+        );
+        this.setState({ posts3: res.data.posts.slice(0, 2) }, () =>
           console.log("state is ", this.state.posts)
         );
       })
@@ -70,7 +74,30 @@ class Blog extends Component {
             </div>
           </div>
           <div className="col-12 col-md-4 ">
-            <div
+          
+          <CardDeck id="post_row">
+          {this.state.posts.map((post) => {
+            return (
+              <Card id="shadowa">
+                <a href={`/blog/${post.id}`}>
+                  <CardImg
+                    id="headStyle"
+                    variant="top"
+                    src={post.feature_image}
+                  />
+                  <CardBody>
+                    <CardTitle id="headTitle">
+                      <a href={`/blog/${post.id}`}>{post.title}</a>
+                    </CardTitle>
+                    <CardText>{post.custom_excerpt}</CardText>
+                  </CardBody>
+                </a>
+              </Card>
+            );
+          })}
+        </CardDeck>
+          </div>
+            {/* <div
               style={{
                 boxShadow: "-1px 3px 10px rgba(0,0,0,.16)",
                 padding: "0px",
@@ -90,12 +117,44 @@ class Blog extends Component {
                 beauty, in motion. All is flowing, rushing and tide-And I sit in
                 wonder
               </p>
-            </div>
-          </div>
+            </div> */}
+          
         </div>
         {/* This is the second row */}
         <div className="row" style={{ marginTop: "30px" }}>
-          <div
+          <div className="col-12 col-md-7"
+          style={{
+            boxShadow: "-1px 3px 20px rgba(0,0,0,.16)",}}>
+          <div id="cardPod" style={{marginTop:"3vw"}}>
+            {this.state.posts3.map((post) => {
+              return (
+                <div className="popRowS">
+                  <a href={`/blog/${post.id}`}>
+                    <div>
+                      <img
+                        className="popImg"
+                        src={post.feature_image}
+                        alt="blog not found"
+                      ></img>
+                    </div>
+                    <div className="popText">
+                      <p>
+                        <h3>
+                          <a href={`/blog/${post.id}`}>{post.title}</a>
+                        </h3>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+
+          </div>
+          
+          
+          
+          {/* <div
             className="col-12 col-md-7"
             style={{
               boxShadow: "-1px 3px 20px rgba(0,0,0,.16)",
@@ -149,9 +208,9 @@ class Blog extends Component {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
             </div>
-          </div>
+          </div> */}
           <div
-            className="col-12 col-md-4 "
+            className="col-12 col-md-4 ml-auto"
             style={{
               boxShadow: "-1px 3px 20px rgba(0,0,0,.16)",
               padding: "0px",

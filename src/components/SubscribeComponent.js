@@ -10,9 +10,7 @@ class Contact extends Component {
       lastname: "",
       telnum: "",
       email: "",
-      agree: false,
       contactType: "Tel.",
-      message: "",
       touched: {
         fullname: false,
         lastname: false,
@@ -78,7 +76,7 @@ class Contact extends Component {
       this.state.fullname,
       this.state.lastname,
       this.state.telnum,
-      this.state.email
+      this.state.email,
     );
     return (
       <div className="container">
@@ -155,7 +153,7 @@ class Contact extends Component {
                       height: "64px",borderRadius:"5px" ,paddingLeft: "20px"}}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
-                      {errors.lastname}
+                      {errors.email}
                     </FormFeedback>
                   </FormGroup>
                 </div>

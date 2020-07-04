@@ -102,7 +102,21 @@ class Home extends Component {
               {/* <button className="custom-button2" style={{position:"absolute",left:"20px"}}>Know More</button> */}
             </div>
           </div>
+
           {/* This is the third row */}
+          <div id="row1" className="row">
+          <div className="col-12" style={{padding:"0px"}}>
+            <img 
+                    width="100%"
+                    src={`${process.env.PUBLIC_URL}/images/bridge.webp`}
+                    />
+          </div>
+          <div>
+            Bridging the Gap between Students and Recruiters with the help of AI
+          </div>
+          </div>
+
+
           {/* <div id="row2" className="row">
             <div className="col-12 col-md-5" id="content">
               <div>
