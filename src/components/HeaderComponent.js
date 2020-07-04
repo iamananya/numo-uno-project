@@ -417,7 +417,7 @@ class Header extends Component {
                         <FormGroup>
                         <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" type="email" placeholder="E-mail" 
                         onChange={e => this.setState({email: e.target.value })}
-                        style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
+                        style={{fontSize:"16px",width: "80%", fontFamily:"Josefin Sans",height:"80%"}}/>
 						<span className="cd-signin-modal__error">Error message here!</span>
                         </FormGroup>
                         <FormFeedback style={{ fontSize: "14px" }}>
