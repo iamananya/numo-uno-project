@@ -388,7 +388,7 @@ class Header extends Component {
                          invalid={errors.firstName !== ""}
                          onBlur={this.handleBlur("firstName")}
                          onChange={this.handleInputChange}
-                        style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
+                        style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"90%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
                         <FormFeedback style={{ fontSize: "14px" }}>
                             {errors.firstName}
                             </FormFeedback>
