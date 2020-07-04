@@ -84,13 +84,13 @@ class Header extends Component {
           errors.email = "Email is not correct";
     
         if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
-          errors.loginEmail = "Email is not correct";
+          errors.loginEmail = "Email is already registered";
         if (this.state.touched.password && this.state.password.length < 6)
           errors.password = "Password should be >=6";
         if (this.state.touched.confirmPassword && this.state.confirmPassword.length != this.state.password.length)
           errors.confirmPassword = "Password didn't match";
         if (this.state.touched.loginPassword && this.state.loginPassword.length < 6)
-          errors.loginPassword = "Password is already registered";
+          errors.loginPassword = "Password is incorrect";
         return errors;
       }
     toggleNav(){
@@ -423,7 +423,7 @@ class Header extends Component {
                        
          
 					</p></div>
-				<div class="b" style={{width: "2.5%"}}><p style={{color:"white"}}>.</p></div>
+				<div class="b" style={{width: "2.6%"}}><p style={{color:"white"}}>.</p></div>
 					<div class="a">
 					
 					<p class="cd-signin-modal__fieldset">
