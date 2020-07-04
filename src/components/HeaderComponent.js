@@ -400,6 +400,7 @@ class Header extends Component {
                          onBlur={this.handleBlur("firstName")}
                          onChange={this.handleInputChange}
                         style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"90%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
+                        <span className="cd-signin-modal__error">Error message here!</span> 
                         <FormFeedback style={{ fontSize: "14px" }}>
                             {errors.firstName}
                             </FormFeedback>
@@ -417,6 +418,7 @@ class Header extends Component {
 			onBlur={this.handleBlur("lastName")}
 			onChange={this.handleInputChange}
 			style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
+                           <span className="cd-signin-modal__error">Error message here!</span> 
                        <FormFeedback style={{ fontSize: "14px" }}>
                             {errors.lastName}
                             </FormFeedback>
