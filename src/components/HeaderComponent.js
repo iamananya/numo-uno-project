@@ -18,7 +18,7 @@ class Header extends Component {
             
             firstName: '',
             lastName: '',
-            email: '',
+            Semail: '',
             password: '',
             confirmPassword: '',
             instiEmail: '',
@@ -28,7 +28,7 @@ class Header extends Component {
             touched: {
                 firstName: false,
                 lastName: false,
-                email: false,
+                Semail: false,
                 loginEmail: false,
               },
         };
@@ -55,12 +55,12 @@ class Header extends Component {
         });
       };
 
-    validate(firstName, lastName, telnum, email,loginEmail){
+    validate(firstName, lastName, telnum, Semail,loginEmail){
         const errors = {
           firstName: "",
           lastName: "",
           telnum: "",
-          email: "",
+          Semail: "",
           loginEmail: "",
         };
         if (this.state.touched.firstName && firstName.length < 3)
@@ -74,8 +74,8 @@ class Header extends Component {
     
         const reg = /^\d+$/;
         
-        if (this.state.touched.email && email.split("").filter((x) => x === "@").length !== 1)
-          errors.email = "Email is not correct";
+        if (this.state.touched.Semail && email.split("").filter((x) => x === "@").length !== 1)
+          errors.Semail = "Email is not correct";
     
       if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
         errors.loginEmail = "Email is not correct";
@@ -192,7 +192,7 @@ class Header extends Component {
         const errors = this.validate(
             this.state.firstName,
             this.state.lastName,
-            this.state.email,
+            this.state.Semail,
             this.state.loginEmail,
           );
         return(
@@ -426,12 +426,12 @@ class Header extends Component {
 						<center>
                         
                         <FormGroup>
-                        <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" type="email" placeholder="E-mail" 
-                        name="email"
-                        value={this.state.email} 
-			valid={errors.email === "" && this.state.touched.email}
-			invalid={errors.email !== ""}
-			onBlur={this.handleBlur("email")}
+                        <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="Semail" type="email" placeholder="E-mail" 
+                        name="Semail"
+                        value={this.state.Semail} 
+			valid={errors.Semail === "" && this.state.touched.Semail}
+			invalid={errors.Semail !== ""}
+			onBlur={this.handleBlur("Semail")}
 			onChange={this.handleInputChange}
 
                         onChange={e => this.setState({email: e.target.value })}
@@ -439,7 +439,7 @@ class Header extends Component {
 						<span className="cd-signin-modal__error">Error message here!</span>
                         
                         <FormFeedback style={{ fontSize: "14px" }}>
-                            {errors.email}
+                            {errors.Semail}
                          </FormFeedback>		
                         </FormGroup>
                         </center>
