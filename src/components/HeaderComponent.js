@@ -54,12 +54,13 @@ class Header extends Component {
         });
       };
 
-    validate(firstName, lastName, telnum, email) {
+    validate(firstName, lastName, telnum, email,loginEmail){
         const errors = {
           firstName: "",
           lastName: "",
           telnum: "",
           email: "",
+          loginEmail: "",
         };
         if (this.state.touched.firstName && firstName.length < 3)
           errors.firstName = "Name should be >= 3 characters";
@@ -196,6 +197,7 @@ class Header extends Component {
             this.state.firstName,
             this.state.lastName,
             this.state.email,
+            this.state.loginEmail,
           );
         return(
             <div className="keep-fixed">
