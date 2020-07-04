@@ -78,13 +78,13 @@ class Header extends Component {
     
         const reg = /^\d+$/;
         
-        if (this.state.touched.email && email.split("").filter((x) => x === "@").length !== 1)
+        if (this.state.touched.email && this.state.email.split("").filter((x) => x === "@").length !== 1)
           errors.email = "Email is not correct";
     
         if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
           errors.loginEmail = "Email is not correct";
   
-        if (this.state.touched.confirmPassword && confirmPassword.length < 6)
+        if (this.state.touched.confirmPassword && confirmPassword.length != password.length)
           errors.confirmPassword = "Password is incorrect";
         if (this.state.touched.password && password.length < 6)
           errors.password = "Password is incorrect";
@@ -442,7 +442,7 @@ class Header extends Component {
                         <Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="email" type="email" placeholder="E-mail" 
                         name="email"
                         value={this.state.email} 
-			valid={errors.email === "" && this.state.touched.email}
+			valid={errors.email === ""&&this.state.touched.email}
 			invalid={errors.email !== ""}
 			onBlur={this.handleBlur("email")}
 			onChange={this.handleInputChange}
