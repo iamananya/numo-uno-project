@@ -403,9 +403,8 @@ class Header extends Component {
                         <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" 
                         id="firstName" type="text"
                          name="firstName" placeholder="First Name"
-                        
-                        style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"90%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
-                        <span className="cd-signin-modal__error">Error message here!</span> 
+                        style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginLeft:"5px",height:"70%"}} onChange={(e) => this.setState({firstName: e.target.value})}/>
+                 
                        
          
 					</p></div>
@@ -417,7 +416,7 @@ class Header extends Component {
                          name="lastName" placeholder="Last Name"
 			
 			style={{fontSize: "16px",width: "90%", fontFamily:"Josefin Sans",marginRight:"5px",height:"70%"}} onChange={(e) => this.setState({lastName: e.target.value})}/>
-                           <span className="cd-signin-modal__error">Error message here!</span> 
+                           
                        
 					</p></div></div>
 					<p style={{margin:"0.5em 0"}}>
