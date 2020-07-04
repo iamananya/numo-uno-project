@@ -32,6 +32,7 @@ class Header extends Component {
                 loginEmail: false,
                 password: false,
                 confirmPassword: false,
+                loginPassword: false,
               },
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -57,7 +58,7 @@ class Header extends Component {
         });
       };
 
-    validate(firstName, lastName, telnum, email,loginEmail,password,confirmPassword){
+    validate(firstName, lastName, telnum, email,loginEmail,password,confirmPassword,loginPassword,){
         const errors = {
           firstName: "",
           lastName: "",
@@ -66,6 +67,7 @@ class Header extends Component {
           loginEmail: "",
           password: "",
           confirmPassword: "",
+          loginPassword: "",
         };
         if (this.state.touched.firstName && firstName.length < 3)
           errors.firstName = "Wrong";
@@ -87,6 +89,8 @@ class Header extends Component {
           errors.password = "Password should be >=6";
         if (this.state.touched.confirmPassword && this.state.confirmPassword.length != this.state.password.length)
           errors.confirmPassword = "Password didn't match";
+        if (this.state.touched.loginPassword && this.state.loginPassword.length < 6)
+          errors.loginPassword = "Password should be >=6";
         return errors;
       }
     toggleNav(){
@@ -203,6 +207,7 @@ class Header extends Component {
             this.state.loginEmail,
             this.state.password,
             this.state.confirmPassword,
+            this.state.loginPassword,
           );
         return(
             <div className="keep-fixed">
@@ -316,10 +321,20 @@ class Header extends Component {
                         
 					<p style={{margin:"1em 0 0.5em 0"}}>  
 						<center>
+                                                 <FormGroup>
 						<Input className="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="loginPassword" type="password" placeholder="Password"
+                        name="loginPassword"
+                        value={this.state.loginPassword} 
+			valid={errors.loginPassword === "" && this.state.touched.loginPassword}
+			invalid={errors.loginPassword !== ""}
+			onBlur={this.handleBlur("loginPassword")}
+			onChange={this.handleInputChange}
                         onChange={e => this.setState({ loginPassword: e.target.value })}
                         style={{fontSize:"16px",width: "85%", fontFamily:"Josefin Sans",height:"80%"}}/>
-						
+			<FormFeedback style={{ fontSize: "14px" }}>
+                            {errors.loginPassword}
+                         </FormFeedback>
+                          </FormGroup>	
 						<span className="cd-signin-modal__error">Error message here!</span></center>
 					</p>
 					<div className="row">
