@@ -6,7 +6,7 @@ function Footer(props) {
             <div className="row">
               <div className="col-12 col-md-4 mr-5" href="/">
                 <img
-                  src={`${process.env.PUBLIC_URL}/assets/images/logo.png`}
+                  src={`${process.env.PUBLIC_URL}/images/logo.webp`}
                   height="auto"
                   width="30%"
                   margin="auto"

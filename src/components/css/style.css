@@ -3,9 +3,11 @@
 Primary style
 
 -------------------------------- */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -28,12 +30,14 @@ img {
   max-width: 100%;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: "PT Sans", sans-serif;
   font-size: 1.6rem;
 }
 
-input::-ms-clear, textarea::-ms-clear {
+input::-ms-clear,
+textarea::-ms-clear {
   display: none;
 }
 
@@ -51,7 +55,7 @@ Login/Signup modal window -
 
 .cd-main-header::after {
   /* clearfix */
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -61,21 +65,20 @@ Login/Signup modal window -
   margin: 4px 0 0 5%;
   /* reduce logo size on mobile and make sure it is left aligned with the transform-origin property */
   -webkit-transform-origin: 0 50%;
-      -ms-transform-origin: 0 50%;
-          transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
   -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-          transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .cd-main-header__logo img {
   display: block;
 }
-@media only screen and (max-width: 320px){
-	.cd-signin-modal__block {
-		height: 950px;
-	}
-		
+@media only screen and (max-width: 320px) {
+  .cd-signin-modal__block {
+    height: 950px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .cd-main-header {
@@ -84,8 +87,8 @@ Login/Signup modal window -
   .cd-main-header__logo {
     margin: 20px 0 0 5%;
     -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -94,7 +97,7 @@ Login/Signup modal window -
   margin-right: 5%;
   width: 44px;
   height: 100%;
-  background: url("../img/cd-icon-menu.svg") no-repeat center center;
+  background: url("/components/images/cd-icon-menu.svg") no-repeat center center;
   cursor: pointer;
 }
 
@@ -104,14 +107,14 @@ Login/Signup modal window -
   left: 0;
   width: 100%;
   -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .cd-main-nav__list.cd-main-nav__list--is-visible {
   -webkit-transform: translateY(50px);
-      -ms-transform: translateY(50px);
-          transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  transform: translateY(50px);
 }
 
 .cd-main-nav__item {
@@ -121,7 +124,7 @@ Login/Signup modal window -
   padding-left: 5%;
   background: #292a34;
   border-top: 1px solid #3b3d4b;
-  color: #FFF;
+  color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -137,15 +140,15 @@ Login/Signup modal window -
     position: static;
     width: auto;
     -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
     line-height: 80px;
   }
   .cd-main-nav__list.cd-main-nav__list--is-visible {
     /* reset style */
     -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
   .cd-main-nav__list li {
     display: inline-block;
@@ -160,8 +163,9 @@ Login/Signup modal window -
     line-height: normal;
     background: transparent;
   }
-  .cd-main-nav__item.cd-main-nav__item--signin, .cd-main-nav__item.cd-main-nav__item--signup {
-    padding: .6em 1em;
+  .cd-main-nav__item.cd-main-nav__item--signin,
+  .cd-main-nav__item.cd-main-nav__item--signup {
+    padding: 0.6em 1em;
     border-radius: 50em;
   }
   .cd-main-nav__item.cd-main-nav__item--signin {
@@ -202,13 +206,13 @@ x sigin/signup popup
   position: relative;
   width: 90%;
   max-width: 600px;
-  background: #FFF;
+  background: #fff;
   margin: 3em auto 4em;
   cursor: auto;
   border-radius: 0.25em;
   -webkit-transform: translateY(-30px);
-      -ms-transform: translateY(-30px);
-          transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -217,8 +221,8 @@ x sigin/signup popup
 
 .cd-signin-modal--is-visible .cd-signin-modal__container {
   -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .cd-signin-modal__switcher:after {
@@ -235,11 +239,11 @@ x sigin/signup popup
 }
 
 .cd-signin-modal__switcher li:first-child a {
-  border-radius: .25em 0 0 0;
+  border-radius: 0.25em 0 0 0;
 }
 
 .cd-signin-modal__switcher li:last-child a {
-  border-radius: 0 .25em 0 0;
+  border-radius: 0 0.25em 0 0;
 }
 
 .cd-signin-modal__switcher a {
@@ -252,7 +256,7 @@ x sigin/signup popup
 }
 
 .cd-signin-modal__switcher a.cd-selected {
-  background: #FFF;
+  background: #fff;
   color: #505260;
 }
 
@@ -267,7 +271,7 @@ x sigin/signup popup
 }
 
 .cd-signin-modal__form {
-  padding: 1.0em 1.4em;
+  padding: 1em 1.4em;
 }
 
 .cd-signin-modal__fieldset {
@@ -295,8 +299,8 @@ x sigin/signup popup
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   height: 20px;
   width: 20px;
   overflow: hidden;
@@ -308,15 +312,15 @@ x sigin/signup popup
 }
 
 .cd-signin-modal__label.cd-signin-modal__label--username {
-  background-image: url("../img/cd-icon-username.svg");
+  background-image: url("/components/images/cd-icon-username.svg");
 }
 
 .cd-signin-modal__label.cd-signin-modal__label--email {
-  background-image: url("../img/cd-icon-email.svg");
+  background-image: url("/components/images/cd-icon-email.svg");
 }
 
 .cd-signin-modal__label.cd-signin-modal__label--password {
-  background-image: url("../img/cd-icon-password.svg");
+  background-image: url("/components/images/cd-icon-password.svg");
 }
 
 .cd-signin-modal__input {
@@ -336,14 +340,14 @@ x sigin/signup popup
 .cd-signin-modal__input.cd-signin-modal__input--has-border {
   border: 1px solid #d2d8d8;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .cd-signin-modal__input.cd-signin-modal__input--has-border:focus {
   border-color: #343642;
   -webkit-box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
-          box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+  box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
   outline: none;
 }
 
@@ -351,21 +355,22 @@ x sigin/signup popup
   border: 1px solid #d76666;
 }
 
-.cd-signin-modal__input[type=submit] {
+.cd-signin-modal__input[type="submit"] {
   padding: 16px 0;
   cursor: pointer;
   background: #2f889a;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   border: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.cd-signin-modal__input[type=submit]:hover, .cd-signin-modal__input[type=submit]:focus {
+.cd-signin-modal__input[type="submit"]:hover,
+.cd-signin-modal__input[type="submit"]:focus {
   background: #3599ae;
   outline: none;
 }
@@ -380,8 +385,8 @@ x sigin/signup popup
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 1.4rem;
   color: #343642;
 }
@@ -392,9 +397,9 @@ x sigin/signup popup
   left: -5px;
   bottom: -35px;
   background: rgba(215, 102, 102, 0.9);
-  padding: .8em;
+  padding: 0.8em;
   z-index: 2;
-  color: #FFF;
+  color: #fff;
   font-size: 1.3rem;
   border-radius: 0.25em;
   /* prevent click and touch events */
@@ -407,7 +412,7 @@ x sigin/signup popup
 
 .cd-signin-modal__error::after {
   /* triangle */
-  content: '';
+  content: "";
   position: absolute;
   left: 22px;
   bottom: 100%;
@@ -441,7 +446,7 @@ x sigin/signup popup
   .cd-signin-modal__input.cd-signin-modal__input--has-padding {
     padding: 16px 20px 16px 20px;
   }
-  .cd-signin-modal__input[type=submit] {
+  .cd-signin-modal__input[type="submit"] {
     padding: 16px 0;
   }
 }
@@ -469,7 +474,7 @@ x sigin/signup popup
 }
 
 .cd-signin-modal__bottom-message a {
-  color: #FFF;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -481,7 +486,7 @@ x sigin/signup popup
   height: 40px;
   right: 0;
   top: -40px;
-  background: url("../img/cd-icon-close.svg") no-repeat center center;
+  background: url("/components/images/cd-icon-close.svg") no-repeat center center;
   color: transparent;
   text-indent: 100%;
   white-space: nowrap;
@@ -501,45 +506,37 @@ x sigin/signup popup
 .cd-signin-modal__block.cd-signin-modal__block--is-selected {
   display: block;
 }
-.x{
-    float:left;
-    width: 50%;
-    padding: 0 0 0 40px;
-    
+.x {
+  float: left;
+  width: 50%;
+  padding: 0 0 0 40px;
 }
-.y{
+.y {
   float: left;
   width: 50%;
   padding: 0 40px 0 0;
 }
-.a
-{
+.a {
   float: left;
   width: 37.5%;
-
 }
-.b
-{
+.b {
   float: left;
   width: 10%;
 }
-.d
-{
+.d {
   float: left;
   width: 5%;
 }
-.c
-{
+.c {
   float: left;
   width: 40%;
 }
-.e
-{
+.e {
   float: left;
   width: 72%;
 }
-.f
-{
+.f {
   float: left;
   width: 18%;
 }
@@ -551,7 +548,6 @@ x sigin/signup popup
   width: 80%;
   text-align: center;
 }
-#remember-me{
+#remember-me {
   margin-right: 10px;
-
 }
