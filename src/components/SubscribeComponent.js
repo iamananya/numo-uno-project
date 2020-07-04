@@ -104,7 +104,8 @@ class Contact extends Component {
                       onBlur={this.handleBlur("fullname")}
                       onChange={this.handleInputChange}
                       style={{ fontSize: "18px",borderColor: "rgb(53, 53, 53)",
-                      height: "64px",borderRadius:"5px",paddingLeft: "20px" }}
+                      height: "64px",borderRadius:"5px",paddingLeft: "20px" ,
+                      margin:"0px"}}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
                       {errors.fullname}
@@ -129,7 +130,8 @@ class Contact extends Component {
                               borderColor: "rgb(53, 53, 53)",
                               height: "64px",
                               borderRadius:"5px"
-                              ,paddingLeft: "20px"}}
+                              ,paddingLeft: "20px",
+                              margin:"0px"}}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
                       {errors.telnum}
@@ -150,7 +152,8 @@ class Contact extends Component {
                       onBlur={this.handleBlur("email")}
                       onChange={this.handleInputChange}
                       style={{ fontSize: "18px",borderColor: "rgb(53, 53, 53)",
-                      height: "64px",borderRadius:"5px" ,paddingLeft: "20px"}}
+                      height: "64px",borderRadius:"5px",
+                      margin:"0px" ,paddingLeft: "20px"}}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
                       {errors.email}

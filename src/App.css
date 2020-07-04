@@ -2,6 +2,9 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+p{
+    margin-bottom: 0px;
+}
 #blog-main{
     font-size: 3vw;
     font-family: 'Montserrat', sans-serif;
@@ -342,7 +345,6 @@ nav{
     font-size: 18px;
     font-weight: bold;
     color: #445a64;
-    line-height: 0px;
     padding: 35px 0px 0px 0px;
 }
 #footer-sub{
