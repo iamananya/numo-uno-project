@@ -15,25 +15,25 @@ function Skill(props) {
         <img
           id="tl"
           
-          src={`${process.env.PUBLIC_URL}images/group_tl.webp`}
+          src={`${process.env.PUBLIC_URL}images/group_tl.png`}
           alt="not found"
         />
         <img
           id="tr"
           
-          src={`${process.env.PUBLIC_URL}images/group_tr.webp`}
+          src={`${process.env.PUBLIC_URL}images/group_tr.png`}
           alt=" not found"
         />
         
         <img
           id="mr"
           
-          src={`${process.env.PUBLIC_URL}/images/group_mr.webp`}
+          src={`${process.env.PUBLIC_URL}/images/group_mr.png`}
           alt=" not found"
         />
         <img
           id="bl"
-          src={`${process.env.PUBLIC_URL}/images/group_bl.webp`}
+          src={`${process.env.PUBLIC_URL}/images/group_bl.png`}
           alt=" not found"
         />
         <img

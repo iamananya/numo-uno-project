@@ -218,7 +218,7 @@ class Header extends Component {
                             <NavLink className="nav-link"  to='/home'
                             style={{padding:"0px",
                                     margin:"0px"}}>
-                                <img src={`${process.env.PUBLIC_URL}/images/logo.webp`}
+                                <img src={`${process.env.PUBLIC_URL}/images/logo.png`}
                                 height="50" width="auto" alt='Ristorante Con Fusion' />
                                 </NavLink>
                             </NavbarBrand>
@@ -269,7 +269,7 @@ class Header extends Component {
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-		<img src={`${process.env.PUBLIC_URL}/images/un.webp`} style={{width: "40%",marginTop:"2px"}} alt="Logo missing"/></div>
+		<img src={`${process.env.PUBLIC_URL}/images/un.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
@@ -286,7 +286,7 @@ class Header extends Component {
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-           	<img src={`${process.env.PUBLIC_URL}/images/apple.webp`} style={{width: "40%",marginTop:"2px"} } alt=" twitter logo missing"
+           	<img src={`${process.env.PUBLIC_URL}/images/apple.png`} style={{width: "40%",marginTop:"2px"} } alt=" twitter logo missing"
                /></div>
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Apple</div>
@@ -383,7 +383,7 @@ class Header extends Component {
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-		<img src={`${process.env.PUBLIC_URL}/images/un.webp`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+		<img src={`${process.env.PUBLIC_URL}/images/un.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
@@ -400,7 +400,7 @@ class Header extends Component {
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-           	<img src={`${process.env.PUBLIC_URL}/images/apple.webp`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+           	<img src={`${process.env.PUBLIC_URL}/images/apple.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Apple</div>
         	</a></center>

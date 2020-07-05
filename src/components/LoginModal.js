@@ -59,7 +59,7 @@ class Login extends Component{
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-           	<img src={`${process.env.PUBLIC_URL}/images/apple.webp`} style={{width: "40%",marginTop:"2px"} } alt=" twitter logo missing"
+           	<img src={`${process.env.PUBLIC_URL}/images/apple.png`} style={{width: "40%",marginTop:"2px"} } alt=" twitter logo missing"
                /></div>
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Apple</div>

@@ -111,7 +111,7 @@ class Home extends Component {
           <div className="col-12" style={{padding:"0px"}}>
             <img 
                     width="100%"
-                    src={`${process.env.PUBLIC_URL}/images/bridge.webp`}
+                    src={`${process.env.PUBLIC_URL}/images/bridge.png`}
                     />
           </div>
           <div className="col-4"
@@ -165,7 +165,7 @@ class Home extends Component {
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/mission.webp`}
+                    src={`${process.env.PUBLIC_URL}/images/mission.png`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -184,7 +184,7 @@ class Home extends Component {
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/flag.webp`}
+                    src={`${process.env.PUBLIC_URL}/images/flag.png`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -203,7 +203,7 @@ class Home extends Component {
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/mission.webp`}
+                    src={`${process.env.PUBLIC_URL}/images/mission.png`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -222,7 +222,7 @@ class Home extends Component {
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/flag.webp`}
+                    src={`${process.env.PUBLIC_URL}/images/flag.png`}
                     alt="Grey rectangle not found"
                   />
                   <div id="bottom-text">
@@ -294,7 +294,7 @@ class Home extends Component {
                     </div>
                     <div className="f">
                       <img
-                        src={`${process.env.PUBLIC_URL}/images/un.webp`}
+                        src={`${process.env.PUBLIC_URL}/images/un.png`}
                         style={{ width: "40%", marginTop: "2px" }}
                         alt="Logo Missing"
                       />
@@ -335,7 +335,7 @@ class Home extends Component {
                     </div>
                     <div className="f">
                       <img
-                        src={`${process.env.PUBLIC_URL}/images/apple.webp`}
+                        src={`${process.env.PUBLIC_URL}/images/apple.png`}
                         style={{ width: "40%", marginTop: "2px" }}
                         alt="Logo Missing"
                       />
