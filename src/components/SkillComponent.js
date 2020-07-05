@@ -39,7 +39,7 @@ function Skill(props) {
         <img
           id="br"
           
-          src={`${process.env.PUBLIC_URL}/images/group_br.webp`}
+          src={`${process.env.PUBLIC_URL}/images/group_br.png`}
           alt="not found"
         />
       </div>

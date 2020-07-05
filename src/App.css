@@ -69,6 +69,10 @@ input{
     padding-right: 100px;
     padding-left: 100px;
 }
+#pad2{
+    padding-left: 70px;
+    padding-right: 100px;
+}
 .row-content {
     margin:0px auto;
     padding: 50px 0px 50px 0px;
@@ -137,6 +141,9 @@ nav{
 .nav-link :hover{
     color: black;
     font-size: 20px;
+}
+.nav-link :active{
+    color: #222 !important;
 }
 #bottom-text{
     position: absolute;
@@ -270,7 +277,7 @@ nav{
 #side-heading{
     font-family: 'Josefin Sans', sans-serif;
     color: #151D41;
-    font-size: 50px;
+    font-size: 4vw;
     margin-bottom: 10px;
     font-weight: bold;
     text-shadow: 0px 3px 3px #0000002d;
@@ -285,7 +292,7 @@ nav{
 }
 #side-heading-child{
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 1.5vw;
     font-weight: lighter;
     text-align: left;
 }
@@ -354,7 +361,6 @@ nav{
     color: #151D41;
 }
 #tl{
-    margin-right: 60px;
     margin-left: 10vw;
     top: 0px;
     width:330px;
@@ -444,6 +450,10 @@ nav{
 
 
 @media (max-width: 1200px){
+    #skill-box{
+        position: relative;
+        height: 1300px;
+    }
     #numounomobile{
         height: 450px;
     }
@@ -452,30 +462,39 @@ nav{
         height: 2500px;
     } */
     #tl{
-        margin-right: 60px;
+        margin-left: 5vw;
+        margin-right: 5vw;
         left: 0px;
         top: 0px;
     }
     #tr{
         position: absolute;
-        
-        top: 600px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        top: 350px;
     }
     #ml{
-        margin-right: 60px;
+        margin-left: 5vw;
+        margin-right: 5vw;
         position: absolute;
-        top: 900px;
+        top: 500px;
     }
     #mr{
+        margin-left: 5vw;
+        margin-right: 5vw;
         position: absolute;
-        top: 1100px;
+        top: 500px;
     }
     #bl{
-        margin-right: 60px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-right: 0px;
         position: absolute;
-        top: 1750px;
+        top: 875px;
     }
     #br{
+        margin-left: 5vw;
+        margin-right: 5vw;
         position: absolute;
         bottom:0px;
     }
@@ -493,6 +512,13 @@ nav{
     }
     .sub-text{
         font-size: 5vw;
+    }
+    #side-heading{
+        font-size: 6vw;
+        
+    }
+    #side-heading-child{
+        font-size: 3vw;
     }
     #card-heading{
         font-size: 3vw;

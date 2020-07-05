@@ -162,6 +162,10 @@ class Header extends Component {
         const anchor = document.querySelector('#footer')
         anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
+    scrollToAbout(){
+        const anchor = document.querySelector('#about')
+        anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
     handleSubmit = (e) => {
       e.preventDefault()
       
@@ -225,16 +229,16 @@ class Header extends Component {
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/about'> About us</NavLink>
+                                <NavLink onClick={this.scrollToAbout} className="nav-link" to='/about'> About us</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to='/podcast'> PodCasts</NavLink>
+                                <NavLink className="nav-link" to='/podcast'> Podcasts</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to='/blog'> Blog</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink onClick={this.scrollToFooter}className="nav-link" to='/'> Contact Us</NavLink>
+                                <NavLink onClick={this.scrollToFooter} className="nav-link" to='/contact'> Contact Us</NavLink>
                             </NavItem>
                             
                             <NavItem className="ml-5 ">

@@ -68,8 +68,9 @@ class Home extends Component {
               />
             </div>
           </div>
-
+        </div>
           {/* This is the second row */}
+          <div className="container-fluid" id="pad2">
           <div id="row1" className="row">
             <div className="col-12 col-md-6 mx-auto" style={{padding:"0px"}}>
               <div style={{position:"relative",top:"0vw",left:"0vw",width:"5vw",height:"5vw"}}>
@@ -105,18 +106,19 @@ class Home extends Component {
               {/* <button className="custom-button2" style={{position:"absolute",left:"20px"}}>Know More</button> */}
             </div>
           </div>
-
+        </div>
           {/* This is the third row */}
+        <div className="container-fluid" id="pad">
           <div  className="row">
           <div className="col-12" style={{padding:"0px",margin:"auto"}}>
             <img 
                     width="90%"
                     src={`${process.env.PUBLIC_URL}/images/bridge.png`}
                     />
-            <div className="col-4"
+            <div className="col-12 md-col-4"
             style={{
-              fontSize: "21px",
-              fontWeight: "400",
+              fontSize: "24px",
+              fontWeight: "600",
               color: "#151D41",
               margin: "-7vw auto",
             }}>
@@ -163,13 +165,13 @@ class Home extends Component {
 
           {/* This is the Card row */}
           <div  className="row justify-content-center">
-          <div className="col-12">
+          <div className="col-12" >
             <div className="center-heading" id="row1">
               <h3 id="yellow-heading">WHAT WE OFFER?</h3>
             </div>
           </div>
-            <div className="col-6 col-md-4">
-              <Card id="card-odd" width="100%">
+            <div className="col-6 col-md-4"  id="about">
+              <Card id="card-odd" width="100%" >
                 <CardBody>
                   <img
                     id="card-img"

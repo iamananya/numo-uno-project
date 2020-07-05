@@ -1,8 +1,9 @@
 import React from 'react';
 function Footer(props) {
     return(
-          <div className="footer" id="footer">
+          <div className="footer">
           <div className="container">
+            <div style={{padding:"0vw 7vw"}}>
             <div className="row">
               <div className="col-12 col-md-4 mr-5" href="/" style={{textAlign:"left"}}>
                 <img
@@ -63,7 +64,7 @@ West Bengal, India - 731202.</p>
                 </a>
               </div>
             </div>
-    
+            </div>
             <div className="row justify-content-center">
               <div
                 className="col-12"

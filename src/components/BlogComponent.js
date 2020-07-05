@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Card, CardImg, CardDeck,CardBody, CardText, CardTitle } from "reactstrap";
-import { withRouter } from "react-router-dom";
+import {NavLink} from 'react-router-dom';
 import axios from "axios";
 import ReactPlayer from "react-player";
 import { BLOG_URL, BLOG_KEY,POD_URL,
@@ -12,8 +12,16 @@ class Blog extends Component {
     posts: [],
     posts3: [],
     videos: [],
+    
   };
-
+  constructor(props){
+    super(props);
+    
+  this.scrollTop=this.scrollTop.bind(this);
+  }
+  scrollTop(){
+    setTimeout(function(){ window.scrollTo(0, 0); }, 1000);
+  }
   componentDidMount() {
     const URL = BLOG_URL + "/posts/?key=" + BLOG_KEY;
     console.log("URL IS ", URL);
@@ -75,7 +83,7 @@ class Blog extends Component {
           </div>
         </div>
         {/* This is the first row */}
-        <div className="row">
+        <div className="row" style={{marginTop:"15px"}}>
           <div
             className="col-12 col-md-7"
             style={{ borderRadius: "10px", marginRight: "auto" }}
@@ -129,12 +137,13 @@ class Blog extends Component {
               </div>
             </div> */}
           </div>
-          <div className="col-12 col-md-4 ">
           
-          <CardDeck id="post_row">
+          
+          
           {this.state.posts.map((post) => {
             return (
-              <Card id="shadowa">
+              <div className="col-12 col-md-4 " id="shadowa">
+              <Card style={{border:"0px solid white"}}>
                 <a href={`/blog/${post.id}`}>
                   <CardImg
                     id="headStyle"
@@ -149,10 +158,11 @@ class Blog extends Component {
                   </CardBody>
                 </a>
               </Card>
+              </div>
             );
           })}
-        </CardDeck>
-          </div>
+      
+          
             {/* <div
               style={{
                 boxShadow: "-1px 3px 10px rgba(0,0,0,.16)",
@@ -317,13 +327,20 @@ class Blog extends Component {
             </p> */}
             
           </div>
-          <div className="mx-auto">
+          <div className="mx-auto" style={{marginTop:"20px"}}>
+            
+            <NavLink   to='/blog' onClick={this.scrollTop}> 
             <button className="custom-button-blog-podcast" type="submit">
-              Blog
-            </button>
-            <button className="custom-button-blog-podcast" type="submit">
-              PodCasts
-            </button>
+            Blog
+              </button>
+            </NavLink>
+            
+            
+            <NavLink   to='/podcast' onClick={this.scrollTop}>
+              <button className="custom-button-blog-podcast" type="submit"> Podcasts
+              </button>
+              </NavLink>
+            
           </div>
         </div>
       </div>
