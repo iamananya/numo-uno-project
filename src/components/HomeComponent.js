@@ -111,7 +111,7 @@ class Home extends Component {
           <div className="col-12" style={{padding:"0px"}}>
             <img 
                     width="100%"
-                    src={`${process.env.PUBLIC_URL}/images/bridge.webp`}
+                    src={`${process.env.PUBLIC_URL}/images/bridge.png`}
                     />
           </div>
           <div className="col-4"
