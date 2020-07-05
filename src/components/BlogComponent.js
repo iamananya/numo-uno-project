@@ -189,6 +189,7 @@ class Blog extends Component {
                     <div>
                       <img
                         className="popImg"
+                        style={{marginTop:"2vw"}}
                         src={post.feature_image}
                         alt="blog not found"
                       ></img>
@@ -272,7 +273,6 @@ class Blog extends Component {
               padding: "0px",
               margin: "0px",
               borderRadius: "10px",
-              marginBottom:" 20px",
             }}
           >
             <div  >

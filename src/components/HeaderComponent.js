@@ -265,7 +265,7 @@ class Header extends Component {
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}> Welcome Back</p>
                     <p style={{fontSize:"14px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",letterSpacing:"1px"}}>Signin to access personalized articles, podcasts, career enhancement services along with interest based professional communication groups.</p><br/>
 
- 	<center><a  href="./img/cd-logo.svg" className="fb btn" alt="logo missing" style={{padding:"10px 12px"}}>
+ 	<center><a  href="/images/cd-logo.svg" className="fb btn" alt="logo missing" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -379,7 +379,7 @@ class Header extends Component {
                     Create an account to access personalized articles, podcasts,
                      career enhancement services along with interest based professional communication groups.</p>
 
- 	<center><a  href="./img/cd-logo.svg" className="fb btn" style={{padding:"10px 12px"}}>
+ 	<center><a  href="/images/cd-logo.svg" className="fb btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">

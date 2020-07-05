@@ -56,9 +56,9 @@ class Home extends Component {
               <h2 className="sub-text">
                 Efficient A.I. based hiring solutions{" "}
               </h2>
-              <button className="custom-button2" onClick={this.toggleModalj}>
+              {/* <button className="custom-button2" onClick={this.toggleModalj}>
                 Get Started
-              </button>
+              </button> */}
             </div>
             <div className="col-12 col-md-4 ">
               <img
@@ -107,22 +107,31 @@ class Home extends Component {
           </div>
 
           {/* This is the third row */}
-          <div id="row1" className="row">
-          <div className="col-12" style={{padding:"0px"}}>
+          <div  className="row">
+          <div className="col-12" style={{padding:"0px",margin:"auto"}}>
             <img 
-                    width="100%"
+                    width="90%"
                     src={`${process.env.PUBLIC_URL}/images/bridge.png`}
                     />
+            <div className="col-4"
+            style={{
+              fontSize: "21px",
+              fontWeight: "400",
+              color: "#151D41",
+              margin: "-7vw auto",
+            }}>
+              Bridging this gap between<br/> Students and Recruiters<br/> with the help of <br/>AI
+            </div>
           </div>
-          <div className="col-4"
+          {/* <div className="col-4"
           style={{
             fontSize: "21px",
             fontWeight: "400",
             color: "#151D41",
-            margin: "-100px auto",
+            margin: "-9vw auto",
           }}>
             Bridging this gap between<br/> Students and Recruiters<br/> with the help of <br/>AI
-          </div>
+          </div> */}
           </div>
 
 
@@ -155,7 +164,7 @@ class Home extends Component {
           {/* This is the Card row */}
           <div  className="row justify-content-center">
           <div className="col-12">
-            <div className="center-heading">
+            <div className="center-heading" id="row1">
               <h3 id="yellow-heading">WHAT WE OFFER?</h3>
             </div>
           </div>

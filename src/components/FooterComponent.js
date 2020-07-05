@@ -4,7 +4,7 @@ function Footer(props) {
           <div className="footer" id="footer">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-md-4 mr-5" href="/">
+              <div className="col-12 col-md-4 mr-5" href="/" style={{textAlign:"left"}}>
                 <img
                   src={`${process.env.PUBLIC_URL}/images/logo.png`}
                   height="auto"
@@ -13,7 +13,7 @@ function Footer(props) {
                   alt="Ristorante Con Fusion"
                 />
               </div>
-              <div className="col-12 col-md-5 ml-auto" href="/">
+              <div className="col-12 col-md-5 ml-auto" href="/" style={{textAlign:"right"}}>
                 <p
                   style={{
                     fontSize: "21px",
@@ -24,29 +24,30 @@ function Footer(props) {
                     paddingTop: "10px"
                   }}
                 >
-                  We are digital designer living in United States. Apart from eating
-                  burger
+                  Eficient AI based hiring solutions
+                  <br/>Numo Uno
                 </p>
               </div>
             </div>
             <div className="row">
-              <div className="col-12 col-md-4 mr-5" href="/">
-                <p id="footer-heading">SENT MAIL</p>
-                <p id="footer-sub">info@portfolio.com</p>
+              <div className="col-12 col-md-4 mr-5" href="/" style={{textAlign:"left"}}>
+                <p id="footer-heading">EMAIL</p>
+                <p id="footer-sub">contact@numouno(dot)tech</p>
               </div>
-              <div className="col-12 col-md-5 ml-auto" href="/">
+              <div className="col-12 col-md-5 ml-auto" href="/" style={{textAlign:"right"}}>
                 <p id="footer-heading">GET IN TOUCH</p>
-                <p id="footer-sub">123/A,</p>
+                <p id="footer-sub">Indian Institute of Technology Kharagpur<br/>
+West Bengal, India - 731202.</p>
               </div>
             </div>
             <div className="row">
-              <div className="col-12 col-md-4 mr-5" href="/">
-                <p id="footer-heading">MAKE CALL</p>
-                <p id="footer-sub">+1234567890</p>
+              <div className="col-12 col-md-4 mr-5" href="/" style={{textAlign:"left"}}>
+                <p id="footer-heading">CONTACT NUM.</p>
+                <p id="footer-sub">+(91)-(894)6962423</p>
               </div>
               <div
                 className="col-12 col-md-5 ml-auto"
-                style={{ marginTop: "30px" }}
+                style={{ marginTop: "30px" ,textAlign:"right"}}
               >
                 <a
                   className="social-button"
@@ -68,11 +69,11 @@ function Footer(props) {
                 className="col-12"
                 style={{
                   height: "0px",
-                  border: "1px solid #FFD700",
-                  margin: "30px 0px 20px 0px",
+                  border: "1px solid #445a64",
+                  margin: "10px 0px 10px 0px",
                 }}
               ></div>
-              <p id="copyright">2020 (c) Numo Uno All Rights Reserved</p>
+              <p id="copyright">2020 © Numo Uno Pvt. Ltd. All Rights Reserved</p>
             </div>
           </div>
         </div>
