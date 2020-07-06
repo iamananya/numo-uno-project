@@ -75,6 +75,7 @@ class Forgot extends Component {
             this.state.email,
           );
         return(
+                    <div className="xyz">
                     <center>
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
                     ,boxShadow: "0 0 6px rgba(0,0,0,.1)",width:"40%",backgroundColor:"white",marginTop: "13%"
@@ -120,7 +121,7 @@ class Forgot extends Component {
 				</Form>
 				
 				</div></center>
-                
+                                </div>               
 
         );
     }
