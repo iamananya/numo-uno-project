@@ -112,7 +112,7 @@ class Signup extends Component {
             
           );
         return(
-
+            <div className="xyz">
             <center>
             <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
 
@@ -264,7 +264,7 @@ class Signup extends Component {
 				</Form>
 				
 				</div></center>
-
+                        </div>
 
         );
     }
