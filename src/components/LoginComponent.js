@@ -81,6 +81,7 @@ class Login extends Component {
             this.state.loginPassword,
           );
         return(
+                    <div className="xyz">
                     <center>
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
                     ,boxShadow: "0 0 6px rgba(0,0,0,.1)",width:"36%",backgroundColor:"white",marginTop:"2.7%"
@@ -185,7 +186,7 @@ class Login extends Component {
 				</Form>
 				
 				</div></center>
-                
+                        </div>
 
         );
     }
