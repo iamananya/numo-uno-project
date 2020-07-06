@@ -247,7 +247,7 @@ class Signup extends Component {
 						<p  style={{margin:"0.5em 0 0.5em 0.3em"}}>
                             <FormGroup>
 							<Input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
-							<label for="remember-me" style={{fontSize:"12px", fontFamily:"Montserrat"}}>I agree to Terms and Conditions</label>
+							<label for="remember-me" style={{fontSize:"13px", fontFamily:"Montserrat"}}> I agree to Terms and Conditions</label>
                             </FormGroup>
                     </p></div></div>
 
