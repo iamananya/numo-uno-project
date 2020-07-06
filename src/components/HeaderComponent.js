@@ -87,7 +87,7 @@ class Header extends Component {
           errors.loginEmail = "Email is already registered";
         if (this.state.touched.password && this.state.password.length < 6)
           errors.password = "Password should be >=6";
-        if (this.state.touched.confirmPassword && this.state.confirmPassword.length != this.state.password.length)
+        if (this.state.touched.confirmPassword && this.state.confirmPassword != this.state.password)
           errors.confirmPassword = "Password didn't match";
         if (this.state.touched.loginPassword && this.state.loginPassword.length < 6)
           errors.loginPassword = "Password is incorrect";
