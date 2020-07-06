@@ -177,10 +177,10 @@ class Login extends Component {
        							 </a></center>
 					</p>
 
-					<center><a href="google.com" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/>
+					<center><a href="/forgot" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/>
 					
 					<p style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>No Account?
-                       <a href="#" style={{fontSize:"12px",fontFamily:"Montserrat"}}>Create One</a></center></p>
+                       <a href="/signup" style={{fontSize:"12px",fontFamily:"Montserrat"}}>Create One</a></center></p>
 
 				</Form>
 				
