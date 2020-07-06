@@ -1,7 +1,7 @@
 import React from 'react';
 function Footer(props) {
     return(
-          <div className="footer">
+          <div className="footer" id="footer">
           <div className="container">
             <div style={{padding:"0vw 7vw"}}>
             <div className="row">

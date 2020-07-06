@@ -147,6 +147,7 @@ class Header extends Component {
                 if(res.data.message === "success") {
                     localStorage.setItem("tttoken",res.data.token)
                     console.log("FRONTEND TEAM LOGIN SUCES REDIRECT TO LOGIN PAGE")
+                    
                 }
             })
             .catch(err => {
@@ -359,10 +360,10 @@ class Header extends Component {
        							 </a></center>
 					</p>
 
-					<center><a href="google.com" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/>
+					<center><a href="/forget" style={{fontSize: "14px", fontFamily: "Montserrat"}}>Forgot Password?</a></center><br/>
 					
 					<p style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>No Account?
-                       <a href="#" style={{fontSize:"12px",fontFamily:"Montserrat"}}>Create One</a></center></p>
+                       <a href="/signup" style={{fontSize:"12px",fontFamily:"Montserrat"}}>Create One</a></center></p>
 
 				</Form>
 				
@@ -530,7 +531,7 @@ class Header extends Component {
 					</p>
 
 					<p style={{fontSize:"12px" , fontFamily:"Montserrat"}}><center>Already Have an Account?
-                        <a href="#" style={{fontSize:"12px", fontFamily: "Montserrat"}}>Signin</a></center></p>
+                        <a href="/login" style={{fontSize:"12px", fontFamily: "Montserrat"}}>Signin</a></center></p>
 
 				</Form>
 				
