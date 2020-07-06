@@ -115,7 +115,7 @@ class Signup extends Component {
 
             <center>
             <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
-                    ,boxShadow: "0 0 8px rgba(0,0,0,.1)",width:"40%",backgroundColor:"white",marginTop:"1.7%",
+                    ,boxShadow: "0 0 8px rgba(0,0,0,.1)",width:"40%",backgroundColor:"white",marginTop:"1.7%"
                 }}>			
             <Form className="cd-signin-modal__form">
 	    		<p style={{fontSize:"30px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black",marginBottom:"0px"}}>
@@ -123,30 +123,29 @@ class Signup extends Component {
                     	<p style={{fontSize:"12px", fontFamily:"Montserrat",textAlign:"center",lineHeight:"18px",marginBottom:".5em"}}>
                      	Create an account to access personalized articles, podcasts,
                      	career enhancement services along with interest based professional communication groups.</p>
-		<center>
- 		<a  href="/images/cd-logo.svg" className="fb btn" style={{padding:"10px 12px"}}>
+		<center><a  href="/images/cd-logo.svg" className="fb btn" alt="logo missing" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-		<img src={`${process.env.PUBLIC_URL}/images/un.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+		<img src={`${process.env.PUBLIC_URL}/images/un.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo missing"/></div>
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
-		<center>
-       		<a  href="http://google.com/" className="twitter btn" style={{padding:"10px 12px"}}>
+       <center><a  href="http://google.com/" className="twitter btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-          	<img src={`${process.env.PUBLIC_URL}/images/abc.svg`}  style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
-		<div className="e" style={{textAlign: "left" ,marginTop:"3px"}}>
+          	<img src={`${process.env.PUBLIC_URL}/images/abc.svg`}  style={{width: "40%",marginTop:"2px"}} alt=" twitter logo missing"/></div>
+		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
  		Signin with Google</div>
         	</a></center>
-		<center>
-        	<a  href="http://apple.com/" className="google btn" style={{padding:"10px 12px"}}>
+
+        <center><a  href="http://apple.com/" className="google btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
-           	<img src={`${process.env.PUBLIC_URL}/images/apple.png`} style={{width: "40%",marginTop:"2px"}} alt="Logo Missing"/></div>
+           	<img src={`${process.env.PUBLIC_URL}/images/apple.png`} style={{width: "40%",marginTop:"2px"} } alt=" twitter logo missing"
+               /></div>
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Apple</div>
         	</a></center>
