@@ -70,9 +70,7 @@ class Podcast extends Component {
             </a>
           </div>
           <a href="/about">
-
             <div className="podtitle">
-
               <img src="../images/Final_Black.png"></img>
             </div>
           </a>
@@ -213,11 +211,9 @@ class Podcast extends Component {
             </Card.Body>
           </Card>
         </CardDeck>
-<<<<<<< HEAD
-        */}
-=======
 
->>>>>>> 1919991... logo position changed
+        */}
+
         <div className="Poppost">
           <h2>Give It A Read</h2>
           <div id="cardPod">
