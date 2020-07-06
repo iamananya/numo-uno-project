@@ -553,4 +553,5 @@ x sigin/signup popup
 }
 .xyz {
   width: 100%;
+  background-image:url('${process.env.PUBLIC_URL}/images/IMG-20200706-WA0018.jpg')
 }
