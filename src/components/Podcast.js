@@ -213,7 +213,11 @@ class Podcast extends Component {
             </Card.Body>
           </Card>
         </CardDeck>
+<<<<<<< HEAD
         */}
+=======
+
+>>>>>>> 1919991... logo position changed
         <div className="Poppost">
           <h2>Give It A Read</h2>
           <div id="cardPod">
