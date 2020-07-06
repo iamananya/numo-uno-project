@@ -83,7 +83,7 @@ class Login extends Component {
         return(
                     <center>
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
-                    ,boxShadow: "0 0 6px rgba(0,0,0,.1)",width:"40%",backgroundColor:"white",marginTop:"3%",
+                    ,boxShadow: "0 0 6px rgba(0,0,0,.1)",width:"40%",backgroundColor:"white",marginTop:"3%"
                 }}>			
                     <Form className="cd-signin-modal__form" style={{padding:"2em"}}>
 	                <p style={{fontSize:"35px" , textAlign:"center" ,fontFamily:"Josefin Sans", color:"black"}}> Welcome Back</p>
