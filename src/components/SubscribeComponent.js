@@ -6,15 +6,13 @@ class Contact extends Component {
     super(props);
 
     this.state = {
-      firstname: "",
+      fullname: "",
       lastname: "",
       telnum: "",
       email: "",
-      agree: false,
       contactType: "Tel.",
-      message: "",
       touched: {
-        firstname: false,
+        fullname: false,
         lastname: false,
         telnum: false,
         email: false,
@@ -40,21 +38,21 @@ class Contact extends Component {
     });
   };
 
-  validate(firstname, lastname, telnum, email) {
+  validate(fullname, lastname, telnum, email) {
     const errors = {
-      firstname: "",
+      fullname: "",
       lastname: "",
       telnum: "",
       email: "",
     };
-    if (this.state.touched.firstname && firstname.length < 3)
-      errors.firstname = "First name should be >= 3 characters";
-    else if (this.state.touched.firstname && firstname.length >= 10)
-      errors.firstname = "First name shoubld be <=10 characters";
+    if (this.state.touched.fullname && fullname.length < 3)
+      errors.fullname = "Name should be >= 3 characters";
+    else if (this.state.touched.fullname && fullname.length >= 15)
+      errors.fullname = "First name shoubld be <=15 characters";
     if (this.state.touched.lastname && lastname.length < 3)
       errors.lastname = "Last name should be >= 3 characters";
     else if (this.state.touched.lastname && lastname.length >= 10)
-      errors.firstname = "Last name shoubld be <=10 characters";
+      errors.fullname = "Last name shoubld be <=10 characters";
 
     const reg = /^\d+$/;
     if (this.state.touched.telnum && !reg.test(telnum))
@@ -75,10 +73,10 @@ class Contact extends Component {
   }
   render() {
     const errors = this.validate(
-      this.state.firstname,
+      this.state.fullname,
       this.state.lastname,
       this.state.telnum,
-      this.state.email
+      this.state.email,
     );
     return (
       <div className="container">
@@ -97,25 +95,20 @@ class Contact extends Component {
                   <FormGroup row id="form-padding">
                     <Input
                       type="text"
-                      id="firstname"
-                      name="firstname"
-                      placeholder="First Name"
-                      value={this.state.firstname}
-                      valid={
-                        errors.firstname === "" && this.state.touched.firstname
-                      }
-                      invalid={errors.firstname !== ""}
-                      onBlur={this.handleBlur("firstname")}
+                      id="fullname"
+                      name="fullname"
+                      placeholder="Full Name"
+                      value={this.state.fullname}
+                      valid={errors.fullname === ""&&this.state.touched.fullname}
+                      invalid={errors.fullname !== ""}
+                      onBlur={this.handleBlur("fullname")}
                       onChange={this.handleInputChange}
-                      style={{
-                        fontSize: "18px",
-                        borderColor: "rgb(53, 53, 53)",
-                        height: "64px",
-                        borderRadius: "5px",
-                      }}
+                      style={{ fontSize: "18px",borderColor: "rgb(53, 53, 53)",
+                      height: "64px",borderRadius:"5px",paddingLeft: "20px" ,
+                      margin:"0px"}}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
-                      {errors.firstname}
+                      {errors.fullname}
                     </FormFeedback>
                   </FormGroup>
                 </div>
@@ -125,7 +118,7 @@ class Contact extends Component {
                       type="tel"
                       id="telnum"
                       name="telnum"
-                      placeholder="Tel. number"
+                      placeholder="Contact"
                       value={this.state.telnum}
                       valid={
                         errors.telnum === "" && this.state.touched.lastname
@@ -133,12 +126,12 @@ class Contact extends Component {
                       invalid={errors.telnum !== ""}
                       onBlur={this.handleBlur("telnum")}
                       onChange={this.handleInputChange}
-                      style={{
-                        fontSize: "18px",
-                        borderColor: "rgb(53, 53, 53)",
-                        height: "64px",
-                        borderRadius: "5px",
-                      }}
+                      style={{ fontSize: "18px",
+                              borderColor: "rgb(53, 53, 53)",
+                              height: "64px",
+                              borderRadius:"5px"
+                              ,paddingLeft: "20px",
+                              margin:"0px"}}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
                       {errors.telnum}
@@ -152,21 +145,18 @@ class Contact extends Component {
                       type="email"
                       id="email"
                       name="email"
-                      placeholder="Email"
+                      placeholder="Email Id"
                       value={this.state.email}
                       valid={errors.email === "" && this.state.touched.email}
                       invalid={errors.email !== ""}
                       onBlur={this.handleBlur("email")}
                       onChange={this.handleInputChange}
-                      style={{
-                        fontSize: "18px",
-                        borderColor: "rgb(53, 53, 53)",
-                        height: "64px",
-                        borderRadius: "5px",
-                      }}
+                      style={{ fontSize: "18px",borderColor: "rgb(53, 53, 53)",
+                      height: "64px",borderRadius:"5px",
+                      margin:"0px" ,paddingLeft: "20px"}}
                     />
                     <FormFeedback style={{ fontSize: "14px" }}>
-                      {errors.lastname}
+                      {errors.email}
                     </FormFeedback>
                   </FormGroup>
                 </div>
