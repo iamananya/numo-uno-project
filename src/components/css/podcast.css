@@ -143,11 +143,18 @@
 
 #podCard {
   border: 0px solid white;
+<<<<<<< HEAD
   margin-bottom: 10%;
   margin-left: 5%;
   margin-right: 2%;
   height: 500px;
   position: relative;
+=======
+  margin-bottom: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  max-height: 500px;
+>>>>>>> c9971e8... podcast style changed
   border-radius: 10px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.062);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.062);
