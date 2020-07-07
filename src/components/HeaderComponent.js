@@ -517,7 +517,7 @@ class Header extends Component {
 						<p  style={{margin:"1em 0"}}>
                             
 							<input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
-							<label for="remember-me" style={{fontSize:"12px", fontFamily:"Montserrat"}}>  I agree to Terms and Conditions</label>
+							<label for="remember-me" style={{fontSize:"15px", fontFamily:"Montserrat"}}>  I agree to Terms and Conditions</label>
                             
                     </p></div></div>
 
