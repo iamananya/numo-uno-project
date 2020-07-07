@@ -344,11 +344,11 @@ class Header extends Component {
 					</p>
 					<div className="row">
 						<div className="b"><p style={{color:"white"}}>.</p></div>
-						<div className="c" style={{textAlign:"left"}}>
+						<div className="hd4" style={{textAlign:"left"}}>
                             
-						<p  style={{margin:"0.5em 0 0.5em 0.3em"}}>
-							<Input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
-							<label for="remember-me" style={{fontSize:"12px", fontFamily:"Montserrat"}}>Remember me</label>
+						<p  style={{margin:"1em 0"}}>
+							<input type="checkbox" id="remember-me"  className="cd-signin-modal__input "/>
+							<label for="remember-me" style={{fontSize:"15px", fontFamily:"Montserrat"}}> Remember me</label>
 					</p></div></div>
 
 					<p style={{margin:"0em 0"}}>
@@ -512,13 +512,13 @@ class Header extends Component {
 					</p>
                     
 					<div className="row">
-						<div className="b"><p style={{color:"white"}}>.</p></div>
-						<div className="c" style={{width: "80%", textAlign:"left"}}>
-						<p  style={{margin:"0.5em 0 0.5em 0.3em"}}>
-                            <FormGroup>
-							<Input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
-							<label for="remember-me" style={{fontSize:"12px", fontFamily:"Montserrat"}}>I agree to Terms and Conditions</label>
-                            </FormGroup>
+						<div className="b" style={{width:"12%"}}><p style={{color:"white"}}>.</p></div>
+						<div className="hd3" style={{textAlign:"left"}}>
+						<p  style={{margin:"1em 0"}}>
+                            
+							<input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
+							<label for="remember-me" style={{fontSize:"15px", fontFamily:"Montserrat"}}>  I agree to Terms and Conditions</label>
+                            
                     </p></div></div>
 
 					<p style={{margin:"0em 0"}}>

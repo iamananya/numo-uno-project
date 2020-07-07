@@ -86,7 +86,9 @@ class Blog extends Component {
         <div className="row" style={{marginTop:"15px"}}>
           <div
             className="col-12 col-md-7"
-            style={{ borderRadius: "10px", marginRight: "auto",boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.062)" }}
+            style={{ borderRadius: "10px", marginRight: "auto",
+            padding:"0px",
+            boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.062)" }}
           >
             <div  >
               {this.state.videos.slice(0,1).map((video) => {
@@ -97,7 +99,10 @@ class Blog extends Component {
                     
                   }}>
                     <ReactPlayer
-                      id="podLive"
+                      width="100%"
+                      style={{borderRadius:"10px",
+                      padding:"1%",
+                      backgroundColor:"black"}}
                       controls
                       url={`https://www.youtube.com/watch?v=${video.id.videoId}`}
                     />

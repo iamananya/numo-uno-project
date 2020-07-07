@@ -486,7 +486,8 @@ x sigin/signup popup
   height: 40px;
   right: 0;
   top: -40px;
-  background: url("/components/images/cd-icon-close.svg") no-repeat center center;
+  background: url("/components/images/cd-icon-close.svg") no-repeat center
+    center;
   color: transparent;
   text-indent: 100%;
   white-space: nowrap;
@@ -553,5 +554,41 @@ x sigin/signup popup
 }
 .xyz {
   width: 100%;
-  background-image:url('${process.env.PUBLIC_URL}/images/IMG-20200706-WA0018.jpg')
+  background-image: url(/images/Blanding.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 13%;
+  background-size: cover;
+}
+.xyyz {
+  width: 100%;
+  background-image: url(/images/Blanding.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 1.9%;
+  background-size: cover;
+}
+.xyzz {
+  padding-top: 2.7%;
+  width: 100%;
+  background-image: url(/images/Blanding.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+}
+.hd4
+{
+float:left;
+width:90%;
+font-size:12px;
+font-family:Montserrat;
+text-align:left;
+}
+.hd3
+{
+float:left;
+width:88%;
+font-size:12px;
+font-family:Montserrat;
+text-align:left;
 }
