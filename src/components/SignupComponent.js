@@ -393,13 +393,13 @@ class Signup extends Component {
               </p>
 
               <div className="row">
-                <div className="b">
+                <div className="b" style={{width: "12%"}}>
                   <p style={{ color: "white" }}>.</p>
                 </div>
-                <div className="c" style={{ width: "80%", textAlign: "left" }}>
-                  <p style={{ margin: "0.5em 0 0.5em 0.3em" }}>
-                    <FormGroup>
-                      <Input
+                <div className="hd3" style={{textAlign: "left" }}>
+                  <p style={{ margin: "1em 0" }}>
+                    
+                      <input
                         type="checkbox"
                         id="remember-me"
                         checked
@@ -407,12 +407,11 @@ class Signup extends Component {
                       />
                       <label
                         for="remember-me"
-                        style={{ fontSize: "13px", fontFamily: "Montserrat" }}
+                        style={{ fontSize: "15px", fontFamily: "Montserrat" }}
                       >
-                        {" "}
                         I agree to Terms and Conditions
                       </label>
-                    </FormGroup>
+                   
                   </p>
                 </div>
               </div>
