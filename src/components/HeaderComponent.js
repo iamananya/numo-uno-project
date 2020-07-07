@@ -512,8 +512,8 @@ class Header extends Component {
 					</p>
                     
 					<div className="row">
-						<div className="b"><p style={{color:"white"}}>.</p></div>
-						<div className="hd4" style={{textAlign:"left"}}>
+						<div className="b" style={{width:"12%"}}><p style={{color:"white"}}>.</p></div>
+						<div className="hd3" style={{textAlign:"left"}}>
 						<p  style={{margin:"1em 0"}}>
                             
 							<input type="checkbox" id="remember-me" checked className="cd-signin-modal__input "/>
