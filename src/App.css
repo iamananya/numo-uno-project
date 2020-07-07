@@ -232,6 +232,7 @@ nav{
 }
 .popRowS{
     display: flex;
+    align-items: center;
     width: 100%;
 }
 .custom-button2{
@@ -363,29 +364,33 @@ nav{
 }
 #tl{
     margin-left: 10vw;
+    margin-bottom: 20px;
     top: 0px;
     width:370px;
-    height: 350px;
+    height: 450px;
+    box-shadow: 0 0 10px rgba(0,0,0,.25);
     transition: width .5s,height .5s;
     transition-timing-function: ease
 }
 #tl:hover{
     width: 380px;
-    height: 360px;
+    height: auto;
 }
 #tr{
     position: absolute;
     right: 0px;
     top: 0px;
     margin-right: 10vw;
-    width: 370px;
-    height:150px;
+    margin-bottom: 20px;
+    width: 422px;
+    height:200px;
+    box-shadow: 0 0 10px rgba(0,0,0,.25);
     transition: width .5s,height .5s;
     transition-timing-function: ease
 }
 #tr:hover{
     width: 380px;
-    height:160px
+    height:auto;
 }
 #ml{
     margin-right: 60px;
@@ -399,7 +404,7 @@ nav{
 }
 #ml:hover{
     width: 380px;
-    height: 210px;
+    height: auto;
 }
 #mr{
     position: absolute;
@@ -422,31 +427,33 @@ nav{
     left: 0px;
     margin-left: 10vw;
     width:370px;
-    height:275px;
+    height:250px;
+    box-shadow: 0 0 10px rgba(0,0,0,.25);
     transition: width .5s,height .5s;
     transition-timing-function: ease
 }
 #bl:hover{
     width: 380px;
-    height: 285px;
+    height: auto;
 }
 #br{
     position: absolute;
     bottom:0px;
     right: 0px;
     margin-right: 10vw;
-    width:370px;
-    height:150px;
+    width:422px;
+    height:500px;
+    box-shadow: 0 0 10px rgba(0,0,0,.25);
     transition: width .5s,height .5s;
     transition-timing-function: ease
 }
 #br:hover{
     width: 380px;
-    height: 160px;
+    height: auto;
 }
 #skill-box{
     position: relative;
-    height: 625px;
+    height: 720px;
 }
 
 

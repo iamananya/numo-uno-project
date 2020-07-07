@@ -112,7 +112,8 @@ class Home extends Component {
           <div  className="row">
           <div className="col-12" style={{padding:"0px",margin:"auto"}}>
             <img 
-                    width="90%"
+                    width="75%"
+                    style={{opacity:"90%"}}
                     src={`${process.env.PUBLIC_URL}/images/bridge.png`}
                     />
             <div className="col-12 md-col-4"

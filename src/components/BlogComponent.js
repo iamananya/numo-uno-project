@@ -148,7 +148,8 @@ class Blog extends Component {
           {this.state.posts.map((post) => {
             return (
               <div className="col-12 col-md-4 " id="shadowa">
-              <Card style={{border:"0px solid white"}}>
+              <Card style={{border:"0px solid white",
+            marginTop:"50px"}}>
                 <a href={`/blog/${post.id}`}>
                   <CardImg
                     id="headStyle"
@@ -204,12 +205,14 @@ class Blog extends Component {
                     <div>
                       <img
                         className="popImg"
-                        style={{marginTop:"2vw"}}
+                        style={{marginTop:"1vw"}}
                         src={post.feature_image}
                         alt="blog not found"
                       ></img>
                     </div>
-                    <div className="popText">
+                    <div
+                     className="popText"
+                    >
                       <p>
                         <h3>
                           <a href={`/blog/${post.id}`}>{post.title}</a>
@@ -290,13 +293,13 @@ class Blog extends Component {
               borderRadius: "10px",
             }}
           >
-            <div  >
+            
               {this.state.videos.slice(1,2).map((video) => {
                 return (
                   <Card style={{
                     border:"0px solid white",
                     borderRadius:"10px",
-                    boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.062)"
+                    
                   }}>
                     <ReactPlayer
                       id="podLive"
@@ -313,7 +316,7 @@ class Blog extends Component {
                   </Card>
                 );
               })}
-            </div>
+            
             {/* <img
               width="100%"
               height="100%"

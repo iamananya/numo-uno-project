@@ -7,7 +7,8 @@ function Skill(props) {
 
       <div className="col-12">
         <div>
-          <h3 className="center-heading">Our Provided Services & Features</h3>
+          <h3 id="yellow-heading">OUR PRODUCTS</h3>
+          <h3 className="center-heading">For Companies</h3>
         </div>
       </div>
       {/* This is the first row */}
@@ -15,31 +16,26 @@ function Skill(props) {
         <img
           id="tl"
           
-          src={`${process.env.PUBLIC_URL}images/group_tl.png`}
+          src={`${process.env.PUBLIC_URL}images/skill1.png`}
           alt="not found"
         />
         <img
           id="tr"
           
-          src={`${process.env.PUBLIC_URL}images/group_tr.png`}
+          src={`${process.env.PUBLIC_URL}images/skill2.png`}
           alt=" not found"
         />
         
-        <img
-          id="mr"
-          
-          src={`${process.env.PUBLIC_URL}/images/group_mr.png`}
-          alt=" not found"
-        />
+       
         <img
           id="bl"
-          src={`${process.env.PUBLIC_URL}/images/group_bl.png`}
+          src={`${process.env.PUBLIC_URL}/images/skill3.png`}
           alt=" not found"
         />
         <img
           id="br"
           
-          src={`${process.env.PUBLIC_URL}/images/group_br.png`}
+          src={`${process.env.PUBLIC_URL}/images/skill4.png`}
           alt="not found"
         />
       </div>
