@@ -86,7 +86,7 @@ class Blog extends Component {
         <div className="row" style={{marginTop:"15px"}}>
           <div
             className="col-12 col-md-7"
-            style={{ borderRadius: "10px", marginRight: "auto" }}
+            style={{ borderRadius: "10px", marginRight: "auto",boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.062)" }}
           >
             <div  >
               {this.state.videos.slice(0,1).map((video) => {
@@ -94,7 +94,7 @@ class Blog extends Component {
                   <Card style={{
                     border:"0px solid white",
                     borderRadius:"10px",
-                    boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.048), 0 6px 20px 0 rgba(0, 0, 0, 0.062)"
+                    
                   }}>
                     <ReactPlayer
                       id="podLive"
@@ -190,7 +190,7 @@ class Blog extends Component {
         <div className="row" style={{ marginTop: "30px" }}>
           <div className="col-12 col-md-7"
           style={{
-            boxShadow: "-1px 3px 20px rgba(0,0,0,.16)",}}>
+            boxShadow: "-1px 3px 20px rgba(0,0,0,.16)",borderRadius:"10px"}}>
           <div id="cardPod">
             {this.state.posts3.map((post) => {
               return (

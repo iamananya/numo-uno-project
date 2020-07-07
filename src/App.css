@@ -363,13 +363,13 @@ nav{
 #tl{
     margin-left: 10vw;
     top: 0px;
-    width:330px;
+    width:370px;
     height: 350px;
     transition: width .5s,height .5s;
     transition-timing-function: ease
 }
 #tl:hover{
-    width: 340px;
+    width: 380px;
     height: 360px;
 }
 #tr{
@@ -391,13 +391,13 @@ nav{
     position: absolute;
     bottom:450px;
     left: 0px;
-    width:330px;
+    width:370px;
     height:200px;
     transition: width .5s,height .5s;
     transition-timing-function: ease
 }
 #ml:hover{
-    width: 340px;
+    width: 380px;
     height: 210px;
 }
 #mr{
@@ -420,13 +420,13 @@ nav{
     bottom: 0px;
     left: 0px;
     margin-left: 10vw;
-    width:330px;
+    width:370px;
     height:275px;
     transition: width .5s,height .5s;
     transition-timing-function: ease
 }
 #bl:hover{
-    width: 340px;
+    width: 380px;
     height: 285px;
 }
 #br{

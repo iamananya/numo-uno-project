@@ -122,7 +122,7 @@ class Home extends Component {
               color: "#151D41",
               margin: "-7vw auto",
             }}>
-              Bridging this gap between<br/> Students and Recruiters<br/> with the help of <br/>AI
+              Bridging the gap between<br/> Students and Recruiters<br/> with the help of <br/>A.I.
             </div>
           </div>
           {/* <div className="col-4"
