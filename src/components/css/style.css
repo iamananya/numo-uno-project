@@ -576,3 +576,11 @@ x sigin/signup popup
   height: 100vh;
   background-size: cover;
 }
+.hd4
+{
+float:left;
+width:90%;
+font-size:12px;
+font-family:Montserrat;
+text-align:left;
+}
