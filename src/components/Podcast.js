@@ -31,7 +31,7 @@ class Podcast extends Component {
       .get(URL1)
       .then((res) => {
         console.log(res.data);
-        this.setState({ videos: res.data.items.slice(0) }, () =>
+        this.setState({ videos: res.data.items.slice(0, 3) }, () =>
           console.log("state for videos is ", this.state.videos)
         );
       })

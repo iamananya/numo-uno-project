@@ -289,7 +289,7 @@ class Login extends Component {
                     <input
                       type="checkbox"
                       id="remember-me"
-                      checked
+                      
                       className="cd-signin-modal__input "
                     />
                     <label

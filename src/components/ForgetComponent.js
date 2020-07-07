@@ -48,7 +48,7 @@ class Forget extends Component {
         
          if (this.state.touched.password && this.state.password.length < 6)
           errors.password = "Password should be >=6";
-        if (this.state.touched.confirmPassword && this.state.confirmPassword.length != this.state.password.length)
+        if (this.state.touched.confirmPassword && this.state.confirmPassword != this.state.password)
           errors.confirmPassword = "Password didn't match";
         return errors;
       }
@@ -81,7 +81,9 @@ class Forget extends Component {
             this.state.confirmPassword,
           );
         return(
+                    <div className="xxyyzz">
                     <center>
+                    
                     <div className="container" style={{display:"flex",justifyContent:"center",flexDirection:"row",height:"auto",borderRadius:"15px"
                     ,boxShadow: "0 0 6px rgba(0,0,0,.1)",width:"40%",backgroundColor:"white",
                 }}>			
@@ -144,7 +146,7 @@ class Forget extends Component {
 				</Form>
 				
 				</div></center>
-                
+                         </div>
 
         );
     }
