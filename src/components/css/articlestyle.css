@@ -13,8 +13,8 @@
 
 #content_art h1 {
   text-align: center;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 18%;
+  margin-right: 18%;
   font-family: Josefin Sans;
   font-size: 50px;
 }
@@ -65,17 +65,19 @@
 }
 
 .text_art p {
-  margin-left: 15%;
-  margin-right: 15%;
-  font-size: 20px;
+  margin-left: 18%;
+  margin-right: 18%;
+  font-size: 18px;
   font-family: Montserrat !important;
   line-height: 30px;
   display: block;
+  color: rgba(0, 0, 0, 0.753);
 }
 
 .text_art p strong {
   font-weight: 700;
   font-size: 20px;
+  display: inline;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -85,15 +87,16 @@
   font-size: 18px;
   font-weight: 500;
   font-style: italic;
-  display: block;
+  display: inline;
 }
 
 .text_art h3 {
   padding: 20px;
-  font-size: 25px;
+  font-size: 28px;
   font-family: Poppins;
   text-align: left;
-  margin-left: 13.5%;
+  margin-left: 16%;
+  font-weight: 500;
 }
 
 .text_art h3 strong {
@@ -107,7 +110,7 @@
   font-size: 35px;
   padding: 20px;
   text-align: left;
-  margin-left: 13.5%;
+  margin-left: 16%;
 }
 
 .text_art h2 strong {
@@ -119,20 +122,32 @@
 
 .text_art ul {
   text-align: left;
-  margin-left: 15%;
-  margin-right: 15%;
-  font-size: 20px;
+  margin-left: 18%;
+  margin-right: 18%;
+  font-size: 18px;
   font-family: Montserrat;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.733);
   list-style-type: square;
+  font-style: italic;
+}
+
+.text_art ul li {
+  margin-bottom: 10px;
 }
 
 .text_art blockquote {
-  font-size: 20px;
-  font-style: italic;
-  font-family: Montserrat;
   text-align: left;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 18%;
+  margin-right: 18%;
+  font-size: 18px;
+  font-family: Montserrat;
+  border-left: 3px solid #4ccdfc;
+  padding-left: 10px;
+  line-height: 25px;
+  margin-bottom: 15px;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.733);
 }
 
 @media screen and (max-width: 800px) {
