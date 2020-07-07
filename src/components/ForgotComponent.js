@@ -125,7 +125,7 @@ class Forgot extends Component {
                 communication groups.
               </p>
 
-              <p style={{ margin: "1em 0" }}>
+              <p style={{ margin: "0em 0 1em 0" }}>
                 <center>
                   <FormGroup>
                     <Input
