@@ -284,9 +284,9 @@ class Login extends Component {
                 <div className="b">
                   <p style={{ color: "white" }}>.</p>
                 </div>
-                <div className="c" style={{ textAlign: "left" }}>
-                  <p style={{ margin: "0.5em 0 0.5em 0.3em" }}>
-                    <Input
+                <div className="hd4" style={{ textAlign: "left" }}>
+                  <p style={{ margin: "1em 0" }}>
+                    <input
                       type="checkbox"
                       id="remember-me"
                       checked
@@ -294,9 +294,8 @@ class Login extends Component {
                     />
                     <label
                       for="remember-me"
-                      style={{ fontSize: "13px", fontFamily: "Montserrat" }}
+                      style={{ fontSize: "15px", fontFamily: "Montserrat" }}
                     >
-                      {" "}
                       Remember me
                     </label>
                   </p>
