@@ -81,16 +81,16 @@ class Header extends Component {
         const reg = /^\d+$/;
         
         if (this.state.touched.email && this.state.email.split("").filter((x) => x === "@").length !== 1)
-          errors.email = "Email is not correct";
+          errors.email = "Email should contain @";
     
         if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
-          errors.loginEmail = "Email is already registered";
+          errors.loginEmail = "Email should contain @";
         if (this.state.touched.password && this.state.password.length < 6)
           errors.password = "Password should be >=6";
         if (this.state.touched.confirmPassword && this.state.confirmPassword != this.state.password)
           errors.confirmPassword = "Password didn't match";
         if (this.state.touched.loginPassword && this.state.loginPassword.length < 6)
-          errors.loginPassword = "Password is incorrect";
+          errors.loginPassword = "Password should be >=6";
         return errors;
       }
     toggleNav(){
