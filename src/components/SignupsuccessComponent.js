@@ -106,7 +106,7 @@ class Signupsuccess extends Component {
                 }}
               >
                 Signup Completed
-              </p>
+              </p></br>
               <p
                 style={{
                   fontSize: "14px",
