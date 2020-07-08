@@ -36,9 +36,8 @@ class Podcast extends Component {
         );
       })
       .catch((err) => {
-        console.log("err in fetch in podcast ", err);
+      if(err.response.status === 404) 
         alert("error in fetch the podcast");
-        console.log("FRONTEND TEAM SHOW ERROR ");
       });
     const URL2 = BLOG_URL + "/posts/?key=" + BLOG_KEY;
     console.log("URL2 IS ", URL2);
