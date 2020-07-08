@@ -96,12 +96,28 @@ class Signupsuccess extends Component {
               backgroundColor: "white",
             }}
           >			
-<form class="cd-signin-modal__form">
-	<div class="hd">
-	<p style="font-size:35px , text-align:center ,font-family:Josefin Sans; color:black">Signup Completed</p></div><br/>
-	
-	<div class="hd1">
-        <p style="font-size:16px; font-family:Montserrat;text-align:center;line-height:18px;letter-spacing:1px;">Please check your mail to verify your account.</p></div>
+<Form className="cd-signin-modal__form" style={{ padding: "2em" }}>
+              <p
+                style={{
+                  fontSize: "35px",
+                  textAlign: "center",
+                  fontFamily: "Josefin Sans",
+                  color: "black",
+                }}
+              >
+                Signup Completed
+              </p>
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontFamily: "Montserrat",
+                  textAlign: "center",
+                  lineHeight: "18px",
+                  letterSpacing: "1px",
+                }}
+              >
+                Please check your mail to verify your account.
+              </p>
 
  	
  
