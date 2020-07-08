@@ -18,6 +18,7 @@ class VerifyComponent extends Component {
       })
       .catch((err) => {
         console.log("err is ", err);
+        alert("server error");
         console.log("FRONEND TEAM - SHOW SERVER ERROR")
       });
   }
