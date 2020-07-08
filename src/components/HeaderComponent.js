@@ -146,6 +146,7 @@ class Header extends Component {
                 console.log("res is ", res.data);
                 if(res.data.message === "success") {
                     localStorage.setItem("tttoken",res.data.token)
+                    window.location.pathname= "loginsuccess"
                     console.log("FRONTEND TEAM LOGIN SUCES REDIRECT TO LOGIN PAGE")
                     
                 }
