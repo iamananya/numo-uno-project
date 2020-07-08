@@ -172,6 +172,7 @@ class Header extends Component {
       
       // check if password and confirm password match, raise error accordingly
       if(this.state.password !== this.state.confirmPassword) {
+        alert("Password didn't match");
         console.log("FRONTEND TEAM, please show the error");
         return
       }
