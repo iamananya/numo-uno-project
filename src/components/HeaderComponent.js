@@ -199,14 +199,12 @@ class Header extends Component {
         })
         .catch(err => {
           if (err.response.status === 400) 
-          alert("wrong email address");
-          console.log("FRONTEND TEAM - SHOW WRONG EMAIL ADDRESS GIVEN BOLKE")
+            alert("wrong email address");
           else if (err.response.status === 500) 
-          alert("unable to connect to the server");
-          console.log("FRONTEND TEAM - SHOW unable to conect to server GIVEN BOLKE")
+            alert("unable to connect to the server");
           else if (err.response.status === 409)
-          alert("user is already registered");
-          console.log("FRONTEND TEAM SHOW USER ALREADY REG")
+            alert("user is already registered");
+          
         })
 
     }

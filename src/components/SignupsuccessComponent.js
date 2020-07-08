@@ -96,7 +96,7 @@ class Signupsuccess extends Component {
               backgroundColor: "white",
             }}
           >			
-<Form className="cd-signin-modal__form" style={{ padding: "2em" }}>
+        <Form className="cd-signin-modal__form" style={{ padding: "2em" }}>
               <p
                 style={{
                   fontSize: "35px",
@@ -106,7 +106,8 @@ class Signupsuccess extends Component {
                 }}
               >
                 Signup Completed
-              </p></br>
+              </p>
+              <br />
               <p
                 style={{
                   fontSize: "14px",
@@ -118,12 +119,7 @@ class Signupsuccess extends Component {
               >
                 Please check your mail to verify your account.
               </p>
-
- 	
- 
-					
-
-				</form>
+				</Form>
 				
 				</div></center>
                 		</div>
