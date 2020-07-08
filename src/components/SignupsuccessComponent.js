@@ -82,8 +82,20 @@ class Signupsuccess extends Component {
           );
         return(
 		    <div className="xyz">
-                    <center>
-<div class="container" style=" border-radius:15px; background-color:white;">			
+        <center>
+          <div
+            className="container"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "row",
+
+              borderRadius: "15px",
+              boxShadow: "0 0 6px rgba(0,0,0,.1)",
+              width: "40%",
+              backgroundColor: "white",
+            }}
+          >			
 <form class="cd-signin-modal__form">
 	<div class="hd">
 	<p style="font-size:35px , text-align:center ,font-family:Josefin Sans; color:black">Signup Completed</p></div><br/>
