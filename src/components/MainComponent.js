@@ -9,6 +9,7 @@ import Login from "./LoginComponent";
 import Signup from "./SignupComponent";
 import Forget from "./ForgetComponent";
 import Forgot from "./ForgotComponent";
+import Signupsuccess from "./SignupsuccessComponent";
 
 class Main extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class Main extends Component {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/forget" component={Forget} />
           <Route exact path="/forgot" component={Forgot} />
+          <Route exact path="/signupsuccess" component={Signupsuccess} />
           <Route exact path="/contact" component={Home} />
           <Route exact path="/blog" component={BlogFinal} />
           <Route exact path="/podcast" component={PodcastCall} />
