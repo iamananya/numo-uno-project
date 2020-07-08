@@ -36,6 +36,7 @@ class BlogPage extends Component {
       })
       .catch((err) => {
         console.log("err in fetch in podcast ", err);
+        alert("an error occurred");
         console.log("FRONTEND TEAM SHOW ERROR ");
       });
     const URL = BLOG_URL + "/posts/?key=" + BLOG_KEY;
@@ -49,6 +50,7 @@ class BlogPage extends Component {
       })
       .catch((err) => {
         console.log("err in fetch in blog ", err);
+        alert("an error occurred");
         console.log("FRONTEND TEAM SHOW ERROR ");
       });
   }
