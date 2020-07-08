@@ -35,6 +35,7 @@ class Blog extends Component {
       })
       .catch((err) => {
         console.log("err in fetch in blog ", err);
+        alert("error in fetch the blog");
         console.log("FRONTEND TEAM SHOW ERROR ");
       });
       const URL1 =
@@ -55,6 +56,7 @@ class Blog extends Component {
       })
       .catch((err) => {
         console.log("err in fetch in podcast ", err);
+        alert("error in fetch the podcast");
         console.log("FRONTEND TEAM SHOW ERROR ");
       });
     const URL2 = BLOG_URL + "/posts/?key=" + BLOG_KEY;
@@ -68,6 +70,7 @@ class Blog extends Component {
       })
       .catch((err) => {
         console.log("err in fetch in blog ", err);
+        alert("error in fetch the blog");
         console.log("FRONTEND TEAM SHOW ERROR ");
       });
   }
