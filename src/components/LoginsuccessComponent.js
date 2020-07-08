@@ -81,15 +81,44 @@ class Loginsuccess extends Component {
             this.state.confirmPassword,
           );
         return(
-		    <div className="xyz">
-                    <center>
-<div class="container" style=" border-radius:15px; background-color:white;">			
-<form class="cd-signin-modal__form">
-	<div class="hd">
-	<p style="font-size:35px , text-align:center ,font-family:Josefin Sans; color:black">Signin Completed</p></div><br/>
-	
-	<div class="hd1">
-        <p style="font-size:16px; font-family:Montserrat;text-align:center;line-height:18px;letter-spacing:1px;">Please check your mail to verify your account.</p></div>
+		<div className="xyz">
+        <center>
+          <div
+            className="container"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "row",
+
+              borderRadius: "15px",
+              boxShadow: "0 0 6px rgba(0,0,0,.1)",
+              width: "40%",
+              backgroundColor: "white",
+            }}
+          >			
+<Form className="cd-signin-modal__form" style={{ padding: "2em" }}>
+              <p
+                style={{
+                  fontSize: "35px",
+                  textAlign: "center",
+                  fontFamily: "Josefin Sans",
+                  color: "black",
+                }}
+              >
+                Signin Completed
+              </p>
+              <p
+                style={{
+                  fontSize: "14px",
+                  fontFamily: "Montserrat",
+                  textAlign: "center",
+                  lineHeight: "18px",
+                  letterSpacing: "1px",
+                  color:"white",
+                }}
+              >
+                Please check your mail to verify your account.
+              </p>
 
  	
  
