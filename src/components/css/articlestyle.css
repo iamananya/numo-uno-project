@@ -36,6 +36,7 @@
   margin-right: 15%;
   padding: 5px;
   margin-bottom: 30px;
+  font-size: 10px;
 }
 
 .social_art a {
@@ -152,14 +153,22 @@
 
 @media screen and (max-width: 800px) {
   #brand_art {
-    width: 15%;
+    width: 10%;
   }
   .social_art {
     text-align: center;
     margin-left: 15%;
+    font-size: 6px;
   }
   #content_art h1 {
     font-size: 40px;
+  }
+  .text_art img {
+    width: 250px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=articlestyle.css.map */
