@@ -192,6 +192,7 @@ class Header extends Component {
         .then(res => {
           console.log("res is ", res.data);
           if (res.message === "success") {
+            window.location.pathname= "signupsuccess"
             console.log("FRONTEND TEAM TELL THEM TO SEE THEIR MAIL I")
           }
         })
