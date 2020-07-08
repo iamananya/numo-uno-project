@@ -13,6 +13,7 @@ class VerifyComponent extends Component {
       .then((res) => {
         console.log("res.data ", );
         if (res.data.message === "success") {
+          window.location.pathname= "login"
           console.log("FRONTEND TEAM REDIRECT TO LOGIN PAGE ")
         }
       })
