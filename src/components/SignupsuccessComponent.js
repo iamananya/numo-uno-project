@@ -119,6 +119,27 @@ class Signupsuccess extends Component {
               >
                 Please check your mail to verify your account.
               </p>
+              <p style={{ margin: "1em 0" }}>
+                <center>
+                  <a
+                    href="/home"
+                    className="twitter btn"
+                    style={{
+                      backgroundColor: "black",
+                      color: "#ffd700",
+                      padding: "8px 12px",
+                      fontSize: "20px",
+                      textAlign: "center",
+                      fontFamily: "Josefin Sans",
+                      boxShadow: "0 2",
+                      borderRadius: "10px",
+                    }}
+                    onClick={this.handleLoginClick}
+                  >
+                    Go To Home
+                  </a>
+                </center>
+              </p>
 				</Form>
 				
 				</div></center>
