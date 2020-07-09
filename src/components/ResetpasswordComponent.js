@@ -119,7 +119,29 @@ class Resetpassword extends Component {
               >
                 Reset password link sent. Please check your mail to reset password.
               </p>
-				</Form>
+              
+		<p style={{ margin: "1em 0" }}>
+                <center>
+                  <a
+                    href="/resetpassword"
+                    className="twitter btn"
+                    style={{
+                      backgroundColor: "black",
+                      color: "#ffd700",
+                      padding: "8px 12px",
+                      fontSize: "20px",
+                      textAlign: "center",
+                      fontFamily: "Josefin Sans",
+                      boxShadow: "0 2",
+                      borderRadius: "10px",
+                    }}
+                    onClick={this.handleLoginClick}
+                  >
+                    Continue
+                  </a>
+                </center>
+              </p>
+		</Form>
 				
 				</div></center>
                 		</div>
