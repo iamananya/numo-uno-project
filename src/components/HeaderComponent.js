@@ -81,10 +81,10 @@ class Header extends Component {
         const reg = /^\d+$/;
         
         if (this.state.touched.email && this.state.email.split("").filter((x) => x === "@").length !== 1)
-          errors.email = "Email should contain @";
+          errors.email = "Invalid email";
     
         if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
-          errors.loginEmail = "Email should contain @";
+          errors.loginEmail = "Invalid email";
         if (this.state.touched.password && this.state.password.length < 6)
           errors.password = "Password should be >=6";
         
