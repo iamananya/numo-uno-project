@@ -145,7 +145,7 @@ class Header extends Component {
                 console.log("res is ", res.data);
                 if(res.data.message === "success") {
                     localStorage.setItem("tttoken",res.data.token)
-                    window.location.pathname= "loginsuccess"
+                    window.location.pathname= "/loginsuccess"
                     console.log("FRONTEND TEAM LOGIN SUCES REDIRECT TO LOGIN PAGE")
                     
                 }
@@ -201,7 +201,7 @@ class Header extends Component {
         .then(res => {
           console.log("res is ", res.data);
           if (res.data.message === "success") {
-            window.location.pathname= "signupsuccess"
+            window.location.pathname= "/signupsuccess"
             console.log("FRONTEND TEAM TELL THEM TO SEE THEIR MAIL I")
           }
         })
