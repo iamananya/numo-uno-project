@@ -5,14 +5,14 @@ function Skill(props) {
     <div className="container">
       
 
-      <div className="col-12">
-        <div>
-          <h3 id="yellow-heading">OUR PRODUCTS</h3>
+
+      {/* This is the first row */}
+      <div className="row m-auto" id="skill-container" >
+        <div id="side-skill-text">
+        <h3 id="yellow-heading">OUR PRODUCTS</h3>
           <h3 className="center-heading">For Companies</h3>
         </div>
-      </div>
-      {/* This is the first row */}
-      <div className="row m-auto" id="skill-box">
+        <div className="col-12 col-9" id="skill-box">
         <img
           id="tl"
           
@@ -39,6 +39,7 @@ function Skill(props) {
           alt="not found"
         />
       </div>
+    </div>
     </div>
   );
 }

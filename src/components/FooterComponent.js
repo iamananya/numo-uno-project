@@ -14,7 +14,7 @@ function Footer(props) {
                   alt="Ristorante Con Fusion"
                 />
               </div>
-              <div className="col-12 col-md-5 ml-auto" href="/" style={{textAlign:"right"}}>
+              <div className="col-12 col-md-5 ml-auto" href="/" id="right-text-footer">
                 <p
                   style={{
                     fontSize: "21px",
@@ -35,7 +35,7 @@ function Footer(props) {
                 <p id="footer-heading">EMAIL</p>
                 <p id="footer-sub">contact@numouno(dot)tech</p>
               </div>
-              <div className="col-12 col-md-5 ml-auto" href="/" style={{textAlign:"right"}}>
+              <div className="col-12 col-md-5 ml-auto" href="/" id="right-text-footer">
                 <p id="footer-heading">GET IN TOUCH</p>
                 <p id="footer-sub">Indian Institute of Technology Kharagpur<br/>
 West Bengal, India - 731202.</p>
@@ -48,7 +48,8 @@ West Bengal, India - 731202.</p>
               </div>
               <div
                 className="col-12 col-md-5 ml-auto"
-                style={{ marginTop: "30px" ,textAlign:"right"}}
+                id="right-text-footer"
+                style={{ marginTop: "30px" }}
               >
                 <a
                   className="social-button"

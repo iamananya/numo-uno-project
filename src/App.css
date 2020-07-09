@@ -5,6 +5,14 @@ body{
 p{
     margin-bottom: 0px;
 }
+
+#about{
+    background-image:url('/images/stud_back.png');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed;  */
+    background-size: 100vw auto;
+    display: flex;
+}
 #blog-main{
     font-size: 3vw;
     font-family: 'Montserrat', sans-serif;
@@ -97,6 +105,10 @@ address{
     margin:0px;
     color:#0f0f0f;
 }
+#card-width{
+    width:19vw;
+    display:inline-block;
+}
 #card-heading{
     font-size: 1.3vw;
     color: #455A64;
@@ -165,7 +177,7 @@ nav{
 
 #subscribe1{
     padding: 0px 100px;
-    background-image: url({`${process.env.PUBLIC_URL}/images/map.png`});
+    background-image: url('/images/map.png');
 }
 #center-text{
     margin: auto;
@@ -178,18 +190,19 @@ nav{
     margin-top: 10vw;
 }
 #card-even{
-    margin-bottom: 5vw;
+    margin-top: 30vh;
     height:15vw;
-    width: 25vw;
+    width: 20vw;
     overflow: hidden;
     border:0px;
     
     text-align: end;
 }
 #card-odd{
-    margin-top: 5vw;
+    margin-top: 0vw;
+    margin-bottom: 30vh;
     height:15vw;
-    width: 25vw;
+    width: 20vw;
     border:0px;
     
     overflow: hidden;
@@ -214,6 +227,7 @@ nav{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 5.5vw;
     font-weight: 200;
+    margin-top: 15px;
 }
 .main-text2{
     font-family: 'Montserrat', sans-serif;
@@ -363,28 +377,30 @@ nav{
     color: #151D41;
 }
 #tl{
-    margin-left: 10vw;
+
     margin-bottom: 20px;
     top: 0px;
-    width:370px;
-    height: 450px;
+    width:296px;
+    height: 360px;
     box-shadow: 0 0 10px rgba(0,0,0,.25);
+    border-radius: 10px;
     transition: width .5s,height .5s;
     transition-timing-function: ease
 }
 #tl:hover{
-    width: 380px;
+    width: 304px;
     height: auto;
 }
 #tr{
     position: absolute;
     right: 0px;
     top: 0px;
-    margin-right: 10vw;
+
     margin-bottom: 20px;
-    width: 422px;
-    height:200px;
+    width: 337px;
+    height:160px;
     box-shadow: 0 0 10px rgba(0,0,0,.25);
+    border-radius: 10px;
     transition: width .5s,height .5s;
     transition-timing-function: ease
 }
@@ -392,42 +408,13 @@ nav{
     width: 380px;
     height:auto;
 }
-#ml{
-    margin-right: 60px;
-    position: absolute;
-    bottom:450px;
-    left: 0px;
-    width:370px;
-    height:200px;
-    transition: width .5s,height .5s;
-    transition-timing-function: ease
-}
-#ml:hover{
-    width: 380px;
-    height: auto;
-}
-#mr{
-    position: absolute;
-    bottom:150px;
-    right: 0px;
-    margin-right: 10vw;
-    width:370px;
-    height:325px;
-    transition: width .5s,height .5s;
-    transition-timing-function: ease
-}
-#mr:hover{
-    width: 380px;
-    height: 335px;
-}
 #bl{
-    margin-right: 60px;
     position: absolute;
     bottom: 0px;
-    left: 0px;
-    margin-left: 10vw;
-    width:370px;
-    height:250px;
+    right:405px;
+    width:296px;
+    height:200px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,.25);
     transition: width .5s,height .5s;
     transition-timing-function: ease
@@ -440,12 +427,21 @@ nav{
     position: absolute;
     bottom:0px;
     right: 0px;
-    margin-right: 10vw;
-    width:422px;
-    height:500px;
+    
+    width:337px;
+    height:400px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,.25);
     transition: width .5s,height .5s;
     transition-timing-function: ease
+}
+#skill-container{
+    height: 650px;
+}
+#side-skill-text{
+    height: 576px;
+    position: relative;
+    top:200px;
 }
 #br:hover{
     width: 380px;
@@ -453,7 +449,12 @@ nav{
 }
 #skill-box{
     position: relative;
-    height: 720px;
+    height: 576px;
+    width: 633px;
+    bottom: 440px;
+}
+#right-text-footer{
+    text-align: right;
 }
 
 
@@ -554,11 +555,11 @@ nav{
         font-family: 'Josefin Sans', sans-serif;
         font-size: 50px;
         font-weight: 200;
-        
+        margin-top: 15px;
     }
     #subscribe1{
         padding: 0px 50px;
-        background-image: url({`${process.env.PUBLIC_URL}/images/map.png`});
+        background-image: url('/images/map.png');
     }
     .main-text2{
         font-size: 50px;
@@ -566,6 +567,9 @@ nav{
     }
     #numounomobile{
         height: 400px;
+    }
+    #right-text-footer{
+        text-align: left;
     }
 
 }

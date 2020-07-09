@@ -87,8 +87,7 @@ class Header extends Component {
           errors.loginEmail = "Email is already registered";
         if (this.state.touched.password && this.state.password.length < 6)
           errors.password = "Password should be >=6";
-        if (this.state.touched.confirmPassword && this.state.confirmPassword != this.state.password)
-          errors.confirmPassword = "Password didn't match";
+        
         if (this.state.touched.loginPassword && this.state.loginPassword.length < 6)
           errors.loginPassword = "Password is incorrect";
         return errors;
@@ -169,9 +168,19 @@ class Header extends Component {
     }
     handleSubmit = (e) => {
       e.preventDefault()
-      
+      const errors = {
+        firstName: "",
+        lastName: "",
+        telnum: "",
+        email: "",
+        loginEmail: "",
+        password: "",
+        confirmPassword: "",
+        loginPassword: "",
+      };
       // check if password and confirm password match, raise error accordingly
       if(this.state.password !== this.state.confirmPassword) {
+        alert("Password didn't match");
         console.log("FRONTEND TEAM, please show the error");
         return
       }
@@ -218,16 +227,18 @@ class Header extends Component {
             <div className="keep-fixed">
                 <Navbar className="custom-nav" color="white" light expand="md">
                     <div className="container-fluid">
-                        <NavbarToggler onClick={this.toggleNav} />
+                        
                         <NavbarBrand className="mr-auto" href="/">
-                            <NavLink className="nav-link"  to='/home'
+                        <NavLink className="nav-link"  to='/home'
                             style={{padding:"0px",
                                     margin:"0px"}}>
                                 <img src={`${process.env.PUBLIC_URL}/images/logo.png`}
                                 height="50" width="auto" alt='Ristorante Con Fusion' />
                                 </NavLink>
                             </NavbarBrand>
-                        <Collapse isOpen={this.state.isNavOpen} navbar>
+                        <NavbarToggler onClick={this.toggleNav} className="mr-2"/>
+                            
+                        <Collapse isOpen={this.state.isNavOpen} navbar> 
                             <Nav className="ml-auto" navbar>
                             <NavItem>
                                 <NavLink onClick={this.scrollToAbout} className="nav-link" to='/about'> About us</NavLink>

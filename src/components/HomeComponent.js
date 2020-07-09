@@ -50,7 +50,7 @@ class Home extends Component {
             >
               <h1 className="main-text">Shaping Careers </h1>
               <h1 className="main-text2"> Through </h1>
-              <h1 className="main-text" style={{ lineHeight: "1.5" }}>
+              <h1 className="main-text">
                 Artificial Intelligence
               </h1>
               <h2 className="sub-text">
@@ -108,7 +108,7 @@ class Home extends Component {
           </div>
         </div>
           {/* This is the third row */}
-        <div className="container-fluid" id="pad">
+        <div className="container-fluid">
           <div  className="row">
           <div className="col-12" style={{padding:"0px",margin:"auto"}}>
             <img 
@@ -121,138 +121,109 @@ class Home extends Component {
               fontSize: "24px",
               fontWeight: "600",
               color: "#151D41",
-              margin: "-7vw auto",
+              margin: "-5.5vw auto",
             }}>
-              Bridging the gap between<br/> Students and Recruiters<br/> with the help of <br/>A.I.
+              Bridging the gap between<br/> Students and Recruiters<br/> with the <br/>A.I.
             </div>
           </div>
-          {/* <div className="col-4"
-          style={{
-            fontSize: "21px",
-            fontWeight: "400",
-            color: "#151D41",
-            margin: "-9vw auto",
-          }}>
-            Bridging this gap between<br/> Students and Recruiters<br/> with the help of <br/>AI
-          </div> */}
           </div>
 
 
-          {/* <div id="row2" className="row">
-            <div className="col-12 col-md-5" id="content">
-              <div>
-                <h3 id="side-heading">Sneak Peek !</h3>
-              </div>
-              <p id="side-heading-child">
-                We are Creative Director and UI/UX Designer from New York,
-                working in web development and print media. We enjoy turning
-                complex problems into simple, beautiful and intuitive designs.
-                <br />
-                <br />
-                Our job is to build your website so that it is functional and
-                user-friendly but at the same time attractive.
-              </p>
-            </div>
-
-            <div className="col-12 col-md-6 ml-auto">
-              <ReactPlayer
-                height="400px"
-                width="auto"
-                controls
-                url="https://www.youtube.com/watch?v=giYeaKsXnsI.mp4"
-              />
-            </div>
-          </div> */}
+   
 
           {/* This is the Card row */}
-          <div  className="row justify-content-center">
+          <div  className="row justify-content-center" id="about">
           <div className="col-12" >
             <div className="center-heading" id="row1">
-              <h3 id="yellow-heading">WHAT WE OFFER?</h3>
+              <h3 id="yellow-heading">OUR PRODUCTS</h3>
+              <h3 className="center-heading">For Students</h3>
             </div>
           </div>
-            <div className="col-6 col-md-4"  id="about">
-              <Card id="card-odd" width="100%" >
-                <CardBody>
+          <div  className="col-12" id="data-map"  style={{padding:"0px"}}>
+            <div id="card-width" >
+              <div id="card-odd" width="100%" >
+                <div>
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/mission.png`}
+                    src={`${process.env.PUBLIC_URL}/images/stud1.png`}
                     alt="Grey rectangle not found"
                   />
-                  <div id="bottom-text">
-                    <CardTitle id="card-heading">PARCELS</CardTitle>
-                    <CardText id="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aliquam{" "}
-                    </CardText>
-                  </div>
-                </CardBody>
-              </Card>
+                  {/* <div id="bottom-text">
+                    <div id="card-heading">PARCELS</div>
+                    <div id="card-text">
+                      GET HIRED BY<br/> TOP COMPANIES{" "}
+                    </div>
+                  </div> */}
+                </div>
+              </div>
             </div>
-            <div className="col-6 col-md-4">
-              <Card id="card-even" >
-                <CardBody>
+            <div id="card-width" >
+              <div id="card-even" >
+                <div>
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/flag.png`}
+                    src={`${process.env.PUBLIC_URL}/images/stud2.png`}
                     alt="Grey rectangle not found"
                   />
-                  <div id="bottom-text">
-                    <CardTitle id="card-heading">PARCELS</CardTitle>
-                    <CardText id="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aliquam{" "}
-                    </CardText>
-                  </div>
-                </CardBody>
-              </Card>
+                  
+                </div>
+              </div>
             </div>
-            <div className="col-6 col-md-4">
-              <Card id="card-odd" width="100%">
-                <CardBody>
+
+            <div id="card-width" >
+              <div id="card-odd" width="100%">
+                <div>
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/mission.png`}
+                    src={`${process.env.PUBLIC_URL}/images/stud3.png`}
                     alt="Grey rectangle not found"
                   />
-                  <div id="bottom-text">
-                    <CardTitle id="card-heading">PARCELS</CardTitle>
-                    <CardText id="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aliquam{" "}
-                    </CardText>
-                  </div>
-                </CardBody>
-              </Card>
+                  
+                </div>
+              </div>
             </div>
-            {/* <div className="col-6 col-md-4">
-              <Card id="card-even" width="100%">
-                <CardBody>
+
+            <div id="card-width" >
+              <div id="card-even" width="100%">
+                <div>
                   <img
                     id="card-img"
                     top
-                    src={`${process.env.PUBLIC_URL}/images/flag.png`}
+                    src={`${process.env.PUBLIC_URL}/images/stud4.png`}
                     alt="Grey rectangle not found"
                   />
-                  <div id="bottom-text">
-                    <CardTitle id="card-heading">PARCELS</CardTitle>
-                    <CardText id="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Aliquam{" "}
-                    </CardText>
-                  </div>
-                </CardBody>
-              </Card>
-            </div> */}
+                  
+                </div>
+              </div>
+            </div>
+
+            <div id="card-width" >
+              <div id="card-odd" width="100%">
+                <div>
+                  <img
+                    id="card-img"
+                    top
+                    src={`${process.env.PUBLIC_URL}/images/stud5.png`}
+                    alt="Grey rectangle not found"
+                  />
+                  
+                </div>
+              </div>
+            </div>
+
+            </div>
+            
           </div>
         </div>
+        
         <Skill />
         <Blog />
         <Subscribe />
         <Footer />
+       
         <Modal
           isOpen={this.state.isMdodalOpenj}
           toggle={this.toggleModalj}
