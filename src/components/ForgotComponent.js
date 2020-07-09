@@ -160,7 +160,7 @@ class Forgot extends Component {
               <p style={{ margin: "0em 0" }}>
                 <center>
                   <a
-                    href="twitter.com"
+                    href="/resetpassword"
                     className="twitter btn"
                     style={{
                       backgroundColor: "black",
