@@ -123,7 +123,7 @@ class Resetpassword extends Component {
 		<p style={{ margin: "1em 0" }}>
                 <center>
                   <a
-                    href="/resetpassword"
+                    href="/home"
                     className="twitter btn"
                     style={{
                       backgroundColor: "black",
