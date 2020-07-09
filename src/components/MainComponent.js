@@ -14,6 +14,8 @@ import Verificationsuccess from "./VerificationsuccessComponent";
 import Verificationfailure from "./VerificationfailureComponent";
 import Signupsuccess from "./SignupsuccessComponent";
 import Loginsuccess from "./LoginsuccessComponent";
+import GoogleOAuth from "./GoogleOAuth";
+
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -43,6 +45,7 @@ class Main extends Component {
           <Route exact path="/podcast" component={PodcastCall} />
           <Route path="/blog/:id" component={ArticleFinal} />
           <Route path="/verify/:id" component={VerifyComponent} />
+          <Route path="/google/oauth" component={GoogleOAuth} />
         </Switch>
       </div>
     );
