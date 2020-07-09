@@ -137,7 +137,7 @@ class Resetpassword extends Component {
                     }}
                     onClick={this.handleLoginClick}
                   >
-                    Continue
+                    Go To Home
                   </a>
                 </center>
               </p>
