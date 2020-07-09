@@ -200,7 +200,7 @@ class Header extends Component {
         .post(URL,data)
         .then(res => {
           console.log("res is ", res.data);
-          if (res.message === "success") {
+          if (res.data.message === "success") {
             window.location.pathname= "signupsuccess"
             console.log("FRONTEND TEAM TELL THEM TO SEE THEIR MAIL I")
           }
