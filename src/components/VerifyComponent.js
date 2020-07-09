@@ -20,8 +20,7 @@ class VerifyComponent extends Component {
       .catch((err) => {
         console.log("err is ", err);
         if(err.response.status === 410)
-          alert("Sorry! The link has expired")
-        alert("server error");
+        alert("Sorry! The link has expired");
         console.log("FRONEND TEAM - SHOW SERVER ERROR")
       });
   }
