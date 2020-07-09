@@ -293,7 +293,7 @@ class Header extends Component {
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
-       <center><a  href={`https://accounts.google.com/signin/oauth/identifier?scope=profile&access_type=offline&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fgoogle%2Foauth&client_id=939204723287-lr57oipdf4ifpbor35p0i1jdrq8708jc.apps.googleusercontent.com&o2v=2&as=vFxJ1mAiaBH7maVpSgLtRQ&flowName=GeneralOAuthFlow`} className="twitter btn" style={{padding:"10px 12px"}}>
+       <center><a  href={`https://accounts.google.com/signin/oauth/identifier?scope=profile email&access_type=offline&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fgoogle%2Foauth&client_id=939204723287-lr57oipdf4ifpbor35p0i1jdrq8708jc.apps.googleusercontent.com&o2v=2&as=vFxJ1mAiaBH7maVpSgLtRQ&flowName=GeneralOAuthFlow`} className="twitter btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -407,7 +407,7 @@ class Header extends Component {
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
-       <center><a  href={`https://accounts.google.com/signin/oauth/identifier?scope=profile&access_type=offline&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fgoogle%2Foauth&client_id=939204723287-lr57oipdf4ifpbor35p0i1jdrq8708jc.apps.googleusercontent.com&o2v=2&as=vFxJ1mAiaBH7maVpSgLtRQ&flowName=GeneralOAuthFlow`} className="twitter btn" style={{padding:"10px 12px"}}>
+       <center><a  href={`https://accounts.google.com/signin/oauth/identifier?scope=profile email&access_type=offline&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fgoogle%2Foauth&client_id=939204723287-lr57oipdf4ifpbor35p0i1jdrq8708jc.apps.googleusercontent.com&o2v=2&as=vFxJ1mAiaBH7maVpSgLtRQ&flowName=GeneralOAuthFlow`} className="twitter btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
