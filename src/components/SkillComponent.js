@@ -7,7 +7,7 @@ function Skill(props) {
 
 
       {/* This is the first row */}
-      <div className="row m-auto" id="skill-container" >
+      <div className="m-auto" id="skill-container" >
         <div id="side-skill-text">
         <h3 id="yellow-heading">OUR PRODUCTS</h3>
           <h3 className="center-heading">For Companies</h3>
