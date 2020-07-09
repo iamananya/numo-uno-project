@@ -578,5 +578,53 @@ nav{
     #right-text-footer{
         text-align: left;
     }
+    #skill-container{
+        height: 1280px;
+        display: block;
+        flex-wrap: wrap;
+    }
+
+    #side-skill-text{
+        height: auto;
+        position: relative;
+        top:0px;
+    }
+    #skill-box{
+        position: relative;
+        height: 1200px;
+        width: 660px;
+        bottom: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* #skill-box{
+        position: relative;
+        height: 2500px;
+    } */
+    #tl{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+
+    }
+    #tr{
+        position: absolute;
+        top: 375px;
+        margin-bottom: 20px;
+        width: 337px;
+        height:160px;
+    }
+    #bl{
+        position: absolute;
+        top: 555px;
+        left:0px;
+        width:296px;
+        height:200px;
+    }
+    #br{
+        position: absolute;
+        bottom:0px;
+        right: 0px;
+    }
 
 }
