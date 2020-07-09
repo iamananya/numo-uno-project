@@ -155,34 +155,7 @@
   width: 25%;
   padding-left: 80px;
 }
-.popImg_blog {
-  max-width: 100%;
-  width: 45%;
-  padding: 10px;
-  float: left;
-}
 
-.popText_blog {
-  float: left;
-  width: 50%;
-  text-align: left;
-  padding: 10px 10px;
-  font-family: Montserrat;
-  font-size: 12px;
-}
-.popText_blog h3 {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.popRow_blog {
-  margin: 0 auto;
-}
-.popRow_blog:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 #row {
   margin: 20px 50px;
 }
@@ -308,25 +281,6 @@
   height: 55vh;
   margin-left: 7%;
 }
-.small_img {
-  display: flex;
-  margin-top: 10px;
-  height: 40%;
-  max-width: 100%;
-  position: absolute;
-}
-.bottom_img {
-  margin-right: 15px;
-  margin-top: 13vh;
-}
-@media screen and (max-width: 1300px) {
-  .bottom_img {
-    margin-right: 5px;
-  }
-  .small_img {
-    width: 20%;
-  }
-}
 
 /* Clear floats after the columns */
 
@@ -389,12 +343,7 @@
   .column_card2 {
     text-align: center;
   }
-  .bottom_img {
-    margin-top: 20px;
-  }
-  .small_img {
-    height: 20px;
-  }
+
   .title {
     max-width: 10%;
     max-height: 50%;
@@ -412,29 +361,8 @@
   .rightcolumn {
     width: 100%;
   }
-  .popText_blog h3 {
-    font-size: 20px;
-  }
-  .popText_blog {
-    font-size: 15px;
-  }
 }
-.container_blog {
-  position: relative;
 
-  text-align: center;
-  color: white;
-  font-family: Montserrat;
-  font-size: 15px;
-  text-align: left;
-
-  max-width: 60vw;
-}
-.textOnImg {
-  position: absolute;
-  bottom: 10px;
-  left: 8%;
-}
 @media screen and (max-width: 800px) {
   .container_blog {
     font-size: 10px;
@@ -494,9 +422,7 @@ div.podCard {
   .rightcolumn {
     padding-left: 0;
   }
-  .bottom_img {
-    margin-bottom: 10px;
-  }
+
   .image_article {
     width: 100%;
   }
@@ -507,18 +433,5 @@ div.podCard {
     /* margin-top: -4%; */
     position: absolute;
     top: 30px;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .bottom_img {
-    margin-top: 14px;
-  }
-}
-@media screen and (max-width: 1130px) {
-  .bottom_img {
-    margin-top: 5px;
-  }
-  .small_img {
-    height: 30%;
   }
 }
