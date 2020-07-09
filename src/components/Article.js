@@ -42,7 +42,7 @@ class Article extends Component {
       <div>
         <div id="brand_art">
           <a href="/blog">
-            <img src={`${process.env.PUBLIC_URL}/images/Final_Black.png`}></img>
+            <img src={`${process.env.PUBLIC_URL}/images/numologo.jpg`}></img>
           </a>
         </div>
         <div id="content_art">

@@ -17,7 +17,7 @@ function BlogFinal() {
         <a href="/">
           <img
             className="title"
-            src={`${process.env.PUBLIC_URL}/images/Final_Black.png`}
+            src={`${process.env.PUBLIC_URL}/images/numologo.jpg`}
             alt="black logo"
           ></img>
         </a>
