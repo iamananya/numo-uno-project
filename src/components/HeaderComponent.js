@@ -81,15 +81,15 @@ class Header extends Component {
         const reg = /^\d+$/;
         
         if (this.state.touched.email && this.state.email.split("").filter((x) => x === "@").length !== 1)
-          errors.email = "Email is not correct";
+          errors.email = "Email should contain @";
     
         if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
-          errors.loginEmail = "Email is already registered";
+          errors.loginEmail = "Email should contain @";
         if (this.state.touched.password && this.state.password.length < 6)
           errors.password = "Password should be >=6";
         
         if (this.state.touched.loginPassword && this.state.loginPassword.length < 6)
-          errors.loginPassword = "Password is incorrect";
+          errors.loginPassword = "Password should be >=6";
         return errors;
       }
     toggleNav(){
@@ -145,6 +145,7 @@ class Header extends Component {
                 console.log("res is ", res.data);
                 if(res.data.message === "success") {
                     localStorage.setItem("tttoken",res.data.token)
+                    window.location.pathname= "loginsuccess"
                     console.log("FRONTEND TEAM LOGIN SUCES REDIRECT TO LOGIN PAGE")
                     
                 }
@@ -152,6 +153,7 @@ class Header extends Component {
             .catch(err => {
                 console.log("err is ", err)
                 if(err.response.status === 401) {
+                    alert("invalid credentials");
                     console.log("FRONTEND TEAM SHOW INVALID CREDENTIALS")
                 }
 
@@ -199,16 +201,18 @@ class Header extends Component {
         .then(res => {
           console.log("res is ", res.data);
           if (res.message === "success") {
+            window.location.pathname= "signupsuccess"
             console.log("FRONTEND TEAM TELL THEM TO SEE THEIR MAIL I")
           }
         })
         .catch(err => {
           if (err.response.status === 400) 
-          console.log("FRONTEND TEAM - SHOW WRONG EMAIL ADDRESS GIVEN BOLKE")
+            alert("wrong email address");
           else if (err.response.status === 500) 
-          console.log("FRONTEND TEAM - SHOW unable to conect to server GIVEN BOLKE")
+            alert("unable to connect to the server");
           else if (err.response.status === 409)
-          console.log("FRONTEND TEAM SHOW USER ALREADY REG")
+            alert("user is already registered");
+          
         })
 
     }

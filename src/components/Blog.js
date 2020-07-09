@@ -35,8 +35,8 @@ class BlogPage extends Component {
         );
       })
       .catch((err) => {
-        console.log("err in fetch in podcast ", err);
-        console.log("FRONTEND TEAM SHOW ERROR ");
+      if(err.response.status === 404)
+        alert("Internal Server Error");
       });
     const URL = BLOG_URL + "/posts/?key=" + BLOG_KEY;
     console.log("URL IS ", URL);
@@ -48,8 +48,8 @@ class BlogPage extends Component {
         );
       })
       .catch((err) => {
-        console.log("err in fetch in blog ", err);
-        console.log("FRONTEND TEAM SHOW ERROR ");
+      if(err.response.status === 404)  
+          alert("Internal Server Error");
       });
   }
 

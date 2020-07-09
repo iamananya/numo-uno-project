@@ -23,6 +23,7 @@ class HeadCards extends Component {
       })
       .catch((err) => {
         console.log("err in fetch in blog ", err);
+        alert("error in fetch the blog");
         console.log("FRONTEND TEAM SHOW ERROR ");
       });
   }

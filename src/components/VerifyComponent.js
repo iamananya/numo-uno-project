@@ -13,11 +13,14 @@ class VerifyComponent extends Component {
       .then((res) => {
         console.log("res.data ", );
         if (res.data.message === "success") {
+          window.location.pathname= "login"
           console.log("FRONTEND TEAM REDIRECT TO LOGIN PAGE ")
         }
       })
       .catch((err) => {
         console.log("err is ", err);
+        if(err.response.status === 410)
+        alert("Sorry! The link has expired");
         console.log("FRONEND TEAM - SHOW SERVER ERROR")
       });
   }
