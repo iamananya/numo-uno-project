@@ -99,7 +99,8 @@ class Home extends Component {
                 <br />
                 </div>
               </p>
-
+              <br/>
+              <br/>
               <div>
                 <h3 id="side-heading">B2C </h3>
               </div>
