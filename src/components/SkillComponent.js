@@ -9,8 +9,8 @@ function Skill(props) {
       {/* This is the first row */}
       <div className="m-auto" id="skill-container" >
         <div id="side-skill-text">
-        <h3 id="yellow-heading">OUR PRODUCTS</h3>
-          <h3 className="center-heading">For Companies</h3>
+          <h3 className="center-heading"
+          style={{marginTop:"200px"}}>For Companies</h3>
         </div>
         <div className="col-12 col-9" id="skill-box">
         <img

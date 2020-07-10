@@ -14,18 +14,19 @@ function Footer(props) {
                   alt="Ristorante Con Fusion"
                 />
               </div>
-              <div className="col-12 col-md-5 ml-auto" href="/" id="right-text-footer">
-                  <p id="footer-heading" style={{paddingTop:"20px"}}>Numo Uno</p>
+              <div className="col-12 col-md-6 ml-auto" href="/" id="right-text-footer">
+                  <p id="footer-heading" style={{paddingTop:"20px"}}>NUMO UNO</p>
                   <p id="footer-sub">Eficient AI based hiring solutions</p> 
           
               </div>
             </div>
             <div className="row">
-              <div className="col-12 col-md-4 mr-5" href="/" style={{textAlign:"left"}}>
+              <div className="col-12 col-md-4 mr-5" href="/" style={{textAlign:"left",
+            marginTop:"1vw"}}>
                 <p id="footer-heading">EMAIL</p>
                 <p id="footer-sub">contact@numouno(dot)tech</p>
               </div>
-              <div className="col-12 col-md-5 ml-auto" href="/" id="right-text-footer">
+              <div className="col-12 col-md-6 ml-auto" href="/" id="right-text-footer">
                 <p id="footer-heading">GET IN TOUCH</p>
                 <p id="footer-sub">Indian Institute of Technology Kharagpur<br/>
 West Bengal, India - 731202.</p>
@@ -37,7 +38,7 @@ West Bengal, India - 731202.</p>
                 <p id="footer-sub">+(91)-(894)6962423</p>
               </div>
               <div
-                className="col-12 col-md-5 ml-auto"
+                className="col-12 col-md-6 ml-auto"
                 id="right-text-footer"
                 style={{ marginTop: "30px" }}
               >

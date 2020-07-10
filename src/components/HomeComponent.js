@@ -91,19 +91,20 @@ class Home extends Component {
                 />
             </div>
             <div id="center-text" className="col-12 col-md-5 ">
+              <p>
+                <h3 id="side-heading">B2B </h3>
               
-                <h3 id="side-heading">B2B</h3>
-              
-              <p id="side-heading-child">
-              AI based hassle free recruitment platform
+              <div id="side-heading-child">
+             - AI based hassle free recruitment platform
                 <br />
+                </div>
               </p>
 
               <div>
-                <h3 id="side-heading">B2C</h3>
+                <h3 id="side-heading">B2C </h3>
               </div>
               <p id="side-heading-child">
-              Socio-Professional career platform for college students
+             - Socio-Professional career platform for college students
                 <br />
               </p>
               {/* <button className="custom-button2" style={{position:"absolute",left:"20px"}}>Know More</button> */}
@@ -121,12 +122,12 @@ class Home extends Component {
                     />
             <div className="col-12 md-col-4"
             style={{
-              fontSize: "24px",
+              fontSize: "26px",
               fontWeight: "600",
               color: "#151D41",
               margin: "-5.5vw auto",
             }}>
-              Bridging the gap between<br/> Students and Recruiters<br/> with the <br/>A.I.
+              Bridging the gap between<br/> Students and Recruiters<br/> with A.I.
             </div>
           </div>
           </div>
@@ -138,7 +139,7 @@ class Home extends Component {
           <div  className="row justify-content-center" id="about">
           <div className="col-12" >
             <div className="center-heading" id="row1">
-              <h3 id="yellow-heading">OUR PRODUCTS</h3>
+              <h3 id="yellow-heading">WE OFFER</h3>
               <h3 className="center-heading" style={{marginBottom:"50px"}}>For Students</h3>
             </div>
           </div>
