@@ -77,7 +77,7 @@ class Resetpassword extends Component {
         anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
     componentDidMount() {
-      this.id = setTimeout(() => this.setState({ redirect: true }), 30000)
+      this.id = setTimeout(() => this.setState({ redirect: true }), 10000)
     }
     componentWillUnmount() {
       clearTimeout(this.id)
