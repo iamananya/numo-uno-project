@@ -367,6 +367,7 @@ nav{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
     font-weight: bold;
+    line-height: 1;
     color: #445a64;
     padding: 35px 0px 0px 0px;
 }
@@ -410,7 +411,7 @@ nav{
 #bl{
     position: absolute;
     bottom: 0px;
-    right:405px;
+    right:355px;
     width:296px;
     height:200px;
     border-radius: 10px;
@@ -440,6 +441,7 @@ nav{
 }
 #skill-container{
     height: 575px;
+    padding: 0px 50px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -466,6 +468,7 @@ nav{
         height: 640px;
         display: block;
         flex-wrap: wrap;
+        padding: 0px 0px;
     }
 
     #side-skill-text{
@@ -580,6 +583,7 @@ nav{
         text-align: left;
     }
     #skill-container{
+        padding: 0px 0px;
         height: 1280px;
         display: block;
         flex-wrap: wrap;
