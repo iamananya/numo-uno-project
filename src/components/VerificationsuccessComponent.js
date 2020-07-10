@@ -4,7 +4,7 @@ import { Form, FormGroup, Input, FormFeedback } from 'reactstrap';
 import axios from 'axios';
 
 
-class Signupsuccess extends Component {
+class Verificationsuccess extends Component {
 
     constructor(props){
         super(props);
@@ -105,7 +105,7 @@ class Signupsuccess extends Component {
                   color: "black",
                 }}
               >
-                Signup Completed
+                Verification Successful
               </p>
               <br />
               <p
@@ -117,28 +117,7 @@ class Signupsuccess extends Component {
                   letterSpacing: "1px",
                 }}
               >
-                Please check your mail to verify your account.
-              </p>
-              <p style={{ margin: "1em 0" }}>
-                <center>
-                  <a
-                    href="/home"
-                    className="twitter btn"
-                    style={{
-                      backgroundColor: "black",
-                      color: "#ffd700",
-                      padding: "8px 12px",
-                      fontSize: "20px",
-                      textAlign: "center",
-                      fontFamily: "Josefin Sans",
-                      boxShadow: "0 2",
-                      borderRadius: "10px",
-                    }}
-                    onClick={this.handleLoginClick}
-                  >
-                    Go To Home
-                  </a>
-                </center>
+                Your account verification is successful.
               </p>
 				</Form>
 				
@@ -149,4 +128,4 @@ class Signupsuccess extends Component {
     }
   }
 
-export default Signupsuccess;
+export default Verificationsuccess;

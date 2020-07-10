@@ -81,10 +81,10 @@ class Header extends Component {
         const reg = /^\d+$/;
         
         if (this.state.touched.email && this.state.email.split("").filter((x) => x === "@").length !== 1)
-          errors.email = "Email should contain @";
+          errors.email = "Invalid email";
     
         if (this.state.touched.loginEmail && email.split("").filter((x) => x === "@").length !== 1)
-          errors.loginEmail = "Email should contain @";
+          errors.loginEmail = "Invalid email";
         if (this.state.touched.password && this.state.password.length < 6)
           errors.password = "Password should be >=6";
         
@@ -145,7 +145,7 @@ class Header extends Component {
                 console.log("res is ", res.data);
                 if(res.data.message === "success") {
                     localStorage.setItem("tttoken",res.data.token)
-                    window.location.pathname= "loginsuccess"
+                    window.location.pathname= "/loginsuccess"
                     console.log("FRONTEND TEAM LOGIN SUCES REDIRECT TO LOGIN PAGE")
                     
                 }
@@ -200,8 +200,8 @@ class Header extends Component {
         .post(URL,data)
         .then(res => {
           console.log("res is ", res.data);
-          if (res.message === "success") {
-            window.location.pathname= "signupsuccess"
+          if (res.data.message === "success") {
+            window.location.pathname= "/signupsuccess"
             console.log("FRONTEND TEAM TELL THEM TO SEE THEIR MAIL I")
           }
         })
@@ -293,7 +293,7 @@ class Header extends Component {
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
-       <center><a  href="http://google.com/" className="twitter btn" style={{padding:"10px 12px"}}>
+       <center><a  href={`https://accounts.google.com/signin/oauth/identifier?scope=profile email&access_type=offline&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fgoogle%2Foauth&client_id=939204723287-lr57oipdf4ifpbor35p0i1jdrq8708jc.apps.googleusercontent.com&o2v=2&as=vFxJ1mAiaBH7maVpSgLtRQ&flowName=GeneralOAuthFlow`} className="twitter btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">
@@ -407,7 +407,7 @@ class Header extends Component {
 		<div className="e" style={{textAlign: "left",marginTop:"3px"}}>
 		Signin with Linkedin</div>
         	</a></center>
-       <center><a  href="http://google.com/" className="twitter btn" style={{padding:"10px 12px"}}>
+       <center><a  href={`https://accounts.google.com/signin/oauth/identifier?scope=profile email&access_type=offline&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fgoogle%2Foauth&client_id=939204723287-lr57oipdf4ifpbor35p0i1jdrq8708jc.apps.googleusercontent.com&o2v=2&as=vFxJ1mAiaBH7maVpSgLtRQ&flowName=GeneralOAuthFlow`} className="twitter btn" style={{padding:"10px 12px"}}>
 		<div className="b">
             	<p style={{color:"white"}}>.</p></div>
 		<div className="f">

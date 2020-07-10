@@ -4,7 +4,7 @@ import { Form, FormGroup, Input, FormFeedback } from 'reactstrap';
 import axios from 'axios';
 
 
-class Signupsuccess extends Component {
+class Resetpassword extends Component {
 
     constructor(props){
         super(props);
@@ -105,7 +105,7 @@ class Signupsuccess extends Component {
                   color: "black",
                 }}
               >
-                Signup Completed
+                Reset Password
               </p>
               <br />
               <p
@@ -117,9 +117,10 @@ class Signupsuccess extends Component {
                   letterSpacing: "1px",
                 }}
               >
-                Please check your mail to verify your account.
+                Reset password link sent. Please check your mail to reset password.
               </p>
-              <p style={{ margin: "1em 0" }}>
+              
+		<p style={{ margin: "1em 0" }}>
                 <center>
                   <a
                     href="/home"
@@ -140,7 +141,7 @@ class Signupsuccess extends Component {
                   </a>
                 </center>
               </p>
-				</Form>
+		</Form>
 				
 				</div></center>
                 		</div>
@@ -149,4 +150,4 @@ class Signupsuccess extends Component {
     }
   }
 
-export default Signupsuccess;
+export default Resetpassword;
