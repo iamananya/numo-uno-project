@@ -15,19 +15,9 @@ function Footer(props) {
                 />
               </div>
               <div className="col-12 col-md-5 ml-auto" href="/" id="right-text-footer">
-                <p
-                  style={{
-                    fontSize: "21px",
-                    fontWeight: "400",
-                    color: "#151D41",
-                    margin: "auto",
-                    position: "relative",
-                    paddingTop: "10px"
-                  }}
-                >
-                  Eficient AI based hiring solutions
-                  <br/>Numo Uno
-                </p>
+                  <p id="footer-heading" style={{paddingTop:"20px"}}>Numo Uno</p>
+                  <p id="footer-sub">Eficient AI based hiring solutions</p> 
+          
               </div>
             </div>
             <div className="row">

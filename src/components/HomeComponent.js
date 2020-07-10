@@ -72,7 +72,7 @@ class Home extends Component {
           {/* This is the second row */}
           <div className="container-fluid" id="pad2">
           <div id="row1" className="row">
-            <div className="col-12 col-md-6 mx-auto" style={{padding:"0px"}}>
+            <div className="col-12 col-md-6 mx-auto" style={{padding:"0px 15px 0px 0px"}}>
               <div style={{position:"relative",top:"0vw",left:"0vw",width:"5vw",height:"5vw"}}>
                 <img 
                   src={`${process.env.PUBLIC_URL}/images/Path 116.png`}
@@ -91,17 +91,20 @@ class Home extends Component {
                 />
             </div>
             <div id="center-text" className="col-12 col-md-5 ">
+              
+                <h3 id="side-heading">B2B</h3>
+              
+              <p id="side-heading-child">
+              AI based hassle free recruitment platform
+                <br />
+              </p>
+
               <div>
-                <h3 id="side-heading">What do we do?</h3>
+                <h3 id="side-heading">B2C</h3>
               </div>
               <p id="side-heading-child">
-                We are Creative Director and UI/UX Designer from New York,
-                working in web development and print media. We enjoy turning
-                complex problems into simple, beautiful and intuitive designs.
+              Socio-Professional career platform for college students
                 <br />
-                <br />
-                Our job is to build your website so that it is functional and
-                user-friendly but at the same time attractive.
               </p>
               {/* <button className="custom-button2" style={{position:"absolute",left:"20px"}}>Know More</button> */}
             </div>
@@ -136,7 +139,7 @@ class Home extends Component {
           <div className="col-12" >
             <div className="center-heading" id="row1">
               <h3 id="yellow-heading">OUR PRODUCTS</h3>
-              <h3 className="center-heading">For Students</h3>
+              <h3 className="center-heading" style={{marginBottom:"50px"}}>For Students</h3>
             </div>
           </div>
           <div  className="col-12" id="data-map"  style={{padding:"0px"}}>

@@ -80,7 +80,8 @@ class Contact extends Component {
     );
     return (
       <div className="container">
-        <div className="row row-content">
+        <div className="row row-content" style={{ marginTop:"25px",
+            paddingBottom:"25px"}}>
           <div className="col-12" id="bottom">
             <div>
               <h3 id="subs" className="center-heading">
