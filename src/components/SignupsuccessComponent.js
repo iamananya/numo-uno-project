@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, Input, FormFeedback } from 'reactstrap';
-
+import { Redirect } from "react-router-dom";
 import axios from 'axios';
 
 
@@ -73,14 +73,22 @@ class Signupsuccess extends Component {
         const anchor = document.querySelector('#about')
         anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
-    
+    componentDidMount() {
+      this.id = setTimeout(() => this.setState({ redirect: true }), 10000)
+    }
+    componentWillUnmount() {
+      clearTimeout(this.id)
+    }
 
     render() {
         const errors = this.validate(
             this.state.password,
             this.state.confirmPassword,
           );
-        return(
+        return this.state.redirect
+      ? <Redirect to="/home" />
+      : 
+	(
 		    <div className="xyz">
         <center>
           <div
