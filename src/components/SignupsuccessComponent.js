@@ -105,7 +105,7 @@ class Signupsuccess extends Component {
                   color: "black",
                 }}
               >
-                Signup Completed
+                Verify Your Email
               </p>
               <br />
               <p
