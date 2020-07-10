@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, Input, FormFeedback } from 'reactstrap';
-
+import { Redirect } from "react-router-dom";
 import axios from 'axios';
 
 
 class Verificationsuccess extends Component {
+	 state = {
+    redirect: false
+  }
 
     constructor(props){
         super(props);
@@ -73,14 +76,22 @@ class Verificationsuccess extends Component {
         const anchor = document.querySelector('#about')
         anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
-    
+     componentDidMount() {
+      this.id = setTimeout(() => this.setState({ redirect: true }), 5000)
+    }
+    componentWillUnmount() {
+      clearTimeout(this.id)
+    }
 
     render() {
         const errors = this.validate(
             this.state.password,
             this.state.confirmPassword,
           );
-        return(
+         return this.state.redirect
+      ? <Redirect to="/login" />
+      : 
+	 (
 		    <div className="xyz">
         <center>
           <div
